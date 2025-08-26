@@ -1,0 +1,153 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Section */
+.main-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.update-date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Content Sections */
+.content-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3498db;
+}
+
+.content-section h3 {
+    color: #34495e;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Placeholder Content */
+.placeholder-content {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.placeholder-content p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .placeholder-content {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 0 15px;
+    }
+    
+    .content-section {
+        padding: 1rem;
+    }
+    
+    .placeholder-content {
+        padding: 1.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-header {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .content-section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

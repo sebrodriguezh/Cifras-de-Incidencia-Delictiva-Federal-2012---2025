@@ -1,0 +1,15 @@
+/* Basic Styles for Snapshots Section */
+.snapshots-section {
+    margin-bottom: 2rem;
+}
+
+/* Placeholder for future snapshots functionality */
+.snapshots-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}

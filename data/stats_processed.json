@@ -1,0 +1,26 @@
+{
+  "total_registros_procesados": 6720,
+  "fecha_minima_procesada": 2019,
+  "fecha_maxima_procesada": 2025,
+  "conceptos_unicos_procesados": 5,
+  "estados_unicos_procesados": 32,
+  "columnas_finales": [
+    "AÑO",
+    "ENTIDAD",
+    "LEY",
+    "CONCEPTO",
+    "TIPO",
+    "ENERO",
+    "FEBRERO",
+    "MARZO",
+    "ABRIL",
+    "MAYO",
+    "JUNIO",
+    "JULIO",
+    "AGOSTO",
+    "SEPTIEMBRE",
+    "OCTUBRE",
+    "NOVIEMBRE",
+    "DICIEMBRE"
+  ]
+}

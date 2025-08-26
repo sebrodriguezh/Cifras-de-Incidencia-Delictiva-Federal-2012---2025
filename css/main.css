@@ -138,7 +138,132 @@ body {
         font-size: 1rem;
     }
 }
+/* Data Overview Section */
+.data-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
 
+.summary-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-content h3 {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Data Quality Section */
+.data-quality {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.data-quality h3 {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.quality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quality-label {
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+
+.quality-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quality-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.quality-value {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for data overview */
+@media (max-width: 768px) {
+    .data-overview {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-card {
+        padding: 1rem;
+    }
+    
+    .card-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-overview {
+        grid-template-columns: 1fr;
+    }
+}
 /* Print Styles */
 @media print {
     .main-header {
@@ -149,5 +274,80 @@ body {
     .content-section {
         box-shadow: none;
         border: 1px solid #ddd;
+    }
+}
+
+/* Database Preview Table */
+.database-preview {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.database-preview h3 {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
+
+.preview-description {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Estilos específicos para la tabla de preview */
+#preview-table-procesados {
+    font-size: 0.75rem;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#preview-table-procesados th,
+#preview-table-procesados td {
+    padding: 6px 8px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#preview-table-procesados th {
+    background: #34495e;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+#preview-table-procesados tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+#preview-table-procesados tbody tr:hover {
+    background: #e3f2fd;
+}
+
+/* Scroll horizontal para tablas muy anchas */
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Responsive para tablas */
+@media (max-width: 768px) {
+    #preview-table-procesados {
+        font-size: 0.65rem;
+    }
+    
+    #preview-table-procesados th,
+    #preview-table-procesados td {
+        padding: 4px 6px;
+        max-width: 80px;
     }
 }

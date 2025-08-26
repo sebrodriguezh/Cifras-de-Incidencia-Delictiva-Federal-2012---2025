@@ -21,6 +21,111 @@
 
     <!-- Main Content Container -->
     <main class="main-container">
+        <!-- Overview section -->
+        <section class="content-section">
+            <h2>Estructura de la base de datos</h2>
+            <p class="section-description">Overview de la base de datos original</p>
+
+            <!-- Data Summary Cards -->
+            <div class="data-overview">
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Total de registros</h3>
+                        <p class="card-number" id="total-registros-original">Cargando...</p>
+                        <p class="card-description">Registros delictivos incluidos</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Período</h3>
+                        <p class="card-number" id="periodo-original">Cargando...</p>
+                        <p class="card-description">Rango temporal completo</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Estados</h3>
+                        <p class="card-number" id="total-estados-original">Cargando...</p>
+                        <p class="card-description">Entidades federativas incluidas</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Conceptos</h3>
+                        <p class="card-number" id="conceptos-unicos-original">Cargando...</p>
+                        <p class="card-description">Conceptos principales</p>
+                    </div>
+                </div>
+            </div>
+            <p class="section-description">Base de datos procesada para el resto del informe</p>
+            <!-- Data Summary Cards - Base Procesada -->
+            <div class="data-overview">
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Total de Registros</h3>
+                        <p class="card-number" id="total-registros-procesados">Cargando...</p>
+                        <p class="card-description">Registros delictivos procesados</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Período</h3>
+                        <p class="card-number" id="periodo-procesado">Cargando...</p>
+                        <p class="card-description">Rango temporal filtrado</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Estados</h3>
+                        <p class="card-number" id="total-estados-procesados">Cargando...</p>
+                        <p class="card-description">Entidades federativas incluidas</p>
+                    </div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="card-icon"></div>
+                    <div class="card-content">
+                        <h3>Conceptos</h3>
+                        <p class="card-number" id="conceptos-unicos-procesados">Cargando...</p>
+                        <p class="card-description">Conceptos principales</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Database Preview Table - Solo Base Procesada -->
+            <div class="database-preview">
+                <h3>Vista previa de la base procesada</h3>
+                <p class="preview-description">Primeras 10 filas de la base procesada - 'IDEFF_processed.csv'</p>
+                <div class="table-container">
+                    <table class="data-table" id="preview-table-procesados">
+                        <thead>
+                            <tr>
+                                <th>Cargando...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cargando datos...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Nacional Section -->
         <section class="content-section">
             <h2>Nacional</h2>
@@ -55,12 +160,147 @@
         </section>
     </main>
 
-    <!-- Simple JavaScript for basic interactions -->
+    <!-- JavaScript para cargar estadísticas -->
+         <!-- JavaScript para cargar estadísticas -->
     <script>
-        // Your custom JavaScript code here
-        console.log('Template loaded successfully!');
+        // Función para cargar estadísticas de la base ORIGINAL
+        async function loadOriginalStats() {
+            try {
+                console.log('🔄 Cargando estadísticas de base original...');
+                const response = await fetch('data/stats.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const stats = await response.json();
+                console.log('✅ Estadísticas originales cargadas:', stats);
+                
+                // Actualizar elementos de la base ORIGINAL
+                if (stats.total_registros !== undefined) {
+                    document.getElementById('total-registros-original').textContent = stats.total_registros.toLocaleString();
+                }
+                
+                if (stats.fecha_minima && stats.fecha_maxima) {
+                    document.getElementById('periodo-original').textContent = `${stats.fecha_minima} - ${stats.fecha_maxima}`;
+                }
+                
+                if (stats.conceptos_unicos !== undefined) {
+                    document.getElementById('conceptos-unicos-original').textContent = stats.conceptos_unicos;
+                }
+                
+                if (stats.estados_unicos !== undefined) {
+                    document.getElementById('total-estados-original').textContent = stats.estados_unicos;
+                } else {
+                    document.getElementById('total-estados-original').textContent = '32';
+                }
+                
+                console.log('✅ Base original actualizada');
+                
+            } catch (error) {
+                console.error('❌ Error cargando estadísticas originales:', error);
+                document.getElementById('total-registros-original').textContent = 'Error';
+                document.getElementById('periodo-original').textContent = 'Error';
+                document.getElementById('conceptos-unicos-original').textContent = 'Error';
+                document.getElementById('total-estados-original').textContent = 'Error';
+            }
+        }
         
-        // Example: Add click event to sections
+        // Función para cargar estadísticas de la base PROCESADA
+        async function loadProcessedStats() {
+            try {
+                console.log('🔄 Cargando estadísticas de base procesada...');
+                const response = await fetch('data/stats_processed.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const stats = await response.json();
+                console.log('✅ Estadísticas procesadas cargadas:', stats);
+                
+                // Actualizar elementos de la base PROCESADA
+                if (stats.total_registros_procesados !== undefined) {
+                    document.getElementById('total-registros-procesados').textContent = stats.total_registros_procesados.toLocaleString();
+                }
+                
+                if (stats.fecha_minima_procesada && stats.fecha_maxima_procesada) {
+                    document.getElementById('periodo-procesado').textContent = `${stats.fecha_minima_procesada} - ${stats.fecha_maxima_procesada}`;
+                }
+                
+                if (stats.conceptos_unicos_procesados !== undefined) {
+                    document.getElementById('conceptos-unicos-procesados').textContent = stats.conceptos_unicos_procesados;
+                }
+                
+                if (stats.estados_unicos_procesados !== undefined) {
+                    document.getElementById('total-estados-procesados').textContent = stats.estados_unicos_procesados;
+                }
+                
+                console.log('✅ Base procesada actualizada');
+                
+            } catch (error) {
+                console.error('❌ Error cargando estadísticas procesadas:', error);
+                document.getElementById('total-registros-procesados').textContent = 'Error';
+                document.getElementById('periodo-procesado').textContent = 'Error';
+                document.getElementById('conceptos-unicos-procesados').textContent = 'Error';
+                document.getElementById('total-estados-procesados').textContent = 'Error';
+            }
+        }
+        
+        // Función para cargar preview de la base PROCESADA (solo esta)
+        async function loadProcessedPreview() {
+            try {
+                console.log('🔄 Cargando preview de base procesada...');
+                const response = await fetch('data/preview_processed.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const previewData = await response.json();
+                updatePreviewTable('preview-table-procesados', previewData);
+                console.log('✅ Preview procesado actualizado');
+                
+            } catch (error) {
+                console.error('❌ Error cargando preview procesado:', error);
+                document.getElementById('preview-table-procesados').innerHTML = '<tbody><tr><td>Error cargando preview</td></tr></tbody>';
+            }
+        }
+        
+        // Función auxiliar para actualizar tabla de preview
+        function updatePreviewTable(tableId, previewData) {
+            if (previewData.length > 0) {
+                const columns = Object.keys(previewData[0]);
+                
+                let tableHTML = '<thead><tr>';
+                columns.forEach(col => {
+                    tableHTML += `<th>${col}</th>`;
+                });
+                tableHTML += '</tr></thead><tbody>';
+                
+                previewData.forEach(row => {
+                    tableHTML += '<tr>';
+                    columns.forEach(col => {
+                        const value = row[col] || '';
+                        tableHTML += `<td>${value}</td>`;
+                    });
+                    tableHTML += '</tr>';
+                });
+                
+                tableHTML += '</tbody>';
+                document.getElementById(tableId).innerHTML = tableHTML;
+            }
+        }
+        
+        // Cargar todos los datos cuando la página se cargue
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Página cargada, iniciando carga de datos...');
+            loadOriginalStats();
+            loadProcessedStats();
+            loadProcessedPreview(); // Solo este preview
+        });
+        
+        // También cargar cuando se haga clic en la sección (para debugging)
         document.querySelectorAll('.content-section').forEach(section => {
             section.addEventListener('click', function() {
                 console.log('Section clicked:', this.querySelector('h2').textContent);

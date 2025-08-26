@@ -1,6 +1,6 @@
 # Análisis de Incidencia Delictiva Federal
 
-## 📁 Estructura del Proyecto
+##  Estructura del proyecto
 
 ```
 Learning_Site/
@@ -15,7 +15,7 @@ Learning_Site/
 └── 📖 README.md              # Este archivo
 ```
 
-## 🚀 Cómo Usar
+##  Cómo Usar
 
 ### Ejecutar Localmente
 ```bash
@@ -25,7 +25,7 @@ python python/server.py
 ### Abrir en Navegador
 http://localhost:8000
 
-## 📝 Notas
+##  Notas
 - Los datos van en la carpeta `data/`
 - Los estilos están en `css/`
 - Los scripts de Python están en `python/`

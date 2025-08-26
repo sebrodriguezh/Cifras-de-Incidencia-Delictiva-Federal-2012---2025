@@ -6,12 +6,20 @@ Simple startup script to run the local server
 
 import sys
 import os
+import subprocess
 
-# Add the python directory to the path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'python'))
+# Change to the project root directory
+project_root = os.path.dirname(os.path.abspath(__file__))
+os.chdir(project_root)
 
-# Import and run the server
-from server import run_server
+# Start the HTTP server from the project root
+print("🚀 Starting server from project root...")
+print(f"📁 Project directory: {project_root}")
+print("🌐 Server will be available at: http://localhost:8000")
+print("⏹️  Press Ctrl+C to stop the server")
 
-if __name__ == "__main__":
-    run_server()
+try:
+    # Use Python's built-in HTTP server
+    subprocess.run([sys.executable, "-m", "http.server", "8000"])
+except KeyboardInterrupt:
+    print("\n🛑 Server stopped by user")

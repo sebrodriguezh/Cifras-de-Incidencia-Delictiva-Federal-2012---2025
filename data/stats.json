@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c417aecd80b0dafb19baa10801a6a2a2f3a8940c285cc47a021ce73496a9b26
-size 131
+{
+  "total_registros": 13398,
+  "fecha_minima": "2012",
+  "fecha_maxima": "2025",
+  "conceptos_unicos": 5,
+  "estados_unicos": 33
+}

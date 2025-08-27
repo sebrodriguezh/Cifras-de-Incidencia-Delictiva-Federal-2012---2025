@@ -10,6 +10,8 @@
     <!-- Custom CSS Files -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/snapshots.css">
+    <!-- Leaflet CSS para mapas -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <!-- Header Section -->
@@ -143,7 +145,7 @@
             </div>
             <!-- Tabla de Datos de la Gráfica -->
             <div class="table-container">
-                <h3>Tabla 1. Incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
+                <h3>Tabla 1. Valores absolutos de incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
                 <p class="table-description">Valores agregados por concepto y año (suma de todos los meses)</p>
                 
                 <table class="data-table" id="national-concept-table">
@@ -170,7 +172,7 @@
             </div>
             <!-- Tabla de cambios porcentuales de la Gráfica -->
             <div class="table-container">
-                <h3>Tabla 1.1 Incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
+                <h3>Tabla 1.1 Variación porcentual en la incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
                 <p class="table-description">Cambios porcentuales con respecto al año anterior (enero-julio)</p>
                 
                 <table class="data-table" id="percentage-changes-table">
@@ -196,7 +198,7 @@
             </div>
             <!-- Gráfica 2 -->
             <div class="chart-container">
-                <h2>Gráfica 2. Distribución porcentual anual de la delictiva del fuero federal por concepto (2019–2025)</h2>
+                <h2>Gráfica 2. Distribución porcentual anual de la incidencia delictiva del fuero federal por concepto (2019–2025)</h2>
                 <p class="table-description">Datos reportados por el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública, enero–julio de cada año</p>
                 <!-- Grid de 7 pie charts -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin-top: 20px;">
@@ -208,7 +210,7 @@
             </div>
                     <div style="height: 300px; width: 100%;">
                         <canvas id="pieChart2021"></canvas>
-                    </div>
+            </div>
                     <div style="height: 300px; width: 100%;">
                         <canvas id="pieChart2022"></canvas>
                     </div>
@@ -225,7 +227,7 @@
             </div>
             <!-- Gráfica 3 -->
             <div class="chart-container">
-                <h2>Gráfica 3. Distribución de tipos por concepto y año (2019–2025)</h2>
+                <h2>Gráfica 3. Distribución porcentual anual de la incidencia delictiva del fuero federal por tipo (2019–2025)</h2>
                 <p class="table-description">Distribución porcentual de tipos para el concepto seleccionado</p>
                 
                 <!-- Selector de Concepto -->
@@ -263,15 +265,56 @@
             </div>
             <!-- Tabla de datos de la gráfica 3-->
             <div class="table-container">
-                <h3>Tabla 2. Incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
-                <p class="table-description">Valores agregados por concepto y año (suma de todos los meses)</p>
+                <h3>Tabla 2. Valores absolutos de la incidencia delictiva del fuero federal por tipo (2019–2025)</h3>
+                <p class="table-description">Valores absolutos por concepto y año (suma de enero-julio)</p>
             </div>
+            
+            <!-- Tabla de cambios porcentuales de la Gráfica 3 -->
+            <div class="table-container">
+                <h3>Tabla 2.1. Variación porcentual de la incidencia delictiva del fuero federal por tipos (2019–2025)</h3>
+                <p class="table-description">Cambios porcentuales con respecto al año anterior para cada tipo</p>
+            </div>
+            
+            <!-- Gráfica 4: Mapa de distribución por entidad -->
+            <div class="chart-container">
+                <h2>Gráfica 4. Distribución por entidad federativa</h2>
+                
+                <!-- Selectores de concepto y año -->
+                <div class="map-selectors">
+                    <div class="concept-selector">
+                        <label for="map-concept-selector">Selecciona el concepto a visualizar:</label>
+                        <select id="map-concept-selector">
+                            <option value="">Cargando conceptos...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="year-selector">
+                        <label for="map-year-slider">Selecciona el año: <span id="year-display">2019</span></label>
+                        <input type="range" id="map-year-slider" min="2019" max="2025" value="2019" step="1">
+                        <div class="year-labels">
+                            <span>2019</span>
+                            <span>2020</span>
+                            <span>2021</span>
+                            <span>2022</span>
+                            <span>2023</span>
+                            <span>2024</span>
+                            <span>2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="map" class="map-container"></div>
+                
+
+            </div>
+
         </section>
 
         <!-- Estatal Section -->
         <section class="content-section">
             <h2>Estatal</h2>
             <p class="section-description">Análisis estatal con evolución de rankings</p>
+            
             
             <!-- Placeholder for your content -->
             <div class="placeholder-content">
@@ -533,7 +576,7 @@
         }
 
 
-        // Función para cargar la tabla de datos nacionales
+                // Función para cargar la tabla de datos nacionales
         async function loadNationalTable() {
             try {
                 console.log('🔄 Cargando tabla de datos nacionales...');
@@ -592,7 +635,7 @@
                     '<tbody><tr><td colspan="8">Error cargando datos</td></tr></tbody>';
             }
         }
-        
+
         // ===== FUNCIÓN PARA CARGAR TABLA DE CAMBIOS PORCENTUALES =====
         
         async function loadPercentageChangesTable() {
@@ -951,14 +994,14 @@ function parseCSVToData(csvText) {
         });
         
         const tipos = Array.from(allTipos).sort();
-        
-        // Crear tabla HTML
+                
+                // Crear tabla HTML
         let tableHTML = '<thead><tr><th>Tipo</th>';
         years.forEach(year => {
             tableHTML += `<th>${year}</th>`;
-        });
-        tableHTML += '</tr></thead><tbody>';
-        
+                });
+                tableHTML += '</tr></thead><tbody>';
+                
         // Procesar cada tipo
         tipos.forEach(tipo => {
             tableHTML += '<tr>';
@@ -999,6 +1042,140 @@ function parseCSVToData(csvText) {
         }
         
         console.log('✅ Tabla de distribución de tipos creada para:', concepto);
+    }
+
+    // Función para crear la tabla de cambios porcentuales de la Gráfica 3
+    function createTypePercentageTable(concepto) {
+        if (!typeChartData || !typeChartData[concepto]) {
+            console.error('No hay datos para el concepto:', concepto);
+            return;
+        }
+        
+        const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+        const conceptData = typeChartData[concepto];
+        
+        // Obtener todos los tipos únicos para este concepto
+        const allTipos = new Set();
+        years.forEach(year => {
+            if (conceptData[year]) {
+                Object.keys(conceptData[year]).forEach(tipo => {
+                    const valor = conceptData[year][tipo];
+                    if (valor > 0 && 
+                        tipo !== 'CONCEPTO' && 
+                        tipo !== 'AÑO' &&
+                        typeof valor === 'number' &&
+                        !isNaN(valor)) {
+                        allTipos.add(tipo);
+                    }
+                });
+            }
+        });
+        
+        const tipos = Array.from(allTipos).sort();
+        
+        // Crear tabla HTML
+        let tableHTML = '<thead><tr><th>Tipo</th>';
+        years.forEach(year => {
+            tableHTML += `<th>${year}</th>`;
+        });
+        tableHTML += '</tr></thead><tbody>';
+        
+        // Procesar cada tipo
+        tipos.forEach(tipo => {
+                    tableHTML += '<tr>';
+            tableHTML += `<td>${tipo}</td>`;
+            
+            // Agregar cambios porcentuales para cada año
+            years.forEach((year, yearIndex) => {
+                if (yearIndex === 0) {
+                    // Para 2019, usar 2018 como año base si está disponible
+                    const year2018 = conceptData['2018'];
+                    const year2019 = conceptData[year];
+                    
+                    if (year2018 && year2018[tipo] && year2018[tipo] > 0 && 
+                        year2019 && year2019[tipo] && year2019[tipo] > 0) {
+                        
+                        const percentageChange = ((year2019[tipo] - year2018[tipo]) / year2018[tipo]) * 100;
+                        
+                        // Formatear cambios porcentuales con colores
+                        let cellClass = 'text-right';
+                        let displayValue = '-';
+                        
+                        if (percentageChange > 0) {
+                            cellClass += ' positive-change';
+                            displayValue = `+${percentageChange.toFixed(1)}%`;
+                        } else if (percentageChange < 0) {
+                            cellClass += ' negative-change';
+                            displayValue = `${percentageChange.toFixed(1)}%`;
+                        } else {
+                            displayValue = '0.0%';
+                        }
+                        
+                        tableHTML += `<td class="${cellClass}">${displayValue}</td>`;
+                    } else {
+                        // Si no hay datos de 2018 o 2019, mostrar guión
+                        tableHTML += '<td class="text-right">-</td>';
+                    }
+                } else {
+                    const currentYear = parseInt(year);
+                    const previousYear = currentYear - 1;
+                    const currentValue = conceptData[year] && conceptData[year][tipo] ? conceptData[year][tipo] : 0;
+                    const previousValue = conceptData[previousYear] && conceptData[previousYear][tipo] ? conceptData[previousYear][tipo] : 0;
+                    
+                    let percentageChange = 0;
+                    if (previousValue > 0) {
+                        percentageChange = ((currentValue - previousValue) / previousValue) * 100;
+                    }
+                    
+                    // Formatear cambios porcentuales con colores
+                    let cellClass = 'text-right';
+                    let displayValue = '-';
+                    
+                    if (previousValue > 0) {
+                        if (percentageChange > 0) {
+                            cellClass += ' positive-change';
+                            displayValue = `+${percentageChange.toFixed(1)}%`;
+                        } else if (percentageChange < 0) {
+                            cellClass += ' negative-change';
+                            displayValue = `${percentageChange.toFixed(1)}%`;
+                        } else {
+                            displayValue = '0.0%';
+                        }
+                    }
+                    
+                    tableHTML += `<td class="${cellClass}">${displayValue}</td>`;
+                }
+            });
+            
+            tableHTML += '</tr>';
+        });
+                
+                tableHTML += '</tbody>';
+                
+        // Buscar la tabla de la Gráfica 3 por el título
+        const tableContainers = document.querySelectorAll('.table-container');
+        let targetTable = null;
+        
+        for (let container of tableContainers) {
+            const h3 = container.querySelector('h3');
+            if (h3 && h3.textContent.includes('Tabla 2.1')) {
+                targetTable = container;
+                break;
+            }
+        }
+        
+        if (targetTable) {
+            let table = targetTable.querySelector('table');
+            if (!table) {
+                // Crear tabla si no existe
+                table = document.createElement('table');
+                table.className = 'data-table';
+                targetTable.appendChild(table);
+            }
+            table.innerHTML = tableHTML;
+        }
+        
+        console.log('✅ Tabla de cambios porcentuales creada para:', concepto);
     }
 
     // Función para crear los pie charts de tipos
@@ -1120,6 +1297,9 @@ function parseCSVToData(csvText) {
     
     // Crear también la tabla de datos
     createTypeDistributionTable(concepto);
+    
+    // Crear también la tabla de cambios porcentuales
+    createTypePercentageTable(concepto);
 }
         // ===== EVENT LISTENERS Y INICIALIZACIÓN =====
         
@@ -1138,6 +1318,12 @@ function parseCSVToData(csvText) {
             // Crear gráfica nacional
             createNationalStackedChart();
             createNationalPieCharts();
+            
+            // Crear mapa de estados
+            createEstadosMap();
+            
+            // Cargar conceptos para el mapa
+            loadAvailableConceptsForMap();
         });
         
         // Event listeners adicionales para debugging
@@ -1147,6 +1333,356 @@ function parseCSVToData(csvText) {
             });
         });
 
+        // ===== FUNCIONES PARA MAPAS =====
+        
+        // Variables globales para el mapa
+        let map = null;
+        let entidadConceptoData = null;
+        let currentConcepto = null;
+        let currentYear = 2019;
+        
+        // Función para cargar los conceptos disponibles
+        async function loadAvailableConceptsForMap() {
+            try {
+                console.log('🔄 Cargando conceptos para el mapa...');
+                
+                const response = await fetch('data/entidad_concepto_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('✅ CSV cargado, longitud:', csvText.length);
+                
+                // Parsear CSV
+                const lines = csvText.split('\n');
+                console.log('📊 Líneas en CSV:', lines.length);
+                console.log('📋 Headers:', lines[0]);
+                
+                const headers = lines[0].split(',');
+                const conceptos = [...new Set(lines.slice(1).map(line => {
+                    const values = line.split(',');
+                    return values[1]; // CONCEPTO está en la columna 1
+                }).filter(Boolean))];
+                
+                console.log('🎯 Conceptos encontrados:', conceptos);
+                
+                // Cargar datos completos
+                entidadConceptoData = parseCSVToEntidadConceptoData(csvText);
+                console.log('📊 Datos parseados:', entidadConceptoData);
+                
+                // Poblar selector
+                const selector = document.getElementById('map-concept-selector');
+                if (!selector) {
+                    console.error('❌ Selector no encontrado');
+                    return;
+                }
+                
+                selector.innerHTML = '<option value="">Selecciona un concepto</option>';
+                conceptos.forEach(concepto => {
+                    const option = document.createElement('option');
+                    option.value = concepto;
+                    option.textContent = concepto;
+                    selector.appendChild(option);
+                });
+                
+                console.log('✅ Selector poblado con', conceptos.length, 'conceptos');
+                
+                // Event listener para cambios de concepto
+                selector.addEventListener('change', function() {
+                    currentConcepto = this.value;
+                    console.log('🎯 Concepto seleccionado:', currentConcepto);
+                    if (currentConcepto) {
+                        updateMapColors(currentConcepto, currentYear);
+                    }
+                });
+                
+                // Configurar slider de año
+                const yearSlider = document.getElementById('map-year-slider');
+                const yearDisplay = document.getElementById('year-display');
+                
+                if (yearSlider && yearDisplay) {
+                    // Event listener para cambios del slider
+                    yearSlider.addEventListener('input', function() {
+                        currentYear = parseInt(this.value);
+                        yearDisplay.textContent = currentYear;
+                        
+                        if (currentConcepto) {
+                            updateMapColors(currentConcepto, currentYear);
+                        }
+                    });
+                    
+                    console.log('✅ Slider de año configurado');
+                }
+                
+            } catch (error) {
+                console.error('❌ Error cargando conceptos para mapa:', error);
+            }
+        }
+        
+        // Función para mapear nombres de entidades del CSV a los del GeoJSON
+        function mapEntidadName(csvName) {
+            const mapping = {
+                'AGUASCALIENTES': 'Aguascalientes',
+                'BAJA CALIFORNIA': 'Baja California',
+                'BAJA CALIFORNIA SUR': 'Baja California Sur',
+                'CAMPECHE': 'Campeche',
+                'COAHUILA': 'Coahuila de Zaragoza',
+                'COLIMA': 'Colima',
+                'CHIAPAS': 'Chiapas',
+                'CHIHUAHUA': 'Chihuahua',
+                'CIUDAD DE MEXICO': 'Ciudad de México',
+                'DURANGO': 'Durango',
+                'GUANAJUATO': 'Guanajuato',
+                'GUERRERO': 'Guerrero',
+                'HIDALGO': 'Hidalgo',
+                'JALISCO': 'Jalisco',
+                'MEXICO': 'México',
+                'MICHOACAN': 'Michoacán de Ocampo',
+                'MORELOS': 'Morelos',
+                'NAYARIT': 'Nayarit',
+                'NUEVO LEON': 'Nuevo León',
+                'OAXACA': 'Oaxaca',
+                'PUEBLA': 'Puebla',
+                'QUERETARO': 'Querétaro',
+                'QUINTANA ROO': 'Quintana Roo',
+                'SAN LUIS POTOSI': 'San Luis Potosí',
+                'SINALOA': 'Sinaloa',
+                'SONORA': 'Sonora',
+                'TABASCO': 'Tabasco',
+                'TAMAULIPAS': 'Tamaulipas',
+                'TLAXCALA': 'Tlaxcala',
+                'VERACRUZ': 'Veracruz de Ignacio de la Llave',
+                'YUCATAN': 'Yucatán',
+                'ZACATECAS': 'Zacatecas'
+            };
+            
+            return mapping[csvName] || csvName;
+        }
+        
+        // Función para parsear CSV de entidad-concepto
+        function parseCSVToEntidadConceptoData(csvText) {
+            const lines = csvText.split('\n');
+            const headers = lines[0].split(',');
+            const data = {};
+            
+            lines.slice(1).forEach(line => {
+                if (line.trim()) {
+                    const values = line.split(',');
+                    const entidad = values[0];
+                    const concepto = values[1];
+                    
+                    // Mapear nombre de entidad del CSV al del GeoJSON
+                    const entidadMapeada = mapEntidadName(entidad);
+                    
+                    if (!data[entidadMapeada]) data[entidadMapeada] = {};
+                    if (!data[entidadMapeada][concepto]) data[entidadMapeada][concepto] = {};
+                    
+                    // Agregar años
+                    for (let i = 2; i < headers.length; i++) {
+                        const year = headers[i];
+                        const value = parseInt(values[i]) || 0;
+                        data[entidadMapeada][concepto][year] = value;
+                    }
+                }
+            });
+            
+            return data;
+        }
+        
+        // Función para actualizar colores del mapa según el concepto y año
+        function updateMapColors(concepto, year) {
+            console.log('🔄 Actualizando colores del mapa para concepto:', concepto, 'año:', year);
+            console.log('📊 Datos disponibles:', entidadConceptoData);
+            
+            if (!map || !entidadConceptoData) {
+                console.error('❌ Mapa o datos no disponibles');
+                return;
+            }
+            
+            // Obtener todos los valores para este concepto y año específico
+            const allValues = [];
+            Object.values(entidadConceptoData).forEach(entidadData => {
+                if (entidadData[concepto] && entidadData[concepto][year]) {
+                    const value = entidadData[concepto][year];
+                    if (value > 0) allValues.push(value);
+                }
+            });
+            
+            console.log('📈 Valores encontrados para', concepto, 'en', year, ':', allValues);
+            
+            if (allValues.length === 0) {
+                console.error('❌ No hay valores para el concepto:', concepto, 'en año:', year);
+                return;
+            }
+            
+            // Calcular percentiles para la escala de colores (5 niveles)
+            allValues.sort((a, b) => a - b);
+            const q20 = allValues[Math.floor(allValues.length * 0.20)];
+            const q40 = allValues[Math.floor(allValues.length * 0.40)];
+            const q60 = allValues[Math.floor(allValues.length * 0.60)];
+            const q80 = allValues[Math.floor(allValues.length * 0.80)];
+            
+            console.log('📊 Percentiles - Q20:', q20, 'Q40:', q40, 'Q60:', q60, 'Q80:', q80);
+            
+            // Actualizar colores de los estados
+            let estadosActualizados = 0;
+            map.eachLayer(layer => {
+                if (layer.feature && layer.feature.properties) {
+                    const entidad = layer.feature.properties.NOMGEO;
+                    console.log('🗺️ Procesando entidad:', entidad);
+                    
+                    const entidadData = entidadConceptoData[entidad];
+                    
+                    if (entidadData && entidadData[concepto] && entidadData[concepto][year]) {
+                        // Usar el valor del año específico
+                        const value = entidadData[concepto][year];
+                        
+                        console.log(`   📊 ${entidad}: Año ${year} = ${value}`);
+                        
+                        // Asignar color según el valor (escala blanco a rojo con 5 niveles)
+                        let color;
+                        if (value <= q20) {
+                            color = '#ffffff'; // Blanco (muy baja incidencia)
+                        } else if (value <= q40) {
+                            color = '#ffe6e6'; // Rosa muy claro (baja incidencia)
+                        } else if (value <= q60) {
+                            color = '#ffcccc'; // Rosa claro (media-baja incidencia)
+                        } else if (value <= q80) {
+                            color = '#ff9999'; // Rosa medio (media-alta incidencia)
+                        } else {
+                            color = '#ff0000'; // Rojo (alta incidencia)
+                        }
+                        
+                        layer.setStyle({
+                            fillColor: color,
+                            fillOpacity: 0.8
+                        });
+                        
+                        // Actualizar el popup con los nuevos datos
+                        const nombre = layer.feature.properties.NOMGEO;
+                        let popupContent = `<b>${nombre}</b>`;
+                        
+                        if (entidadConceptoData && currentConcepto && currentYear) {
+                            const entidadData = entidadConceptoData[nombre];
+                            if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentYear]) {
+                                const value = entidadData[currentConcepto][currentYear];
+                                popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
+                            } else {
+                                popupContent += `<br><br><i>No hay datos disponibles para "${currentConcepto}" en ${currentYear}</i>`;
+                            }
+                        } else {
+                            popupContent += `<br><br><i>Selecciona un concepto y año para ver datos</i>`;
+                        }
+                        
+                        layer.bindPopup(popupContent);
+                        
+                        estadosActualizados++;
+                    } else {
+                        console.log(`   ⚠️ ${entidad}: No hay datos para ${concepto} en ${year}`);
+                    }
+                }
+            });
+            
+            console.log(`✅ Estados actualizados: ${estadosActualizados}`);
+        }
+        
+        // Función para crear el mapa de estados
+        function createEstadosMap() {
+            try {
+
+                
+                // Verificar que el contenedor existe
+                const mapContainer = document.getElementById('map');
+                if (!mapContainer) {
+                    console.error('❌ No se encontró el contenedor del mapa');
+                    return;
+                }
+                
+                // Crear el mapa centrado en México (sin capa base)
+                map = L.map('map', {
+                    center: [23.6345, -102.5528],
+                    zoom: 5,
+                    zoomControl: true,
+                    attributionControl: false
+                });
+                
+                // Establecer límites del mapa para que no se pueda alejar demasiado
+                map.setMaxBounds([14.5, -118.5, 32.5, -86.5]); // Límites de México
+                
+                // Cargar GeoJSON de estados
+                fetch('data/geojson/estados.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(geojsonData => {
+                        // Agregar estados al mapa
+                        const estadosLayer = L.geoJSON(geojsonData, {
+                            style: function(feature) {
+                                return {
+                                    fillColor: '#3498db',
+                                    weight: 1.5,
+                                    opacity: 1,
+                                    color: '#2c3e50',
+                                    fillOpacity: 0.8
+                                };
+                            },
+                            onEachFeature: function(feature, layer) {
+                                // Mostrar nombre del estado en popup
+                                const nombre = feature.properties.NOMGEO || 'Estado';
+                                
+                                // Crear popup con datos si están disponibles
+                                let popupContent = `<b>${nombre}</b>`;
+                                
+                                if (entidadConceptoData && currentConcepto && currentYear) {
+                                    const entidadData = entidadConceptoData[nombre];
+                                    if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentYear]) {
+                                        const value = entidadData[currentConcepto][currentYear];
+                                        popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
+                                    } else {
+                                        popupContent += `<br><br><i>No hay datos disponibles para "${currentConcepto}" en ${currentYear}</i>`;
+                                    }
+                                } else {
+                                    popupContent += `<br><br><i>Selecciona un concepto y año para ver datos</i>`;
+                                }
+                                
+                                layer.bindPopup(popupContent);
+                            }
+                        });
+                        
+                        estadosLayer.addTo(map);
+                        
+                        // Ajustar la vista del mapa para mostrar todos los estados
+                        if (estadosLayer.getBounds) {
+                            const bounds = estadosLayer.getBounds();
+                            map.fitBounds(bounds, { padding: [20, 20] });
+                        }
+                        
+                        // Forzar redibujado del mapa
+                        map.invalidateSize();
+                        
+                        // Ocultar el mensaje de carga
+                        const mapContainer = document.getElementById('map');
+                        if (mapContainer) {
+                            mapContainer.classList.add('loaded');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('❌ Error cargando GeoJSON:', error);
+                        mapContainer.innerHTML = '<p style="text-align: center; color: #d32f2f; padding: 20px;">Error cargando el mapa</p>';
+                    });
+                
+            } catch (error) {
+                console.error('❌ Error creando mapa:', error);
+            }
+        }
+
     </script>
+    
+    <!-- Leaflet JavaScript para mapas -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>

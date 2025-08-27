@@ -515,3 +515,144 @@ body {
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
+/* ===== ESTILOS PARA SELECTORES DEL MAPA ===== */
+
+.map-selectors {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.concept-selector {
+    flex: 1;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.year-selector {
+    flex: 1;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px 15px 20px 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.year-selector label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+}
+
+#year-display {
+    color: #3498db;
+    font-weight: bold;
+}
+
+#map-year-slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #dee2e6;
+    outline: none;
+    -webkit-appearance: none;
+    margin-bottom: 10px;
+}
+
+#map-year-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#map-year-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.year-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.year-labels span {
+    flex: 1;
+    text-align: center;
+}
+
+/* ===== ESTILOS PARA MAPAS ===== */
+/* 
+ * Escala de colores del mapa (5 niveles):
+ * - #ffffff (Blanco): Muy baja incidencia (Q0-Q20)
+ * - #ffe6e6 (Rosa muy claro): Baja incidencia (Q20-Q40)  
+ * - #ffcccc (Rosa claro): Media-baja incidencia (Q40-Q60)
+ * - #ff9999 (Rosa medio): Media-alta incidencia (Q60-Q80)
+ * - #ff0000 (Rojo): Alta incidencia (Q80-Q100)
+ */
+
+.map-container {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.map-container::before {
+    content: "Cargando mapa de estados...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6c757d;
+    font-style: italic;
+    font-size: 1.1rem;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.map-container.loaded::before {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Responsive para mapas */
+@media (max-width: 768px) {
+    .map-container {
+        height: 400px;
+    }
+}
+
+/* Regla adicional para ocultar mensaje de carga */
+#map.loaded::before {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+

@@ -599,14 +599,6 @@ body {
 }
 
 /* ===== ESTILOS PARA MAPAS ===== */
-/* 
- * Escala de colores del mapa (5 niveles):
- * - #ffffff (Blanco): Muy baja incidencia (Q0-Q20)
- * - #ffe6e6 (Rosa muy claro): Baja incidencia (Q20-Q40)  
- * - #ffcccc (Rosa claro): Media-baja incidencia (Q40-Q60)
- * - #ff9999 (Rosa medio): Media-alta incidencia (Q60-Q80)
- * - #ff0000 (Rojo): Alta incidencia (Q80-Q100)
- */
 
 .map-container {
     width: 100%;

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte de Incidencia Delictiva - SESNSP México</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <!-- Custom CSS Files -->
     <link rel="stylesheet" href="css/main.css">
@@ -128,12 +130,15 @@
 
         <!-- Nacional Section -->
         <section class="content-section">
-            <h2>Nacional</h2>
-            <p class="section-description">Análisis de la evolución delictiva a nivel nacional</p>
+            <h2>Sección: Nacional</h2>
+            <p class="section-description">Análisis a nivel nacional</p>
             
             <!-- Placeholder for your content -->
-            <div class="placeholder-content">
-                <p>Tu contenido aquí...</p>
+            <div class="chart-container">
+                <h2>Gráfica 1. Análisis nacional por concepto y año</h2>>
+                <div style="height: 500px; width: 100%;">
+                    <canvas id="nationalChart"></canvas>
+                </div>
             </div>
         </section>
 
@@ -305,6 +310,114 @@
             section.addEventListener('click', function() {
                 console.log('Section clicked:', this.querySelector('h2').textContent);
             });
+        });
+
+        // Función para crear el stacked chart nacional
+        function createNationalStackedChart() {
+            // Obtener el canvas
+            const ctx = document.getElementById('nationalChart').getContext('2d');
+            
+            // Datos del CSV (esto se cargará dinámicamente)
+            const chartData = {
+                labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: []
+            };
+            
+            // Colores para los conceptos
+            const colors = [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                '#FF9F40', '#FF6384', '#C9CBCF', '#4BC0C0', '#FF6384'
+            ];
+            
+            // Cargar datos del CSV
+            fetch('data/national_concept_analysis.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    const lines = csvText.split('\n');
+                    const headers = lines[0].split(',');
+                    const years = headers.slice(1); // Años (2019, 2020, etc.)
+                    
+                    // Procesar cada línea (concepto)
+                    for (let i = 1; i < lines.length; i++) {
+                        if (lines[i].trim()) {
+                            const values = lines[i].split(',');
+                            const concepto = values[0];
+                            const data = values.slice(1).map(val => parseInt(val) || 0);
+                            
+                            // Crear dataset para este concepto
+                            chartData.datasets.push({
+                                label: concepto,
+                                data: data,
+                                backgroundColor: colors[i % colors.length],
+                                borderColor: colors[i % colors.length],
+                                borderWidth: 1,
+                                stack: 'Stack 0' // Agrupa en la misma barra
+                            });
+                        }
+                    }
+                    
+                    // Crear el chart
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: chartData,
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom',
+                                    labels: {
+                                        usePointStyle: true,
+                                        padding: 20
+                                    }
+                                },
+                                tooltip: {
+                                    mode: 'index',
+                                    intersect: false,
+                                    callbacks: {
+                                        label: function(context) {
+                                            return context.dataset.label + ': ' + context.parsed.y.toLocaleString() + ' casos';
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    stacked: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Año'
+                                    }
+                                },
+                                y: {
+                                    stacked: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Número de casos'
+                                    },
+                                    ticks: {
+                                        callback: function(value) {
+                                            return value.toLocaleString();
+                                        }
+                                    }
+                                }
+                            },
+                            interaction: {
+                                mode: 'nearest',
+                                axis: 'x',
+                                intersect: false
+                            }
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error cargando datos:', error);
+                });
+        }
+
+        // Llamar la función cuando se cargue la página
+        document.addEventListener('DOMContentLoaded', function() {
+            createNationalStackedChart();
         });
     </script>
 </body>

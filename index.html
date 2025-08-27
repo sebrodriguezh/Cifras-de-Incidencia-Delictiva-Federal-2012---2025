@@ -1291,9 +1291,7 @@ function parseCSVToData(csvText) {
                 }
             });
             
-                console.log('✅ Pie charts de tipos creados para:', concepto);
-    console.log('🎨 Tipos encontrados:', Array.from(allTipos));
-    console.log('🎨 Colores asignados:', typeColors);
+                            // Pie charts de tipos creados exitosamente
     
     // Crear también la tabla de datos
     createTypeDistributionTable(concepto);
@@ -1305,7 +1303,7 @@ function parseCSVToData(csvText) {
         
         // Cargar todos los datos cuando la página se cargue
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 Página cargada, iniciando carga de datos...');
+            // Página cargada, iniciando carga de datos
             
             // Cargar estadísticas
             loadOriginalStats();
@@ -1329,7 +1327,7 @@ function parseCSVToData(csvText) {
         // Event listeners adicionales para debugging
         document.querySelectorAll('.content-section').forEach(section => {
             section.addEventListener('click', function() {
-                console.log('Section clicked:', this.querySelector('h2').textContent);
+                // Sección clickeada
             });
         });
 
@@ -1344,37 +1342,27 @@ function parseCSVToData(csvText) {
         // Función para cargar los conceptos disponibles
         async function loadAvailableConceptsForMap() {
             try {
-                console.log('🔄 Cargando conceptos para el mapa...');
-                
                 const response = await fetch('data/entidad_concepto_analysis.csv');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
                 const csvText = await response.text();
-                console.log('✅ CSV cargado, longitud:', csvText.length);
                 
                 // Parsear CSV
                 const lines = csvText.split('\n');
-                console.log('📊 Líneas en CSV:', lines.length);
-                console.log('📋 Headers:', lines[0]);
-                
                 const headers = lines[0].split(',');
                 const conceptos = [...new Set(lines.slice(1).map(line => {
                     const values = line.split(',');
                     return values[1]; // CONCEPTO está en la columna 1
                 }).filter(Boolean))];
                 
-                console.log('🎯 Conceptos encontrados:', conceptos);
-                
                 // Cargar datos completos
                 entidadConceptoData = parseCSVToEntidadConceptoData(csvText);
-                console.log('📊 Datos parseados:', entidadConceptoData);
                 
                 // Poblar selector
                 const selector = document.getElementById('map-concept-selector');
                 if (!selector) {
-                    console.error('❌ Selector no encontrado');
                     return;
                 }
                 
@@ -1386,12 +1374,9 @@ function parseCSVToData(csvText) {
                     selector.appendChild(option);
                 });
                 
-                console.log('✅ Selector poblado con', conceptos.length, 'conceptos');
-                
                 // Event listener para cambios de concepto
                 selector.addEventListener('change', function() {
                     currentConcepto = this.value;
-                    console.log('🎯 Concepto seleccionado:', currentConcepto);
                     if (currentConcepto) {
                         updateMapColors(currentConcepto, currentYear);
                     }
@@ -1411,12 +1396,10 @@ function parseCSVToData(csvText) {
                             updateMapColors(currentConcepto, currentYear);
                         }
                     });
-                    
-                    console.log('✅ Slider de año configurado');
                 }
                 
             } catch (error) {
-                console.error('❌ Error cargando conceptos para mapa:', error);
+                // Error silencioso
             }
         }
         
@@ -1492,11 +1475,7 @@ function parseCSVToData(csvText) {
         
         // Función para actualizar colores del mapa según el concepto y año
         function updateMapColors(concepto, year) {
-            console.log('🔄 Actualizando colores del mapa para concepto:', concepto, 'año:', year);
-            console.log('📊 Datos disponibles:', entidadConceptoData);
-            
             if (!map || !entidadConceptoData) {
-                console.error('❌ Mapa o datos no disponibles');
                 return;
             }
             
@@ -1509,10 +1488,7 @@ function parseCSVToData(csvText) {
                 }
             });
             
-            console.log('📈 Valores encontrados para', concepto, 'en', year, ':', allValues);
-            
             if (allValues.length === 0) {
-                console.error('❌ No hay valores para el concepto:', concepto, 'en año:', year);
                 return;
             }
             
@@ -1523,22 +1499,15 @@ function parseCSVToData(csvText) {
             const q60 = allValues[Math.floor(allValues.length * 0.60)];
             const q80 = allValues[Math.floor(allValues.length * 0.80)];
             
-            console.log('📊 Percentiles - Q20:', q20, 'Q40:', q40, 'Q60:', q60, 'Q80:', q80);
-            
             // Actualizar colores de los estados
-            let estadosActualizados = 0;
             map.eachLayer(layer => {
                 if (layer.feature && layer.feature.properties) {
                     const entidad = layer.feature.properties.NOMGEO;
-                    console.log('🗺️ Procesando entidad:', entidad);
-                    
                     const entidadData = entidadConceptoData[entidad];
                     
                     if (entidadData && entidadData[concepto] && entidadData[concepto][year]) {
                         // Usar el valor del año específico
                         const value = entidadData[concepto][year];
-                        
-                        console.log(`   📊 ${entidad}: Año ${year} = ${value}`);
                         
                         // Asignar color según el valor (escala blanco a rojo con 5 niveles)
                         let color;
@@ -1576,15 +1545,9 @@ function parseCSVToData(csvText) {
                         }
                         
                         layer.bindPopup(popupContent);
-                        
-                        estadosActualizados++;
-                    } else {
-                        console.log(`   ⚠️ ${entidad}: No hay datos para ${concepto} en ${year}`);
                     }
                 }
             });
-            
-            console.log(`✅ Estados actualizados: ${estadosActualizados}`);
         }
         
         // Función para crear el mapa de estados
@@ -1592,92 +1555,90 @@ function parseCSVToData(csvText) {
             try {
 
                 
-                // Verificar que el contenedor existe
-                const mapContainer = document.getElementById('map');
-                if (!mapContainer) {
-                    console.error('❌ No se encontró el contenedor del mapa');
-                    return;
-                }
-                
-                // Crear el mapa centrado en México (sin capa base)
-                map = L.map('map', {
-                    center: [23.6345, -102.5528],
-                    zoom: 5,
-                    zoomControl: true,
-                    attributionControl: false
-                });
-                
-                // Establecer límites del mapa para que no se pueda alejar demasiado
-                map.setMaxBounds([14.5, -118.5, 32.5, -86.5]); // Límites de México
-                
-                // Cargar GeoJSON de estados
-                fetch('data/geojson/estados.json')
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
+                                        // Verificar que el contenedor existe
+                        const mapContainer = document.getElementById('map');
+                        if (!mapContainer) {
+                            return;
                         }
-                        return response.json();
-                    })
-                    .then(geojsonData => {
-                        // Agregar estados al mapa
-                        const estadosLayer = L.geoJSON(geojsonData, {
-                            style: function(feature) {
-                                return {
-                                    fillColor: '#3498db',
-                                    weight: 1.5,
-                                    opacity: 1,
-                                    color: '#2c3e50',
-                                    fillOpacity: 0.8
-                                };
-                            },
-                            onEachFeature: function(feature, layer) {
-                                // Mostrar nombre del estado en popup
-                                const nombre = feature.properties.NOMGEO || 'Estado';
-                                
-                                // Crear popup con datos si están disponibles
-                                let popupContent = `<b>${nombre}</b>`;
-                                
-                                if (entidadConceptoData && currentConcepto && currentYear) {
-                                    const entidadData = entidadConceptoData[nombre];
-                                    if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentYear]) {
-                                        const value = entidadData[currentConcepto][currentYear];
-                                        popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
-                                    } else {
-                                        popupContent += `<br><br><i>No hay datos disponibles para "${currentConcepto}" en ${currentYear}</i>`;
-                                    }
-                                } else {
-                                    popupContent += `<br><br><i>Selecciona un concepto y año para ver datos</i>`;
-                                }
-                                
-                                layer.bindPopup(popupContent);
-                            }
+                        
+                        // Crear el mapa centrado en México (sin capa base)
+                        map = L.map('map', {
+                            center: [23.6345, -102.5528],
+                            zoom: 5,
+                            zoomControl: true,
+                            attributionControl: false
                         });
                         
-                        estadosLayer.addTo(map);
+                        // Establecer límites del mapa para que no se pueda alejar demasiado
+                        map.setMaxBounds([14.5, -118.5, 32.5, -86.5]); // Límites de México
                         
-                        // Ajustar la vista del mapa para mostrar todos los estados
-                        if (estadosLayer.getBounds) {
-                            const bounds = estadosLayer.getBounds();
-                            map.fitBounds(bounds, { padding: [20, 20] });
-                        }
+                        // Cargar GeoJSON de estados
+                        fetch('data/geojson/estados.json')
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(`HTTP error! status: ${response.status}`);
+                                }
+                                return response.json();
+                            })
+                            .then(geojsonData => {
+                                // Agregar estados al mapa
+                                const estadosLayer = L.geoJSON(geojsonData, {
+                                    style: function(feature) {
+                                        return {
+                                            fillColor: '#3498db',
+                                            weight: 1.5,
+                                            opacity: 1,
+                                            color: '#2c3e50',
+                                            fillOpacity: 0.8
+                                        };
+                                    },
+                                    onEachFeature: function(feature, layer) {
+                                        // Mostrar nombre del estado en popup
+                                        const nombre = feature.properties.NOMGEO || 'Estado';
+                                        
+                                        // Crear popup con datos si están disponibles
+                                        let popupContent = `<b>${nombre}</b>`;
+                                        
+                                        if (entidadConceptoData && currentConcepto && currentYear) {
+                                            const entidadData = entidadConceptoData[nombre];
+                                            if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentYear]) {
+                                                const value = entidadData[currentConcepto][currentYear];
+                                                popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
+                                            } else {
+                                                popupContent += `<br><br><i>No hay datos disponibles para "${currentConcepto}" en ${currentYear}</i>`;
+                                            }
+                                        } else {
+                                            popupContent += `<br><br><i>Selecciona un concepto y año para ver datos</i>`;
+                                        }
+                                        
+                                        layer.bindPopup(popupContent);
+                                    }
+                                });
+                                
+                                estadosLayer.addTo(map);
+                                
+                                // Ajustar la vista del mapa para mostrar todos los estados
+                                if (estadosLayer.getBounds) {
+                                    const bounds = estadosLayer.getBounds();
+                                    map.fitBounds(bounds, { padding: [20, 20] });
+                                }
+                                
+                                // Forzar redibujado del mapa
+                                map.invalidateSize();
+                                
+                                // Ocultar el mensaje de carga
+                                const mapContainer = document.getElementById('map');
+                                if (mapContainer) {
+                                    mapContainer.classList.add('loaded');
+                                }
+                            })
+                            .catch(error => {
+                                mapContainer.innerHTML = '<p style="text-align: center; color: #d32f2f; padding: 20px;">Error cargando el mapa</p>';
+                            });
                         
-                        // Forzar redibujado del mapa
-                        map.invalidateSize();
-                        
-                        // Ocultar el mensaje de carga
-                        const mapContainer = document.getElementById('map');
-                        if (mapContainer) {
-                            mapContainer.classList.add('loaded');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('❌ Error cargando GeoJSON:', error);
-                        mapContainer.innerHTML = '<p style="text-align: center; color: #d32f2f; padding: 20px;">Error cargando el mapa</p>';
-                    });
-                
-            } catch (error) {
-                console.error('❌ Error creando mapa:', error);
-            }
+                    } catch (error) {
+                        // Error silencioso
+                    }
         }
 
     </script>

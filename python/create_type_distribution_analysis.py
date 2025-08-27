@@ -62,6 +62,14 @@ def create_type_distribution_analysis():
     final_columns = ['CONCEPTO', 'AÑO'] + tipos_ordered
     result_df = result_df[final_columns]
     
+    # Llenar valores NaN con 0 para evitar celdas vacías
+    result_df = result_df.fillna(0)
+    
+    # Convertir todas las columnas numéricas a enteros
+    for col in result_df.columns:
+        if col not in ['CONCEPTO', 'AÑO']:
+            result_df[col] = result_df[col].astype(int)
+    
     # Guardar CSV
     output_file = 'data/type_distribution_analysis.csv'
     result_df.to_csv(output_file, index=False)

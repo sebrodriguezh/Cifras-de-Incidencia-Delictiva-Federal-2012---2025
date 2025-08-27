@@ -202,10 +202,10 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin-top: 20px;">
                     <div style="height: 300px; width: 100%;">
                         <canvas id="pieChart2019"></canvas>
-                    </div>
+                </div>
                     <div style="height: 300px; width: 100%;">
                         <canvas id="pieChart2020"></canvas>
-                    </div>
+            </div>
                     <div style="height: 300px; width: 100%;">
                         <canvas id="pieChart2021"></canvas>
                     </div>
@@ -807,54 +807,97 @@
                 // Cargar datos completos
                 typeChartData = parseCSVToData(csvText);
                 
-                // Event listener para cambios en el selector
-                select.addEventListener('change', function() {
-                    currentConcept = this.value;
-                    if (currentConcept) {
-                        createTypePieCharts(currentConcept);
-                        document.getElementById('type-charts-container').style.display = 'block';
-                    } else {
-                        document.getElementById('type-charts-container').style.display = 'none';
-                    }
-                });
-                
-                console.log('✅ Conceptos cargados:', Array.from(concepts));
+                        // Event listener para cambios en el selector
+        select.addEventListener('change', function() {
+            currentConcept = this.value;
+            if (currentConcept) {
+                createTypePieCharts(currentConcept);
+                document.getElementById('type-charts-container').style.display = 'block';
+            } else {
+                document.getElementById('type-charts-container').style.display = 'none';
+            }
+        });
                 
             } catch (error) {
                 console.error('❌ Error cargando conceptos:', error);
             }
         }
 
-        // Función para parsear CSV a datos estructurados
-        function parseCSVToData(csvText) {
-            const lines = csvText.split('\n');
-            const headers = lines[0].split(',');
+        // Función para parsear CSV a datos estructurados CORREGIDA
+function parseCSVToData(csvText) {
+    const lines = csvText.split('\n');
+    const headers = [];
+    
+    // Parsear headers manualmente para manejar comillas correctamente
+    const firstLine = lines[0];
+    let currentHeader = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < firstLine.length; i++) {
+        const char = firstLine[i];
+        
+        if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            headers.push(currentHeader.trim());
+            currentHeader = '';
+        } else {
+            currentHeader += char;
+        }
+    }
+    headers.push(currentHeader.trim()); // Último header
+    
+    const data = {};
+    
+    for (let i = 1; i < lines.length; i++) {
+        if (lines[i].trim()) {
+            // Parsear valores de la misma manera para manejar comillas
+            const values = [];
+            let currentValue = '';
+            let inQuotes = false;
             
-            const data = {};
-            
-            for (let i = 1; i < lines.length; i++) {
-                if (lines[i].trim()) {
-                    const values = lines[i].split(',');
-                    const concepto = values[0];
-                    const año = values[1];
-                    
-                    if (!data[concepto]) {
-                        data[concepto] = {};
-                    }
-                    
-                    data[concepto][año] = {};
-                    
-                    // Agregar datos de tipos (columnas 2 en adelante)
-                    for (let j = 2; j < headers.length; j++) {
-                        const tipo = headers[j];
-                        const valor = parseInt(values[j]) || 0;
-                        data[concepto][año][tipo] = valor;
-                    }
+            for (let j = 0; j < lines[i].length; j++) {
+                const char = lines[i][j];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    values.push(currentValue.trim());
+                    currentValue = '';
+                } else {
+                    currentValue += char;
                 }
             }
+            values.push(currentValue.trim()); // Último valor
             
-            return data;
+            const concepto = values[0];
+            const año = values[1];
+            
+            if (!data[concepto]) {
+                data[concepto] = {};
+            }
+            
+            data[concepto][año] = {};
+            
+            // Agregar datos de tipos (columnas 2 en adelante)
+            // El CSV tiene columnas fijas para todos los conceptos
+            for (let j = 2; j < headers.length; j++) {
+                const tipo = headers[j];
+                // Solo procesar si es un tipo válido (no CONCEPTO ni AÑO)
+                if (tipo !== 'CONCEPTO' && tipo !== 'AÑO') {
+                    // Manejar valores vacíos correctamente
+                    let valor = 0;
+                    if (values[j] && values[j].trim() !== '') {
+                        valor = parseInt(values[j]) || 0;
+                    }
+                    data[concepto][año][tipo] = valor;
+                }
+            }
         }
+    }
+    
+    return data;
+}
 
         // Función para generar colores flexibles únicos basados en los tipos disponibles
         function generateFlexibleColors(tipos) {
@@ -889,11 +932,18 @@
         const conceptData = typeChartData[concepto];
         
         // Obtener todos los tipos únicos para este concepto
+        // El CSV tiene columnas fijas, pero solo mostramos las que tienen datos reales para este concepto
         const allTipos = new Set();
         years.forEach(year => {
             if (conceptData[year]) {
                 Object.keys(conceptData[year]).forEach(tipo => {
-                    if (conceptData[year][tipo] > 0) {
+                    const valor = conceptData[year][tipo];
+                    // Solo incluir tipos que realmente tienen valores > 0 para este concepto específico
+                    if (valor > 0 && 
+                        tipo !== 'CONCEPTO' && 
+                        tipo !== 'AÑO' &&
+                        typeof valor === 'number' &&
+                        !isNaN(valor)) {
                         allTipos.add(tipo);
                     }
                 });
@@ -989,10 +1039,20 @@
                         window[`typeChart${year}`].destroy();
                     }
                     
-                    // Preparar datos para este año
-                    const yearData = conceptData[year];
-                    const tipos = Object.keys(yearData).filter(tipo => yearData[tipo] > 0);
-                    const valores = tipos.map(tipo => yearData[tipo]);
+                                // Preparar datos para este año
+            const yearData = conceptData[year];
+            // Filtrar solo tipos con valores > 0 para este concepto específico
+            // El CSV tiene columnas fijas, pero solo mostramos las que tienen datos reales
+            const tipos = Object.keys(yearData).filter(tipo => {
+                const valor = yearData[tipo];
+                // Solo incluir tipos que realmente tienen valores > 0 para este concepto
+                return valor > 0 && 
+                       tipo !== 'CONCEPTO' && 
+                       tipo !== 'AÑO' &&
+                       typeof valor === 'number' &&
+                       !isNaN(valor);
+            });
+            const valores = tipos.map(tipo => yearData[tipo]);
                     
                     // Preparar colores usando el mapeo flexible
                     const backgroundColor = tipos.map(tipo => typeColors[tipo]);

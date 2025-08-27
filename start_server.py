@@ -19,7 +19,7 @@ print("🌐 Server will be available at: http://localhost:8000")
 print("⏹️  Press Ctrl+C to stop the server")
 
 try:
-    # Use Python's built-in HTTP server
-    subprocess.run([sys.executable, "-m", "http.server", "8000"])
+    # Use Python's built-in HTTP server from project root
+    subprocess.run([sys.executable, "-m", "http.server", "8000", "--directory", project_root])
 except KeyboardInterrupt:
     print("\n🛑 Server stopped by user")

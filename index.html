@@ -133,9 +133,9 @@
             <h2>Sección: Nacional</h2>
             <p class="section-description">Análisis a nivel nacional</p>
             
-            <!-- Placeholder for your content -->
+            <!-- Gráfica 1 -->
             <div class="chart-container">
-                <h2>Gráfica 1. Incidencia delictiva del fuero federal por concepto (2019–2025)</h2>
+                <h2>Gráfica 1. Evolución temporal de la incidencia delictiva del fuero federal por concepto (2019–2025)</h2>
                 <p class="table-description">Datos reportados por el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública, enero–julio de cada año</p>
                 <div style="height: 500px; width: 100%;">
                     <canvas id="nationalChart"></canvas>
@@ -170,7 +170,7 @@
             </div>
             <!-- Tabla de cambios porcentuales de la Gráfica -->
             <div class="table-container">
-                <h3>Tabla 2. Incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
+                <h3>Tabla 1.1 Incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
                 <p class="table-description">Cambios porcentuales con respecto al año anterior (enero-julio)</p>
                 
                 <table class="data-table" id="percentage-changes-table">
@@ -193,6 +193,78 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <!-- Gráfica 2 -->
+            <div class="chart-container">
+                <h2>Gráfica 2. Distribución porcentual anual de la delictiva del fuero federal por concepto (2019–2025)</h2>
+                <p class="table-description">Datos reportados por el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública, enero–julio de cada año</p>
+                <!-- Grid de 7 pie charts -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; margin-top: 20px;">
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2019"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2020"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2021"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2022"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2023"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2024"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="pieChart2025"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Gráfica 3 -->
+            <div class="chart-container">
+                <h2>Gráfica 3. Distribución de tipos por concepto y año (2019–2025)</h2>
+                <p class="table-description">Distribución porcentual de tipos para el concepto seleccionado</p>
+                
+                <!-- Selector de Concepto -->
+                <div class="concept-selector">
+                    <label for="concept-select">Selecciona un concepto:</label>
+                    <select id="concept-select">
+                        <option value="">Cargando conceptos...</option>
+                    </select>
+                </div>
+                
+                <!-- Grid de 7 pie charts -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2019"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2020"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2021"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2022"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2023"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2024"></canvas>
+                    </div>
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="typePieChart2025"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Tabla de datos de la gráfica 3-->
+            <div class="table-container">
+                <h3>Tabla 2. Incidencia delictiva del fuero federal por concepto (2019–2025)</h3>
+                <p class="table-description">Valores agregados por concepto y año (suma de todos los meses)</p>
             </div>
         </section>
 
@@ -362,7 +434,16 @@
                 datasets: []
             };
             
-            // Colores para los conceptos
+            // Colores consistentes para cada concepto
+            const conceptColors = {
+                'OTRAS LEYES Y CODIGOS': '#FF6384',
+                'OTROS DELITOS': '#36A2EB', 
+                'CONTRA LA SALUD': '#FFCE56',
+                'LEY GENERAL DE SALUD (L.G.S.)': '#4BC0C0',
+                'LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)': '#FF9F40'
+            };
+            
+            // Colores de respaldo
             const colors = [
                 '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
                 '#FF9F40', '#FF6384', '#C9CBCF', '#4BC0C0', '#FF6384'
@@ -387,8 +468,8 @@
                             chartData.datasets.push({
                                 label: concepto,
                                 data: data,
-                                backgroundColor: colors[i % colors.length],
-                                borderColor: colors[i % colors.length],
+                                backgroundColor: conceptColors[concepto] || colors[i % colors.length],
+                                borderColor: conceptColors[concepto] || colors[i % colors.length],
                                 borderWidth: 1,
                             });
                         }
@@ -450,65 +531,7 @@
                     console.error('Error cargando datos:', error);
                 });
         }
-                // Función para cargar la tabla de datos nacionales
-        async function loadNationalTable() {
-            try {
-                console.log('🔄 Cargando tabla de datos nacionales...');
-                const response = await fetch('data/national_concept_analysis.csv');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const csvText = await response.text();
-                const rows = csvText.split('\n');
-                const headers = rows[0].split(',');
-                
-                // Crear tabla HTML
-                let tableHTML = '<thead><tr>';
-                headers.forEach(header => {
-                    tableHTML += `<th>${header}</th>`;
-                });
-                tableHTML += '<th>Total</th></tr></thead><tbody>';
-                
-                // Procesar filas de datos (saltar la primera que son headers)
-                for (let i = 1; i < rows.length; i++) {
-                    if (rows[i].trim() === '') continue; // Saltar filas vacías
-                    
-                    const values = rows[i].split(',');
-                    if (values.length < headers.length) continue; // Saltar filas incompletas
-                    
-                    tableHTML += '<tr>';
-                    
-                    // Primera columna (Concepto)
-                    tableHTML += `<td>${values[0]}</td>`;
-                    
-                    // Columnas de años (convertir a números y formatear)
-                    let total = 0;
-                    for (let j = 1; j < values.length; j++) {
-                        const value = parseInt(values[j]) || 0;
-                        total += value;
-                        tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
-                    }
-                    
-                    // Columna de total
-                    tableHTML += `<td class="text-right total-cell"><strong>${total.toLocaleString()}</strong></td>`;
-                    
-                    tableHTML += '</tr>';
-                }
-                
-                tableHTML += '</tbody>';
-                
-                // Actualizar la tabla
-                document.getElementById('national-concept-table').innerHTML = tableHTML;
-                console.log('✅ Tabla nacional actualizada');
-                
-            } catch (error) {
-                console.error('❌ Error cargando tabla nacional:', error);
-                document.getElementById('national-concept-table').innerHTML = 
-                    '<tbody><tr><td colspan="8">Error cargando datos</td></tr></tbody>';
-            }
-        }
+
 
         // Función para cargar la tabla de datos nacionales
         async function loadNationalTable() {
@@ -640,7 +663,404 @@
                     '<tbody><tr><td colspan="7">Error cargando datos</td></tr></tbody>';
             }
         }
+        // Función para crear 7 pie charts nacionales (uno por año)
+        function createNationalPieCharts() {
+            // Colores consistentes para cada concepto (mismos que en la gráfica 1)
+            const conceptColors = {
+                'OTRAS LEYES Y CODIGOS': '#FF6384',
+                'OTROS DELITOS': '#36A2EB', 
+                'CONTRA LA SALUD': '#FFCE56',
+                'LEY GENERAL DE SALUD (L.G.S.)': '#4BC0C0',
+                'LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)': '#FF9F40'
+            };
+            
+            // Colores de respaldo
+            const colors = [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                '#FF9F40', '#FF6384', '#C9CBCF', '#4BC0C0', '#FF6384'
+            ];
+            
+            // Años disponibles
+            const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            
+            // Cargar datos del CSV
+            fetch('data/national_concept_analysis.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    const lines = csvText.split('\n');
+                    const headers = lines[0].split(',');
+                    
+                    // Procesar cada línea (concepto)
+                    const conceptData = [];
+                    for (let i = 1; i < lines.length; i++) {
+                        if (lines[i].trim()) {
+                            const values = lines[i].split(',');
+                            const concepto = values[0];
+                            const data = values.slice(1).map(val => parseInt(val) || 0);
+                            
+                            conceptData.push({
+                                concepto: concepto,
+                                data: data
+                            });
+                        }
+                    }
+                    
+                    // Crear un pie chart para cada año
+                    years.forEach((year, yearIndex) => {
+                        const canvasId = `pieChart${year}`;
+                        const canvas = document.getElementById(canvasId);
+                        
+                        if (canvas) {
+                            const ctx = canvas.getContext('2d');
+                            
+                            // Preparar datos para este año específico
+                            const chartData = {
+                                labels: conceptData.map(item => item.concepto),
+                                datasets: [{
+                                    data: conceptData.map(item => item.data[yearIndex]),
+                                    backgroundColor: conceptData.map(item => conceptColors[item.concepto] || colors[conceptData.indexOf(item) % colors.length]),
+                                    borderColor: conceptData.map(item => conceptColors[item.concepto] || colors[conceptData.indexOf(item) % colors.length]),
+                                    borderWidth: 2,
+                                    hoverOffset: 4
+                                }]
+                            };
+                            
+                            // Crear el donut chart para este año
+                            new Chart(ctx, {
+                                type: 'doughnut',
+                                data: chartData,
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    cutout: '40%',  // Tamaño del agujero central
+                                    plugins: {
+                                        title: {
+                                            display: true,
+                                            text: `Año ${year}`,
+                                            font: {
+                                                size: 16
+                                            }
+                                        },
+                                        legend: {
+                                            display: false
+                                        },
+                                        tooltip: {
+                                            callbacks: {
+                                                label: function(context) {
+                                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                                    const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                                    const shortLabel = context.label.length > 30 ? 
+                                                        context.label.substring(0, 15) + '...' : 
+                                                        context.label;
+                                                    return shortLabel + ': ' + context.parsed.toLocaleString() + ' casos (' + percentage + '%)';
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error cargando datos:', error);
+                });
+        }
+
+        // ===== GRÁFICA 3: DISTRIBUCIÓN DE TIPOS POR CONCEPTO =====
+
+        // Variables globales para la gráfica 3
+        let typeChartData = null;
+        let currentConcept = '';
+
+        // Función para cargar los conceptos disponibles
+        async function loadAvailableConcepts() {
+            try {
+                const response = await fetch('data/type_distribution_analysis.csv');
+                const csvText = await response.text();
+                
+                const lines = csvText.split('\n');
+                const headers = lines[0].split(',');
+                
+                // Obtener conceptos únicos
+                const concepts = new Set();
+                for (let i = 1; i < lines.length; i++) {
+                    if (lines[i].trim()) {
+                        const values = lines[i].split(',');
+                        if (values.length > 1) {
+                            concepts.add(values[0]); // Primera columna es CONCEPTO
+                        }
+                    }
+                }
+                
+                // Llenar el selector
+                const select = document.getElementById('concept-select');
+                select.innerHTML = '<option value="">Selecciona un concepto...</option>';
+                
+                Array.from(concepts).sort().forEach(concept => {
+                    const option = document.createElement('option');
+                    option.value = concept;
+                    option.textContent = concept;
+                    select.appendChild(option);
+                });
+                
+                // Cargar datos completos
+                typeChartData = parseCSVToData(csvText);
+                
+                // Event listener para cambios en el selector
+                select.addEventListener('change', function() {
+                    currentConcept = this.value;
+                    if (currentConcept) {
+                        createTypePieCharts(currentConcept);
+                        document.getElementById('type-charts-container').style.display = 'block';
+                    } else {
+                        document.getElementById('type-charts-container').style.display = 'none';
+                    }
+                });
+                
+                console.log('✅ Conceptos cargados:', Array.from(concepts));
+                
+            } catch (error) {
+                console.error('❌ Error cargando conceptos:', error);
+            }
+        }
+
+        // Función para parsear CSV a datos estructurados
+        function parseCSVToData(csvText) {
+            const lines = csvText.split('\n');
+            const headers = lines[0].split(',');
+            
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                if (lines[i].trim()) {
+                    const values = lines[i].split(',');
+                    const concepto = values[0];
+                    const año = values[1];
+                    
+                    if (!data[concepto]) {
+                        data[concepto] = {};
+                    }
+                    
+                    data[concepto][año] = {};
+                    
+                    // Agregar datos de tipos (columnas 2 en adelante)
+                    for (let j = 2; j < headers.length; j++) {
+                        const tipo = headers[j];
+                        const valor = parseInt(values[j]) || 0;
+                        data[concepto][año][tipo] = valor;
+                    }
+                }
+            }
+            
+            return data;
+        }
+
+        // Función para generar colores flexibles únicos basados en los tipos disponibles
+        function generateFlexibleColors(tipos) {
+            // Paleta de colores únicos y visualmente distintos
+            const uniqueColors = [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF',
+                '#FF9F40', '#8AC249', '#FF6B6B', '#4ECDC4', '#45B7D1',
+                '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F',
+                '#BB8FCE', '#85C1E9', '#F8C471', '#82E0AA', '#F1948A',
+                '#D7BDE2', '#A9CCE3', '#F5B7B1', '#D2B4DE', '#AED6F1'
+            ];
+            
+            // Crear mapeo de colores únicos para cada tipo
+            const colorMap = {};
+            
+            tipos.forEach((tipo, index) => {
+                // Asignar color único directamente por índice
+                colorMap[tipo] = uniqueColors[index];
+            });
+            
+                    return colorMap;
+    }
+
+    // Función para crear la tabla de datos de la Gráfica 3
+    function createTypeDistributionTable(concepto) {
+        if (!typeChartData || !typeChartData[concepto]) {
+            console.error('No hay datos para el concepto:', concepto);
+            return;
+        }
         
+        const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+        const conceptData = typeChartData[concepto];
+        
+        // Obtener todos los tipos únicos para este concepto
+        const allTipos = new Set();
+        years.forEach(year => {
+            if (conceptData[year]) {
+                Object.keys(conceptData[year]).forEach(tipo => {
+                    if (conceptData[year][tipo] > 0) {
+                        allTipos.add(tipo);
+                    }
+                });
+            }
+        });
+        
+        const tipos = Array.from(allTipos).sort();
+        
+        // Crear tabla HTML
+        let tableHTML = '<thead><tr><th>Tipo</th>';
+        years.forEach(year => {
+            tableHTML += `<th>${year}</th>`;
+        });
+        tableHTML += '</tr></thead><tbody>';
+        
+        // Procesar cada tipo
+        tipos.forEach(tipo => {
+            tableHTML += '<tr>';
+            tableHTML += `<td>${tipo}</td>`;
+            
+            // Agregar valores para cada año
+            years.forEach(year => {
+                const value = conceptData[year] && conceptData[year][tipo] ? conceptData[year][tipo] : 0;
+                tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
+            });
+            
+            tableHTML += '</tr>';
+        });
+        
+        tableHTML += '</tbody>';
+        
+        // Buscar la tabla de la Gráfica 3 por el título
+        const tableContainers = document.querySelectorAll('.table-container');
+        let targetTable = null;
+        
+        for (let container of tableContainers) {
+            const h3 = container.querySelector('h3');
+            if (h3 && h3.textContent.includes('Tabla 2')) {
+                targetTable = container;
+                break;
+            }
+        }
+        
+        if (targetTable) {
+            let table = targetTable.querySelector('table');
+            if (!table) {
+                // Crear tabla si no existe
+                table = document.createElement('table');
+                table.className = 'data-table';
+                targetTable.appendChild(table);
+            }
+            table.innerHTML = tableHTML;
+        }
+        
+        console.log('✅ Tabla de distribución de tipos creada para:', concepto);
+    }
+
+    // Función para crear los pie charts de tipos
+        function createTypePieCharts(concepto) {
+            if (!typeChartData || !typeChartData[concepto]) {
+                console.error('No hay datos para el concepto:', concepto);
+                return;
+            }
+            
+            const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            const conceptData = typeChartData[concepto];
+            
+            // Obtener todos los tipos únicos para este concepto
+            const allTipos = new Set();
+            years.forEach(year => {
+                if (conceptData[year]) {
+                    Object.keys(conceptData[year]).forEach(tipo => {
+                        if (conceptData[year][tipo] > 0) {
+                            allTipos.add(tipo);
+                        }
+                    });
+                }
+            });
+            
+            // Generar colores flexibles para todos los tipos
+            const typeColors = generateFlexibleColors(Array.from(allTipos));
+            
+            // Crear un pie chart para cada año
+            years.forEach(year => {
+                const canvasId = `typePieChart${year}`;
+                const canvas = document.getElementById(canvasId);
+                
+                if (canvas && conceptData[year]) {
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Destruir chart anterior si existe
+                    if (window[`typeChart${year}`]) {
+                        window[`typeChart${year}`].destroy();
+                    }
+                    
+                    // Preparar datos para este año
+                    const yearData = conceptData[year];
+                    const tipos = Object.keys(yearData).filter(tipo => yearData[tipo] > 0);
+                    const valores = tipos.map(tipo => yearData[tipo]);
+                    
+                    // Preparar colores usando el mapeo flexible
+                    const backgroundColor = tipos.map(tipo => typeColors[tipo]);
+                    const borderColor = backgroundColor;
+                    
+                    const chartData = {
+                        labels: tipos,
+                        datasets: [{
+                            data: valores,
+                            backgroundColor: backgroundColor,
+                            borderColor: borderColor,
+                            borderWidth: 2,
+                            hoverOffset: 4
+                        }]
+                    };
+                    
+                                // Crear el donut chart
+            window[`typeChart${year}`] = new Chart(ctx, {
+                type: 'doughnut',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '40%',  // Tamaño del agujero central
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `Año ${year}`,
+                            font: { size: 16 }
+                        },
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                    
+                                    // Acortar nombres largos inteligentemente
+                                    let shortLabel = context.label;
+                                    if (context.label.length > 30) {
+                                        // Buscar el último espacio antes del límite
+                                        const lastSpace = context.label.lastIndexOf(' ', 30);
+                                        if (lastSpace > 20) {
+                                            shortLabel = context.label.substring(0, lastSpace) + '...';
+                                        } else {
+                                            shortLabel = context.label.substring(0, 30) + '...';
+                                        }
+                                    }
+                                    
+                                    return shortLabel + ': ' + context.parsed.toLocaleString() + ' casos (' + percentage + '%)';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+                }
+            });
+            
+                console.log('✅ Pie charts de tipos creados para:', concepto);
+    console.log('🎨 Tipos encontrados:', Array.from(allTipos));
+    console.log('🎨 Colores asignados:', typeColors);
+    
+    // Crear también la tabla de datos
+    createTypeDistributionTable(concepto);
+}
         // ===== EVENT LISTENERS Y INICIALIZACIÓN =====
         
         // Cargar todos los datos cuando la página se cargue
@@ -653,9 +1073,11 @@
             loadProcessedPreview();
             loadNationalTable();
             loadPercentageChangesTable();
+            loadAvailableConcepts();
             
             // Crear gráfica nacional
             createNationalStackedChart();
+            createNationalPieCharts();
         });
         
         // Event listeners adicionales para debugging

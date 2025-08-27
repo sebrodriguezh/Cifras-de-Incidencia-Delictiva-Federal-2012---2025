@@ -296,11 +296,10 @@ body {
     font-size: 0.9rem;
 }
 
-/* Estilos específicos para la tabla de preview */
+/* Estilos específicos para la tabla de preview - sobrescribe estilos base */
 #preview-table-procesados {
     font-size: 0.75rem;
     max-width: 100%;
-    overflow-x: auto;
 }
 
 #preview-table-procesados th,
@@ -310,33 +309,36 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border-bottom: 1px solid #dee2e6;
 }
 
 #preview-table-procesados th {
-    background: #34495e;
-    color: white;
-    text-transform: uppercase;
     font-size: 0.7rem;
-    font-weight: 600;
     position: sticky;
     top: 0;
 }
 
-#preview-table-procesados tbody tr:nth-child(even) {
-    background: #f8f9fa;
-}
-
-#preview-table-procesados tbody tr:hover {
-    background: #e3f2fd;
-}
-
-/* Scroll horizontal para tablas muy anchas */
+/* Contenedor de tabla con scroll horizontal */
 .table-container {
-    overflow-x: auto;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow-x: auto;  /* ✅ PERMITE SCROLL HORIZONTAL */
+    overflow-y: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 20px 0;  /* ✅ ESPACIADO ENTRE TABLAS */
+}
+
+/* Scrollbar personalizado para contenedores con scroll */
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 4px;
 }
 
 /* Responsive para tablas */
@@ -368,3 +370,116 @@ body {
     margin-bottom: 20px;
 }
 /* ... existing code ... */
+
+/* ===== ESTILOS UNIFICADOS PARA TODAS LAS TABLAS ===== */
+
+/* Estilos base para todas las tablas */
+.data-table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Headers con gradiente para todas las tablas */
+.data-table th {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px 12px;
+    text-align: center;
+}
+
+/* Celdas base para todas las tablas */
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
+}
+
+/* Hover sin animaciones para todas las tablas */
+.data-table tbody tr:hover {
+    background: linear-gradient(90deg, #f8f9fa, #e3f2fd);
+}
+
+/* Filas alternadas para todas las tablas */
+.data-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA TABLA NACIONAL ===== */
+
+/* Tabla nacional - sobrescribe estilos base si es necesario */
+#national-concept-table {
+    font-size: 0.9rem;
+}
+
+#national-concept-table th {
+    padding: 12px 8px;  /* Padding específico para tabla nacional */
+}
+
+#national-concept-table td {
+    padding: 8px;  /* Padding específico para tabla nacional */
+}
+
+/* ===== UTILIDADES DE TABLA ===== */
+
+/* Alineación de texto */
+.text-right {
+    text-align: right;
+    font-weight: 500;
+}
+
+/* Celda de total destacada */
+.total-cell {
+    background: #e8f5e8 !important;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* Descripción de tabla */
+.table-description {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE PARA TABLAS ===== */
+
+@media (max-width: 768px) {
+    #national-concept-table {
+        font-size: 0.8rem;
+    }
+    
+    #national-concept-table th,
+    #national-concept-table td {
+        padding: 6px 4px;
+    }
+    
+    /* Responsive general para todas las tablas */
+    .data-table {
+        font-size: 0.85rem;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Cambios positivos (verde) */
+.positive-change {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+/* Cambios negativos (rojo) */
+.negative-change {
+    color: #d32f2f;
+    font-weight: 500;
+}

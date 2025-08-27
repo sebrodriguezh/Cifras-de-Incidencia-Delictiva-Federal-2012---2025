@@ -337,11 +337,20 @@
     <!-- JavaScript para cargar estadísticas -->
          <!-- JavaScript para cargar estadísticas -->
     <script>
+        // Función para obtener la ruta base según el entorno
+        function getBasePath() {
+            // Detectar si estamos en GitHub Pages
+            if (window.location.hostname === 'sebrodriguezh.github.io') {
+                return '/Cifras-de-Incidencia-Delictiva-Federal-2012---2025';
+            }
+            return ''; // Ruta local
+        }
+        
         // Función para cargar estadísticas de la base ORIGINAL
         async function loadOriginalStats() {
             try {
                 console.log('🔄 Cargando estadísticas de base original...');
-                const response = await fetch('data/stats.json');
+                const response = await fetch(getBasePath() + '/data/stats.json');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -384,7 +393,7 @@
         async function loadProcessedStats() {
             try {
                 console.log('🔄 Cargando estadísticas de base procesada...');
-                const response = await fetch('data/stats_processed.json');
+                const response = await fetch(getBasePath() + '/data/stats_processed.json');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -425,7 +434,7 @@
         async function loadProcessedPreview() {
             try {
                 console.log('🔄 Cargando preview de base procesada...');
-                const response = await fetch('data/preview_processed.json');
+                const response = await fetch(getBasePath() + '/data/preview_processed.json');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -580,7 +589,7 @@
         async function loadNationalTable() {
             try {
                 console.log('🔄 Cargando tabla de datos nacionales...');
-                const response = await fetch('data/national_concept_analysis.csv');
+                const response = await fetch(getBasePath() + '/data/national_concept_analysis.csv');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -641,7 +650,7 @@
         async function loadPercentageChangesTable() {
             try {
                 console.log('🔄 Cargando tabla de cambios porcentuales...');
-                const response = await fetch('data/national_percentage_analysis.csv');
+                const response = await fetch(getBasePath() + '/data/national_percentage_analysis.csv');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -727,7 +736,7 @@
             const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
             
             // Cargar datos del CSV
-            fetch('data/national_concept_analysis.csv')
+            fetch(getBasePath() + '/data/national_concept_analysis.csv')
                 .then(response => response.text())
                 .then(csvText => {
                     const lines = csvText.split('\n');
@@ -819,7 +828,7 @@
         // Función para cargar los conceptos disponibles
         async function loadAvailableConcepts() {
             try {
-                const response = await fetch('data/type_distribution_analysis.csv');
+                const response = await fetch(getBasePath() + '/data/type_distribution_analysis.csv');
                 const csvText = await response.text();
                 
                 const lines = csvText.split('\n');
@@ -1342,7 +1351,7 @@ function parseCSVToData(csvText) {
         // Función para cargar los conceptos disponibles
         async function loadAvailableConceptsForMap() {
             try {
-                const response = await fetch('data/entidad_concepto_analysis.csv');
+                const response = await fetch(getBasePath() + '/data/entidad_concepto_analysis.csv');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -1573,7 +1582,7 @@ function parseCSVToData(csvText) {
                         map.setMaxBounds([14.5, -118.5, 32.5, -86.5]); // Límites de México
                         
                         // Cargar GeoJSON de estados
-                        fetch('data/geojson/estados_compressed.json')
+                        fetch(getBasePath() + '/data/geojson/estados_compressed.json')
                             .then(response => {
                                 if (!response.ok) {
                                     throw new Error(`HTTP error! status: ${response.status}`);

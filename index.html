@@ -569,6 +569,207 @@
                 <h3>Tabla 5.1. Variación porcentual de la incidencia delictiva del fuero federal por tipos (enero 2024 a julio 2025)</h3>
                 <p class="table-description">Cambios porcentuales mes tras mes para cada tipo</p>
             </div>
+
+            <!-- Gráfica 8: Mapas mensuales de distribución por entidad federativa -->
+            <div class="chart-container">
+                <h2>Gráfica 8. Distribución mensual por entidad federativa</h2>
+                <p class="table-description">Mapas interactivos mensuales de enero 2024 a julio 2025</p>
+                
+                <!-- Selectores de concepto, tipo y mes/año -->
+                <div class="map-selectors">
+                    <div class="concept-selector">
+                        <label for="monthly-map-concept-selector">Selecciona el concepto a visualizar:</label>
+                        <select id="monthly-map-concept-selector">
+                            <option value="">Cargando conceptos...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="concept-selector">
+                        <label for="monthly-map-type-selector">Selecciona el tipo:</label>
+                        <select id="monthly-map-type-selector" disabled>
+                            <option value="">Primero selecciona un concepto...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="year-selector">
+                        <label for="monthly-map-month-slider">Selecciona el mes: <span id="monthly-month-display">Febrero 2024</span></label>
+                        <input type="range" id="monthly-map-month-slider" min="1" max="19" value="2" step="1">
+                    </div>
+                </div>
+                
+                <!-- Contenedor de mapas lado a lado -->
+                <div class="maps-container">
+                    <!-- Mapa 1: Distribución mensual por concepto -->
+                    <div class="map-wrapper">
+                        <h3>Mapa 1: Distribución mensual por concepto</h3>
+                        <div id="monthly-map" class="map-container"></div>
+                    </div>
+                    
+                    <!-- Mapa 2: Distribución mensual por tipo -->
+                    <div class="map-wrapper">
+                        <h3>Mapa 2: Distribución mensual por tipo</h3>
+                        <div id="monthly-map2" class="map-container placeholder">
+            <div class="placeholder-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabla 8. Valores absolutos mensuales por entidad y concepto -->
+                <div class="table-container">
+                    <h3>Tabla 8. Valores absolutos mensuales de la incidencia delictiva del fuero federal por entidad federativa y concepto</h3>
+                    <p class="table-description">Valores absolutos por entidad, concepto y mes (enero 2024 - julio 2025)</p>
+                    <table class="data-table" id="monthly-entidad-concepto-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>Ene 2024</th>
+                                <th>Feb 2024</th>
+                                <th>Mar 2024</th>
+                                <th>Abr 2024</th>
+                                <th>May 2024</th>
+                                <th>Jun 2024</th>
+                                <th>Jul 2024</th>
+                                <th>Ago 2024</th>
+                                <th>Sep 2024</th>
+                                <th>Oct 2024</th>
+                                <th>Nov 2024</th>
+                                <th>Dic 2024</th>
+                                <th>Ene 2025</th>
+                                <th>Feb 2025</th>
+                                <th>Mar 2025</th>
+                                <th>Abr 2025</th>
+                                <th>May 2025</th>
+                                <th>Jun 2025</th>
+                                <th>Jul 2025</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto para ver datos...</td>
+                                <td colspan="20">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Tabla 8.1. Variación porcentual mensual por entidad y concepto -->
+                <div class="table-container">
+                    <h3>Tabla 8.1. Variación porcentual mensual de la incidencia delictiva del fuero federal por entidad federativa y concepto</h3>
+                    <p class="table-description">Cambios porcentuales mes tras mes (enero 2024 vs diciembre 2023, febrero 2024 vs enero 2024, etc.)</p>
+                    <table class="data-table" id="monthly-entidad-concepto-percentage-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>Ene 2024</th>
+                                <th>Feb 2024</th>
+                                <th>Mar 2024</th>
+                                <th>Abr 2024</th>
+                                <th>May 2024</th>
+                                <th>Jun 2024</th>
+                                <th>Jul 2024</th>
+                                <th>Ago 2024</th>
+                                <th>Sep 2024</th>
+                                <th>Oct 2024</th>
+                                <th>Nov 2024</th>
+                                <th>Dic 2024</th>
+                                <th>Ene 2025</th>
+                                <th>Feb 2025</th>
+                                <th>Mar 2025</th>
+                                <th>Abr 2025</th>
+                                <th>May 2025</th>
+                                <th>Jun 2025</th>
+                                <th>Jul 2025</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto para ver datos...</td>
+                                <td colspan="19">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Tabla 8.2. Valores absolutos mensuales por entidad y tipo -->
+                <div class="table-container">
+                    <h3>Tabla 8.2. Valores absolutos mensuales de la incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
+                    <p class="table-description">Valores absolutos por entidad, tipo y mes (enero 2024 - julio 2025)</p>
+                    <table class="data-table" id="monthly-entidad-tipo-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>Ene 2024</th>
+                                <th>Feb 2024</th>
+                                <th>Mar 2024</th>
+                                <th>Abr 2024</th>
+                                <th>May 2024</th>
+                                <th>Jun 2024</th>
+                                <th>Jul 2024</th>
+                                <th>Ago 2024</th>
+                                <th>Sep 2024</th>
+                                <th>Oct 2024</th>
+                                <th>Nov 2024</th>
+                                <th>Dic 2024</th>
+                                <th>Ene 2025</th>
+                                <th>Feb 2025</th>
+                                <th>Mar 2025</th>
+                                <th>Abr 2025</th>
+                                <th>May 2025</th>
+                                <th>Jun 2025</th>
+                                <th>Jul 2025</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto y tipo para ver datos...</td>
+                                <td colspan="20">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Tabla 8.3. Variación porcentual mensual por entidad y tipo -->
+                <div class="table-container">
+                    <h3>Tabla 8.3. Variación porcentual mensual de la incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
+                    <p class="table-description">Cambios porcentuales mes tras mes por tipo (enero 2024 vs diciembre 2023, febrero 2024 vs enero 2024, etc.)</p>
+                    <table class="data-table" id="monthly-entidad-tipo-percentage-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>Ene 2024</th>
+                                <th>Feb 2024</th>
+                                <th>Mar 2024</th>
+                                <th>Abr 2024</th>
+                                <th>May 2024</th>
+                                <th>Jun 2024</th>
+                                <th>Jul 2024</th>
+                                <th>Ago 2024</th>
+                                <th>Sep 2024</th>
+                                <th>Oct 2024</th>
+                                <th>Nov 2024</th>
+                                <th>Dic 2024</th>
+                                <th>Ene 2025</th>
+                                <th>Feb 2025</th>
+                                <th>Mar 2025</th>
+                                <th>Abr 2025</th>
+                                <th>May 2025</th>
+                                <th>Jun 2025</th>
+                                <th>Jul 2025</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto y tipo para ver datos...</td>
+                                <td colspan="19">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </section>
 
         <!-- Snapshots Section -->
@@ -1302,7 +1503,7 @@
                 // Procesar cada tipo (columnas 2 en adelante)
                 for (let j = 2; j < values.length && j < headers.length; j++) {
                     const tipoName = headers[j];
-                    const value = parseInt(values[j]) || 0;
+                        const value = parseInt(values[j]) || 0;
                     data[concepto][mesAño][tipoName] = value;
                 }
             }
@@ -1516,8 +1717,8 @@
                     const value = conceptData[mes] && conceptData[mes][tipo] ? conceptData[mes][tipo] : 0;
                     tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
                 });
-                
-                tableHTML += '</tr>';
+                    
+                    tableHTML += '</tr>';
             });
             
             tableHTML += '</tbody>';
@@ -1652,9 +1853,9 @@
                 
                 tableHTML += '</tr>';
             });
-            
-            tableHTML += '</tbody>';
-            
+                
+                tableHTML += '</tbody>';
+                
             // Buscar la tabla de la Gráfica 7 por el título (IGUAL QUE TABLA 2.1)
             const tableContainers = document.querySelectorAll('.table-container');
             let targetTable = null;
@@ -1698,7 +1899,7 @@
             return colorMap;
         }
 
-         // Función para cargar la tabla de datos nacionales
+        // Función para cargar la tabla de datos nacionales
         async function loadNationalTable() {
             try {
                 console.log('🔄 Cargando tabla de datos nacionales...');
@@ -2470,7 +2671,840 @@ function parseCSVToData(csvText) {
             
             // Cargar conceptos para el mapa
             loadAvailableConceptsForMap();
+            
+            // Crear mapas mensuales de estados
+            createMonthlyEstadosMap();
+            
+            // Cargar conceptos para mapas mensuales
+            loadAvailableConceptsForMonthlyMap();
         });
+        
+        // ===========================================
+        // FUNCIONES PARA MAPAS MENSUALES (GRÁFICA 8)
+        // ===========================================
+        
+        // Variables globales para mapas mensuales
+        let monthlyMap = null;
+        let monthlyMap2 = null;
+        let monthlyEntidadConceptoData = null;
+        let monthlyEntidadTipoData = null;
+        let monthlyEntidadConceptoPercentageData = null;
+        let monthlyEntidadTipoPercentageData = null;
+        let currentMonthlyConcepto = '';
+        let currentMonthlyTipo = '';
+        let currentMonth = '2024-02';
+        
+        // Función para cargar conceptos disponibles para mapas mensuales
+        async function loadAvailableConceptsForMonthlyMap() {
+            try {
+                console.log('🔄 Cargando conceptos para mapas mensuales...');
+                
+                const response = await fetch('data/monthly_entidad_concepto_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('✅ CSV cargado para mapas mensuales, longitud:', csvText.length);
+                
+                // Parsear CSV
+                const lines = csvText.split('\n');
+                console.log('📊 Líneas en CSV:', lines.length);
+                console.log('📋 Headers:', lines[0]);
+                
+                const headers = lines[0].split(',');
+                const conceptos = [...new Set(lines.slice(1).map(line => {
+                    const values = line.split(',');
+                    return values[1]; // CONCEPTO está en la columna 1
+                }).filter(Boolean))];
+                
+                console.log('🎯 Conceptos encontrados para mapas mensuales:', conceptos);
+                
+                // Cargar datos completos
+                monthlyEntidadConceptoData = parseCSVToMonthlyEntidadConceptoData(csvText);
+                console.log('📊 Datos parseados para mapas mensuales:', monthlyEntidadConceptoData);
+                
+                // Poblar selector de conceptos
+                const conceptSelector = document.getElementById('monthly-map-concept-selector');
+                if (conceptSelector) {
+                    conceptSelector.innerHTML = '<option value="">Selecciona un concepto...</option>';
+                    conceptos.forEach(concepto => {
+                        const option = document.createElement('option');
+                        option.value = concepto;
+                        option.textContent = concepto;
+                        conceptSelector.appendChild(option);
+                    });
+                    
+                    // Event listener para cambios de concepto
+                    conceptSelector.addEventListener('change', function() {
+                        currentMonthlyConcepto = this.value;
+                        console.log('📋 Concepto mensual seleccionado:', currentMonthlyConcepto);
+                        
+                        const typeSelector = document.getElementById('monthly-map-type-selector');
+                        
+                        if (currentMonthlyConcepto) {
+                            // Habilitar selector de tipos y cargar datos
+                            if (typeSelector) {
+                                typeSelector.disabled = false;
+                                typeSelector.innerHTML = '<option value="">Cargando tipos...</option>';
+                            }
+                            
+                            updateMonthlyMapColors(currentMonthlyConcepto, currentMonth);
+                            loadMonthlyTypesForConcept(currentMonthlyConcepto);
+                            updateMonthlyEntidadConceptoTable(currentMonthlyConcepto);
+                            updateMonthlyEntidadConceptoPercentageTable(currentMonthlyConcepto);
+                        } else {
+                            // Deshabilitar selector de tipos y limpiar segundo mapa
+                            if (typeSelector) {
+                                typeSelector.disabled = true;
+                                typeSelector.innerHTML = '<option value="">Primero selecciona un concepto...</option>';
+                            }
+                            if (monthlyMap2) {
+                                monthlyMap2.remove();
+                                monthlyMap2 = null;
+                            }
+                        }
+                    });
+                    
+                    console.log('✅ Selector de conceptos mensuales configurado');
+                }
+                
+                // Configurar slider de mes
+                const monthSlider = document.getElementById('monthly-map-month-slider');
+                const monthDisplay = document.getElementById('monthly-month-display');
+                
+                if (monthSlider && monthDisplay) {
+                    // Array de meses en orden
+                    const months = [
+                        { id: '2024-01', name: 'Enero 2024' },
+                        { id: '2024-02', name: 'Febrero 2024' },
+                        { id: '2024-03', name: 'Marzo 2024' },
+                        { id: '2024-04', name: 'Abril 2024' },
+                        { id: '2024-05', name: 'Mayo 2024' },
+                        { id: '2024-06', name: 'Junio 2024' },
+                        { id: '2024-07', name: 'Julio 2024' },
+                        { id: '2024-08', name: 'Agosto 2024' },
+                        { id: '2024-09', name: 'Septiembre 2024' },
+                        { id: '2024-10', name: 'Octubre 2024' },
+                        { id: '2024-11', name: 'Noviembre 2024' },
+                        { id: '2024-12', name: 'Diciembre 2024' },
+                        { id: '2025-01', name: 'Enero 2025' },
+                        { id: '2025-02', name: 'Febrero 2025' },
+                        { id: '2025-03', name: 'Marzo 2025' },
+                        { id: '2025-04', name: 'Abril 2025' },
+                        { id: '2025-05', name: 'Mayo 2025' },
+                        { id: '2025-06', name: 'Junio 2025' },
+                        { id: '2025-07', name: 'Julio 2025' }
+                    ];
+                    
+                    // Event listener para cambios del slider de mes
+                    monthSlider.addEventListener('input', function() {
+                        const monthIndex = parseInt(this.value) - 1; // Convertir de 1-19 a 0-18
+                        const selectedMonth = months[monthIndex];
+                        
+                        if (selectedMonth) {
+                            currentMonth = selectedMonth.id;
+                            monthDisplay.textContent = selectedMonth.name;
+                            console.log('📅 Mes actualizado:', currentMonth);
+                            
+                            if (currentMonthlyConcepto) {
+                                updateMonthlyMapColors(currentMonthlyConcepto, currentMonth);
+                            }
+                            
+                            // Actualizar segundo mapa si hay tipo seleccionado
+                            if (currentMonthlyTipo && currentMonthlyConcepto && monthlyMap2) {
+                                updateMonthlySecondMapColors(currentMonthlyConcepto, currentMonthlyTipo, currentMonth);
+                            }
+                        }
+                    });
+                    
+                    // Inicializar con Febrero 2024 (valor 2)
+                    currentMonth = '2024-02';
+                    monthDisplay.textContent = 'Febrero 2024';
+                    
+                    console.log('✅ Slider de mes mensual configurado');
+                }
+                
+                // Cargar datos porcentuales
+                await loadMonthlyEntidadConceptoPercentageData();
+                
+            } catch (error) {
+                console.error('❌ Error cargando conceptos para mapas mensuales:', error);
+            }
+        }
+        
+        // Función para parsear CSV de entidad-concepto mensual
+        function parseCSVToMonthlyEntidadConceptoData(csvText) {
+            const lines = csvText.split('\n').filter(line => line.trim());
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
+                if (values.length < headers.length) continue;
+                
+                const entidad = values[0];
+                const concepto = values[1];
+                
+                if (!data[concepto]) {
+                    data[concepto] = {};
+                }
+                if (!data[concepto][entidad]) {
+                    data[concepto][entidad] = {};
+                }
+                
+                // Agregar datos mensuales (desde columna 2 en adelante)
+                for (let j = 2; j < headers.length; j++) {
+                    const month = headers[j];
+                    const value = parseInt(values[j]) || 0;
+                    data[concepto][entidad][month] = value;
+                }
+            }
+            
+            return data;
+        }
+        
+        // Función para crear mapas mensuales de estados
+        function createMonthlyEstadosMap() {
+            try {
+                // Verificar que Leaflet está disponible
+                if (typeof L === 'undefined') {
+                    console.error('❌ Leaflet no está cargado para mapas mensuales. Esperando...');
+                    setTimeout(createMonthlyEstadosMap, 1000); // Reintentar en 1 segundo
+                    return;
+                }
+                
+                // Verificar que el contenedor existe
+                const mapContainer = document.getElementById('monthly-map');
+                if (!mapContainer) {
+                    console.error('❌ No se encontró el contenedor del mapa mensual');
+                    return;
+                }
+                
+                // Crear el mapa centrado en México (sin capa base)
+                monthlyMap = L.map('monthly-map', {
+                    center: [23.6345, -102.5528],
+                    zoom: 5,
+                    zoomControl: true,
+                    attributionControl: false
+                });
+                
+                // Establecer límites del mapa para que no se pueda alejar demasiado
+                monthlyMap.setMaxBounds([14.5, -118.5, 32.5, -86.5]); // Límites de México
+                
+                // Cargar GeoJSON de estados
+                fetch('data/geojson/estados_compressed.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(geojsonData => {
+                        // Agregar estados al mapa
+                        const estadosLayer = L.geoJSON(geojsonData, {
+                            style: function(feature) {
+                                return {
+                                    fillColor: '#3498db',
+                                    weight: 1.5,
+                                    opacity: 1,
+                                    color: '#2c3e50',
+                                    fillOpacity: 0.8
+                                };
+                            },
+                            onEachFeature: function(feature, layer) {
+                                // Sin efectos de hover - idéntico a Gráfica 4
+                            }
+                        }).addTo(monthlyMap);
+                        
+                        console.log('✅ Mapa mensual de estados creado exitosamente');
+                        
+                        // Marcar como cargado para ocultar mensaje de carga
+                        mapContainer.classList.add('loaded');
+                        
+                    })
+                    .catch(error => {
+                        console.error('❌ Error cargando GeoJSON para mapa mensual:', error);
+                    });
+                
+            } catch (error) {
+                console.error('❌ Error creando mapa mensual de estados:', error);
+            }
+        }
+        
+        // Función para actualizar colores del mapa mensual
+        function updateMonthlyMapColors(concepto, month) {
+            if (!monthlyMap || !monthlyEntidadConceptoData || !monthlyEntidadConceptoData[concepto]) {
+                console.warn('⚠️ No se pueden actualizar colores del mapa mensual - datos no disponibles');
+                return;
+            }
+            
+            console.log(`🎨 Actualizando colores del mapa mensual para concepto: ${concepto}, mes: ${month}`);
+            
+            const conceptoData = monthlyEntidadConceptoData[concepto];
+            
+            // Obtener todos los valores para este concepto y mes
+            const values = [];
+            Object.keys(conceptoData).forEach(entidad => {
+                if (conceptoData[entidad][month] !== undefined) {
+                    values.push(conceptoData[entidad][month]);
+                }
+            });
+            
+            if (values.length === 0) {
+                console.warn('⚠️ No hay datos disponibles para este concepto y mes');
+                return;
+            }
+            
+            // Calcular percentiles para la escala de colores
+            values.sort((a, b) => a - b);
+            const percentiles = {
+                p0: values[0],
+                p20: values[Math.floor(values.length * 0.2)],
+                p40: values[Math.floor(values.length * 0.4)],
+                p60: values[Math.floor(values.length * 0.6)],
+                p80: values[Math.floor(values.length * 0.8)],
+                p90: values[Math.floor(values.length * 0.9)],
+                p100: values[values.length - 1]
+            };
+            
+            console.log('📊 Percentiles calculados:', percentiles);
+            
+            // Función para obtener color basado en valor
+            function getColor(value) {
+                if (value === 0) return '#ffffff';
+                if (value <= percentiles.p20) return '#ffebee';
+                if (value <= percentiles.p40) return '#ffcdd2';
+                if (value <= percentiles.p60) return '#ef9a9a';
+                if (value <= percentiles.p80) return '#e57373';
+                if (value <= percentiles.p90) return '#ef5350';
+                return '#f44336';
+            }
+            
+            // Actualizar colores de cada estado
+            monthlyMap.eachLayer(function(layer) {
+                if (layer.feature && layer.feature.properties) {
+                    const entidadName = layer.feature.properties.NOMGEO.toUpperCase(); // Convertir a mayúsculas para coincidir con CSV
+                    const value = conceptoData[entidadName] ? (conceptoData[entidadName][month] || 0) : 0;
+                    
+                    layer.setStyle({
+                        fillColor: getColor(value),
+                        fillOpacity: 0.7
+                    });
+                    
+                    // Actualizar tooltip
+                    const displayName = layer.feature.properties.NOMGEO; // Nombre original para mostrar
+                    layer.bindTooltip(`
+                        <strong>${displayName}</strong><br/>
+                        ${concepto}<br/>
+                        ${month}: ${value.toLocaleString()} casos
+                    `);
+                }
+            });
+            
+            console.log('✅ Colores del mapa mensual actualizados');
+        }
+        
+        // Función para cargar tipos disponibles para un concepto mensual
+        async function loadMonthlyTypesForConcept(concepto) {
+            try {
+                console.log('🔄 Cargando tipos para concepto mensual:', concepto);
+                
+                // Cargar datos de tipo si no están disponibles
+                if (!monthlyEntidadTipoData) {
+                    const response = await fetch('data/monthly_entidad_tipo_analysis.csv');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const csvText = await response.text();
+                    monthlyEntidadTipoData = parseCSVToMonthlyEntidadTipoData(csvText);
+                }
+                
+                // Obtener tipos únicos para este concepto
+                const tipos = new Set();
+                if (monthlyEntidadTipoData[concepto]) {
+                    Object.keys(monthlyEntidadTipoData[concepto]).forEach(entidad => {
+                        Object.keys(monthlyEntidadTipoData[concepto][entidad]).forEach(tipo => {
+                            tipos.add(tipo);
+                        });
+                    });
+                }
+                
+                const tiposArray = Array.from(tipos).sort();
+                console.log('🏷️ Tipos encontrados para concepto mensual:', tiposArray);
+                
+                // Poblar selector de tipos
+                const typeSelector = document.getElementById('monthly-map-type-selector');
+                if (typeSelector) {
+                    typeSelector.innerHTML = '<option value="">Selecciona un tipo...</option>';
+                    tiposArray.forEach(tipo => {
+                        const option = document.createElement('option');
+                        option.value = tipo;
+                        option.textContent = tipo;
+                        typeSelector.appendChild(option);
+                    });
+                    
+                    // Event listener para cambios de tipo
+                    typeSelector.removeEventListener('change', handleMonthlyTypeChange); // Remover listener anterior
+                    typeSelector.addEventListener('change', handleMonthlyTypeChange);
+                    
+                    console.log('✅ Selector de tipos mensuales configurado');
+                }
+                
+            } catch (error) {
+                console.error('❌ Error cargando tipos para concepto mensual:', error);
+            }
+        }
+        
+        // Handler para cambio de tipo mensual
+        function handleMonthlyTypeChange(event) {
+            currentMonthlyTipo = event.target.value;
+            console.log('🏷️ Tipo mensual seleccionado:', currentMonthlyTipo);
+            
+            if (currentMonthlyTipo && currentMonthlyConcepto) {
+                createMonthlySecondMap(currentMonthlyConcepto, currentMonthlyTipo, currentMonth);
+                updateMonthlyEntidadTipoTable(currentMonthlyConcepto, currentMonthlyTipo);
+                updateMonthlyEntidadTipoPercentageTable(currentMonthlyConcepto, currentMonthlyTipo);
+            } else {
+                // Limpiar segundo mapa si no hay tipo seleccionado
+                if (monthlyMap2) {
+                    monthlyMap2.remove();
+                    monthlyMap2 = null;
+                }
+            }
+        }
+        
+        // Función para parsear CSV de entidad-tipo mensual
+        function parseCSVToMonthlyEntidadTipoData(csvText) {
+            const lines = csvText.split('\n').filter(line => line.trim());
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
+                if (values.length < headers.length) continue;
+                
+                const entidad = values[0];
+                const concepto = values[1];
+                const tipo = values[2];
+                
+                if (!data[concepto]) {
+                    data[concepto] = {};
+                }
+                if (!data[concepto][entidad]) {
+                    data[concepto][entidad] = {};
+                }
+                if (!data[concepto][entidad][tipo]) {
+                    data[concepto][entidad][tipo] = {};
+                }
+                
+                // Agregar datos mensuales (desde columna 3 en adelante)
+                for (let j = 3; j < headers.length; j++) {
+                    const month = headers[j];
+                    const value = parseInt(values[j]) || 0;
+                    data[concepto][entidad][tipo][month] = value;
+                }
+            }
+            
+            return data;
+        }
+        
+        // Función para crear segundo mapa mensual
+        function createMonthlySecondMap(concepto, tipo, month) {
+            try {
+                // Limpiar mapa anterior si existe
+                if (monthlyMap2) {
+                    monthlyMap2.remove();
+                    monthlyMap2 = null;
+                }
+                
+                // Verificar que el contenedor existe
+                const mapContainer = document.getElementById('monthly-map2');
+                if (!mapContainer) {
+                    console.error('❌ No se encontró el contenedor del segundo mapa mensual');
+                    return;
+                }
+                
+                // Limpiar placeholder
+                mapContainer.innerHTML = '';
+                mapContainer.classList.remove('placeholder');
+                
+                // Crear el segundo mapa
+                monthlyMap2 = L.map('monthly-map2', {
+                    center: [23.6345, -102.5528],
+                    zoom: 5,
+                    zoomControl: true,
+                    attributionControl: false
+                });
+                
+                // Establecer límites del mapa
+                monthlyMap2.setMaxBounds([14.5, -118.5, 32.5, -86.5]);
+                
+                // Cargar GeoJSON de estados para el segundo mapa
+                fetch('data/geojson/estados_compressed.json')
+                    .then(response => response.json())
+                    .then(geojsonData => {
+                        const estadosLayer = L.geoJSON(geojsonData, {
+                            style: function(feature) {
+                                return {
+                                    fillColor: '#3498db',
+                                    weight: 1.5,
+                                    opacity: 1,
+                                    color: '#2c3e50',
+                                    fillOpacity: 0.8
+                                };
+                            },
+                            onEachFeature: function(feature, layer) {
+                                // Sin efectos de hover - idéntico a Gráfica 4
+                            }
+                        }).addTo(monthlyMap2);
+                        
+                        console.log('✅ Segundo mapa mensual creado exitosamente');
+                        
+                        // Marcar como cargado para ocultar mensaje de carga
+                        mapContainer.classList.add('loaded');
+                        
+                        // Actualizar colores inmediatamente
+                        updateMonthlySecondMapColors(concepto, tipo, month);
+                        
+                    })
+                    .catch(error => {
+                        console.error('❌ Error cargando GeoJSON para segundo mapa mensual:', error);
+                    });
+                
+            } catch (error) {
+                console.error('❌ Error creando segundo mapa mensual:', error);
+            }
+        }
+        
+        // Función para actualizar colores del segundo mapa mensual
+        function updateMonthlySecondMapColors(concepto, tipo, month) {
+            if (!monthlyMap2 || !monthlyEntidadTipoData || !monthlyEntidadTipoData[concepto]) {
+                console.warn('⚠️ No se pueden actualizar colores del segundo mapa mensual - datos no disponibles');
+                return;
+            }
+            
+            console.log(`🎨 Actualizando colores del segundo mapa mensual para concepto: ${concepto}, tipo: ${tipo}, mes: ${month}`);
+            
+            const conceptoData = monthlyEntidadTipoData[concepto];
+            
+            // Obtener todos los valores para este concepto, tipo y mes
+            const values = [];
+            Object.keys(conceptoData).forEach(entidad => {
+                if (conceptoData[entidad][tipo] && conceptoData[entidad][tipo][month] !== undefined) {
+                    values.push(conceptoData[entidad][tipo][month]);
+                }
+            });
+            
+            if (values.length === 0) {
+                console.warn('⚠️ No hay datos disponibles para este concepto, tipo y mes');
+                return;
+            }
+            
+            // Calcular percentiles para la escala de colores
+            values.sort((a, b) => a - b);
+            const percentiles = {
+                p0: values[0],
+                p20: values[Math.floor(values.length * 0.2)],
+                p40: values[Math.floor(values.length * 0.4)],
+                p60: values[Math.floor(values.length * 0.6)],
+                p80: values[Math.floor(values.length * 0.8)],
+                p90: values[Math.floor(values.length * 0.9)],
+                p100: values[values.length - 1]
+            };
+            
+            // Función para obtener color basado en valor
+            function getColor(value) {
+                if (value === 0) return '#ffffff';
+                if (value <= percentiles.p20) return '#ffebee';
+                if (value <= percentiles.p40) return '#ffcdd2';
+                if (value <= percentiles.p60) return '#ef9a9a';
+                if (value <= percentiles.p80) return '#e57373';
+                if (value <= percentiles.p90) return '#ef5350';
+                return '#f44336';
+            }
+            
+            // Actualizar colores de cada estado
+            monthlyMap2.eachLayer(function(layer) {
+                if (layer.feature && layer.feature.properties) {
+                    const entidadName = layer.feature.properties.NOMGEO.toUpperCase(); // Convertir a mayúsculas para coincidir con CSV
+                    const value = (conceptoData[entidadName] && conceptoData[entidadName][tipo]) ? 
+                                  (conceptoData[entidadName][tipo][month] || 0) : 0;
+                    
+                    layer.setStyle({
+                        fillColor: getColor(value),
+                        fillOpacity: 0.7
+                    });
+                    
+                    // Actualizar tooltip
+                    const displayName = layer.feature.properties.NOMGEO; // Nombre original para mostrar
+                    layer.bindTooltip(`
+                        <strong>${displayName}</strong><br/>
+                        ${concepto} - ${tipo}<br/>
+                        ${month}: ${value.toLocaleString()} casos
+                    `);
+                }
+            });
+            
+            console.log('✅ Colores del segundo mapa mensual actualizados');
+        }
+        
+        // Función para cargar datos porcentuales mensuales
+        async function loadMonthlyEntidadConceptoPercentageData() {
+            try {
+                console.log('🔄 Cargando datos porcentuales mensuales de entidad-concepto...');
+                const response = await fetch('data/monthly_entidad_concepto_percentage_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const csvText = await response.text();
+                monthlyEntidadConceptoPercentageData = parseCSVToMonthlyEntidadConceptoData(csvText);
+                console.log('✅ Datos porcentuales mensuales de entidad-concepto cargados');
+            } catch (error) {
+                console.error('❌ Error cargando datos porcentuales mensuales:', error);
+            }
+        }
+        
+        // Función para actualizar tabla de entidad-concepto mensual
+        function updateMonthlyEntidadConceptoTable(concepto) {
+            if (!monthlyEntidadConceptoData || !monthlyEntidadConceptoData[concepto]) {
+                console.warn('⚠️ No hay datos disponibles para la tabla de entidad-concepto mensual');
+                return;
+            }
+            
+            console.log('📊 Actualizando tabla de entidad-concepto mensual para:', concepto);
+            
+            const table = document.getElementById('monthly-entidad-concepto-table');
+            if (!table) return;
+            
+            const tbody = table.querySelector('tbody');
+            if (!tbody) return;
+            
+            const conceptoData = monthlyEntidadConceptoData[concepto];
+            const entidades = Object.keys(conceptoData).sort();
+            
+            // Meses disponibles
+            const meses = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07'];
+            
+            let tableHTML = '';
+            entidades.forEach(entidad => {
+                tableHTML += '<tr>';
+                tableHTML += `<td>${entidad}</td>`;
+                
+                let total = 0;
+                meses.forEach(mes => {
+                    const value = conceptoData[entidad][mes] || 0;
+                    total += value;
+                    tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
+                });
+                
+                tableHTML += `<td class="text-right font-bold">${total.toLocaleString()}</td>`;
+                tableHTML += '</tr>';
+            });
+            
+            tbody.innerHTML = tableHTML;
+            console.log('✅ Tabla de entidad-concepto mensual actualizada');
+        }
+        
+        // Función para actualizar tabla porcentual de entidad-concepto mensual
+        function updateMonthlyEntidadConceptoPercentageTable(concepto) {
+            if (!monthlyEntidadConceptoPercentageData || !monthlyEntidadConceptoPercentageData[concepto]) {
+                console.warn('⚠️ No hay datos porcentuales disponibles para la tabla de entidad-concepto mensual');
+                return;
+            }
+            
+            console.log('📊 Actualizando tabla porcentual de entidad-concepto mensual para:', concepto);
+            
+            const table = document.getElementById('monthly-entidad-concepto-percentage-table');
+            if (!table) return;
+            
+            const tbody = table.querySelector('tbody');
+            if (!tbody) return;
+            
+            const conceptoData = monthlyEntidadConceptoPercentageData[concepto];
+            const entidades = Object.keys(conceptoData).sort();
+            
+            // Meses disponibles
+            const meses = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07'];
+            
+            let tableHTML = '';
+            entidades.forEach(entidad => {
+                tableHTML += '<tr>';
+                tableHTML += `<td>${entidad}</td>`;
+                
+                meses.forEach(mes => {
+                    const value = conceptoData[entidad][mes];
+                    let cellClass = 'text-right';
+                    let displayValue = '-';
+                    
+                    if (value !== null && value !== undefined) {
+                        if (value > 0) {
+                            cellClass += ' positive-change';
+                            displayValue = `+${value}%`;
+                        } else if (value < 0) {
+                            cellClass += ' negative-change';
+                            displayValue = `${value}%`;
+                        } else {
+                            displayValue = '0.0%';
+                        }
+                    }
+                    
+                    tableHTML += `<td class="${cellClass}">${displayValue}</td>`;
+                });
+                
+                tableHTML += '</tr>';
+            });
+            
+            tbody.innerHTML = tableHTML;
+            console.log('✅ Tabla porcentual de entidad-concepto mensual actualizada');
+        }
+        
+        // Función para actualizar tabla de entidad-tipo mensual
+        function updateMonthlyEntidadTipoTable(concepto, tipo) {
+            if (!monthlyEntidadTipoData || !monthlyEntidadTipoData[concepto]) {
+                console.warn('⚠️ No hay datos disponibles para la tabla de entidad-tipo mensual');
+                return;
+            }
+            
+            console.log('📊 Actualizando tabla de entidad-tipo mensual para:', concepto, tipo);
+            
+            const table = document.getElementById('monthly-entidad-tipo-table');
+            if (!table) return;
+            
+            const tbody = table.querySelector('tbody');
+            if (!tbody) return;
+            
+            const conceptoData = monthlyEntidadTipoData[concepto];
+            const entidades = Object.keys(conceptoData).sort();
+            
+            // Meses disponibles
+            const meses = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07'];
+            
+            let tableHTML = '';
+            entidades.forEach(entidad => {
+                if (conceptoData[entidad] && conceptoData[entidad][tipo]) {
+                    tableHTML += '<tr>';
+                    tableHTML += `<td>${entidad}</td>`;
+                    
+                    let total = 0;
+                    meses.forEach(mes => {
+                        const value = conceptoData[entidad][tipo][mes] || 0;
+                        total += value;
+                        tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
+                    });
+                    
+                    tableHTML += `<td class="text-right font-bold">${total.toLocaleString()}</td>`;
+                    tableHTML += '</tr>';
+                }
+            });
+            
+            tbody.innerHTML = tableHTML;
+            console.log('✅ Tabla de entidad-tipo mensual actualizada');
+        }
+        
+        // Función para actualizar tabla porcentual de entidad-tipo mensual
+        function updateMonthlyEntidadTipoPercentageTable(concepto, tipo) {
+            // Cargar datos porcentuales de tipo si no están disponibles
+            if (!monthlyEntidadTipoPercentageData) {
+                fetch('data/monthly_entidad_tipo_percentage_analysis.csv')
+                    .then(response => response.text())
+                    .then(csvText => {
+                        monthlyEntidadTipoPercentageData = parseCSVToMonthlyEntidadTipoPercentageData(csvText);
+                        updateMonthlyEntidadTipoPercentageTable(concepto, tipo);
+                    })
+                    .catch(error => {
+                        console.error('❌ Error cargando datos porcentuales de tipo mensual:', error);
+                    });
+                return;
+            }
+            
+            if (!monthlyEntidadTipoPercentageData[concepto]) {
+                console.warn('⚠️ No hay datos porcentuales disponibles para la tabla de entidad-tipo mensual');
+                return;
+            }
+            
+            console.log('📊 Actualizando tabla porcentual de entidad-tipo mensual para:', concepto, tipo);
+            
+            const table = document.getElementById('monthly-entidad-tipo-percentage-table');
+            if (!table) return;
+            
+            const tbody = table.querySelector('tbody');
+            if (!tbody) return;
+            
+            const conceptoData = monthlyEntidadTipoPercentageData[concepto];
+            const entidades = Object.keys(conceptoData).sort();
+            
+            // Meses disponibles
+            const meses = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07'];
+            
+            let tableHTML = '';
+            entidades.forEach(entidad => {
+                if (conceptoData[entidad] && conceptoData[entidad][tipo]) {
+                    tableHTML += '<tr>';
+                    tableHTML += `<td>${entidad}</td>`;
+                    
+                    meses.forEach(mes => {
+                        const value = conceptoData[entidad][tipo][mes];
+                        let cellClass = 'text-right';
+                        let displayValue = '-';
+                        
+                        if (value !== null && value !== undefined) {
+                            if (value > 0) {
+                                cellClass += ' positive-change';
+                                displayValue = `+${value}%`;
+                            } else if (value < 0) {
+                                cellClass += ' negative-change';
+                                displayValue = `${value}%`;
+                            } else {
+                                displayValue = '0.0%';
+                            }
+                        }
+                        
+                        tableHTML += `<td class="${cellClass}">${displayValue}</td>`;
+                    });
+                    
+                    tableHTML += '</tr>';
+                }
+            });
+            
+            tbody.innerHTML = tableHTML;
+            console.log('✅ Tabla porcentual de entidad-tipo mensual actualizada');
+        }
+        
+        // Función para parsear CSV de datos porcentuales de entidad-tipo mensual
+        function parseCSVToMonthlyEntidadTipoPercentageData(csvText) {
+            const lines = csvText.split('\n').filter(line => line.trim());
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
+                if (values.length < headers.length) continue;
+                
+                const entidad = values[0];
+                const concepto = values[1];
+                const tipo = values[2];
+                
+                if (!data[concepto]) {
+                    data[concepto] = {};
+                }
+                if (!data[concepto][entidad]) {
+                    data[concepto][entidad] = {};
+                }
+                if (!data[concepto][entidad][tipo]) {
+                    data[concepto][entidad][tipo] = {};
+                }
+                
+                // Agregar datos mensuales (desde columna 3 en adelante)
+                for (let j = 3; j < headers.length; j++) {
+                    const month = headers[j];
+                    const value = values[j] === '' || values[j] === 'NaN' ? null : parseFloat(values[j]);
+                    data[concepto][entidad][tipo][month] = value;
+                }
+            }
+            
+            return data;
+        }
         
         // Event listeners adicionales para debugging
         document.querySelectorAll('.content-section').forEach(section => {

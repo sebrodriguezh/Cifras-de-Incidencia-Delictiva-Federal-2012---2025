@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/snapshots.css">
     <!-- Leaflet CSS para mapas -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <!-- Header Section -->
@@ -237,6 +237,8 @@
                         <option value="">Cargando conceptos...</option>
                     </select>
                 </div>
+
+
                 
                 <!-- Grid de 7 pie charts -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px;">
@@ -279,12 +281,19 @@
             <div class="chart-container">
                 <h2>Gráfica 4. Distribución por entidad federativa</h2>
                 
-                <!-- Selectores de concepto y año -->
+                <!-- Selectores de concepto, tipo y año -->
                 <div class="map-selectors">
                     <div class="concept-selector">
                         <label for="map-concept-selector">Selecciona el concepto a visualizar:</label>
                         <select id="map-concept-selector">
                             <option value="">Cargando conceptos...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="concept-selector">
+                        <label for="map-type-selector">Selecciona el tipo:</label>
+                        <select id="map-type-selector">
+                            <option value="">Primero selecciona un concepto...</option>
                         </select>
                     </div>
                     
@@ -303,7 +312,23 @@
                     </div>
                 </div>
                 
-                <div id="map" class="map-container"></div>
+                <!-- Contenedor de mapas lado a lado -->
+                <div class="maps-container">
+                    <!-- Mapa 1: Mapa actual (funcional) -->
+                    <div class="map-wrapper">
+                        <h3>Mapa 1: Distribución por concepto</h3>
+                        <div id="map" class="map-container"></div>
+                    </div>
+                    
+                    <!-- Mapa 2: Placeholder -->
+                    <div class="map-wrapper">
+                        <h3>Mapa 2: Distribución por tipo</h3>
+                        <div id="map2" class="map-container placeholder">
+                            <div class="placeholder-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
 
             </div>
@@ -836,30 +861,32 @@
                     }
                 }
                 
-                // Llenar el selector
-                const select = document.getElementById('concept-select');
-                select.innerHTML = '<option value="">Selecciona un concepto...</option>';
+                // Llenar el selector de conceptos
+                const conceptSelect = document.getElementById('concept-select');
+                conceptSelect.innerHTML = '<option value="">Selecciona un concepto...</option>';
                 
                 Array.from(concepts).sort().forEach(concept => {
                     const option = document.createElement('option');
                     option.value = concept;
                     option.textContent = concept;
-                    select.appendChild(option);
+                    conceptSelect.appendChild(option);
                 });
+                
+
                 
                 // Cargar datos completos
                 typeChartData = parseCSVToData(csvText);
                 
-                        // Event listener para cambios en el selector
-        select.addEventListener('change', function() {
-            currentConcept = this.value;
-            if (currentConcept) {
-                createTypePieCharts(currentConcept);
-                document.getElementById('type-charts-container').style.display = 'block';
-            } else {
-                document.getElementById('type-charts-container').style.display = 'none';
-            }
-        });
+                // Event listener para cambios en el selector de conceptos
+                conceptSelect.addEventListener('change', function() {
+                    currentConcept = this.value;
+                    if (currentConcept) {
+                        createTypePieCharts(currentConcept);
+                        document.getElementById('type-charts-container').style.display = 'block';
+                    } else {
+                        document.getElementById('type-charts-container').style.display = 'none';
+                    }
+                });
                 
             } catch (error) {
                 console.error('❌ Error cargando conceptos:', error);
@@ -1315,6 +1342,12 @@ function parseCSVToData(csvText) {
             loadPercentageChangesTable();
             loadAvailableConcepts();
             
+            // Cargar datos de tipos para el segundo mapa
+            loadTipoData().then(() => {
+                // Cargar conceptos para el mapa (después de cargar tipos)
+                loadAvailableConceptsForMap();
+            });
+            
             // Crear gráfica nacional
             createNationalStackedChart();
             createNationalPieCharts();
@@ -1335,11 +1368,113 @@ function parseCSVToData(csvText) {
 
         // ===== FUNCIONES PARA MAPAS =====
         
-        // Variables globales para el mapa
+        // Variables globales para los mapas
         let map = null;
+        let map2 = null;
         let entidadConceptoData = null;
+        let entidadTipoData = null;
         let currentConcepto = null;
+        let currentTipo = null;
         let currentYear = 2019;
+        
+        // Función para cargar los datos de tipos
+        async function loadTipoData() {
+            try {
+                console.log('🔄 Cargando datos de tipos...');
+                
+                const response = await fetch('data/entidad_tipo_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('✅ CSV de tipos cargado, longitud:', csvText.length);
+                
+                // Parsear CSV de tipos
+                entidadTipoData = parseCSVToEntidadTipoData(csvText);
+                console.log('📊 Datos de tipos parseados:', entidadTipoData);
+                
+                return entidadTipoData;
+                
+            } catch (error) {
+                console.error('❌ Error cargando datos de tipos:', error);
+                return null;
+            }
+        }
+        
+        // Función para parsear CSV de tipos a estructura de datos
+        function parseCSVToEntidadTipoData(csvText) {
+            const lines = csvText.split('\n');
+            const headers = parseCSVLine(lines[0]);
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                
+                const values = parseCSVLine(line);
+                if (values.length < 4) continue;
+                
+                const entidad = values[0];
+                const concepto = values[1];
+                const tipo = values[2];
+                
+                // Mapear nombre de entidad del CSV al del GeoJSON
+                const entidadMapeada = mapEntidadName(entidad);
+                
+                if (!data[entidadMapeada]) {
+                    data[entidadMapeada] = {};
+                }
+                if (!data[entidadMapeada][concepto]) {
+                    data[entidadMapeada][concepto] = {};
+                }
+                if (!data[entidadMapeada][concepto][tipo]) {
+                    data[entidadMapeada][concepto][tipo] = {};
+                }
+                
+                // Agregar datos por año
+                for (let j = 3; j < values.length && j < headers.length; j++) {
+                    const year = headers[j];
+                    const value = parseInt(values[j]) || 0;
+                    data[entidadMapeada][concepto][tipo][year] = value;
+                }
+            }
+            
+            return data;
+        }
+        
+        // Función para parsear una línea CSV correctamente (maneja comillas)
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    if (inQuotes && line[i + 1] === '"') {
+                        // Comilla escapada
+                        current += '"';
+                        i++; // Saltar la siguiente comilla
+                    } else {
+                        // Toggle estado de comillas
+                        inQuotes = !inQuotes;
+                    }
+                } else if (char === ',' && !inQuotes) {
+                    // Separador de campo
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            // Agregar el último campo
+            result.push(current.trim());
+            
+            return result;
+        }
         
         // Función para cargar los conceptos disponibles
         async function loadAvailableConceptsForMap() {
@@ -1371,31 +1506,131 @@ function parseCSVToData(csvText) {
                 entidadConceptoData = parseCSVToEntidadConceptoData(csvText);
                 console.log('📊 Datos parseados:', entidadConceptoData);
                 
-                // Poblar selector
-                const selector = document.getElementById('map-concept-selector');
-                if (!selector) {
-                    console.error('❌ Selector no encontrado');
+                // Poblar selector de conceptos
+                const conceptSelector = document.getElementById('map-concept-selector');
+                if (!conceptSelector) {
+                    console.error('❌ Selector de conceptos no encontrado');
                     return;
                 }
                 
-                selector.innerHTML = '<option value="">Selecciona un concepto</option>';
+                conceptSelector.innerHTML = '<option value="">Selecciona un concepto</option>';
                 conceptos.forEach(concepto => {
                     const option = document.createElement('option');
                     option.value = concepto;
                     option.textContent = concepto;
-                    selector.appendChild(option);
+                    conceptSelector.appendChild(option);
                 });
+                
+                // Configurar selector de tipos (inicialmente deshabilitado)
+                const typeSelector = document.getElementById('map-type-selector');
+                if (typeSelector) {
+                    typeSelector.disabled = true;
+                    typeSelector.innerHTML = '<option value="">Primero selecciona un concepto...</option>';
+                }
                 
                 console.log('✅ Selector poblado con', conceptos.length, 'conceptos');
                 
                 // Event listener para cambios de concepto
-                selector.addEventListener('change', function() {
+                conceptSelector.addEventListener('change', function() {
                     currentConcepto = this.value;
                     console.log('🎯 Concepto seleccionado:', currentConcepto);
+                    
                     if (currentConcepto) {
+                        // Habilitar selector de tipos y cargar tipos disponibles
+                        if (typeSelector) {
+                            typeSelector.disabled = false;
+                            typeSelector.innerHTML = '<option value="">Cargando tipos...</option>';
+                            
+                            // Cargar tipos reales para el concepto seleccionado
+                            if (entidadTipoData) {
+                                const tipos = new Set();
+                                
+                                // Obtener todos los tipos únicos para este concepto
+                                Object.keys(entidadTipoData).forEach(entidad => {
+                                    if (entidadTipoData[entidad][currentConcepto]) {
+                                        Object.keys(entidadTipoData[entidad][currentConcepto]).forEach(tipo => {
+                                            // Verificar si este tipo tiene datos en algún año
+                                            const tipoData = entidadTipoData[entidad][currentConcepto][tipo];
+                                            const hasData = Object.values(tipoData).some(value => value > 0);
+                                            if (hasData) {
+                                                tipos.add(tipo);
+                                            }
+                                        });
+                                    }
+                                });
+                                
+                                // Poblar selector con tipos reales
+                                typeSelector.innerHTML = '<option value="">Selecciona un tipo...</option>';
+                                Array.from(tipos).sort().forEach(tipo => {
+                                    const option = document.createElement('option');
+                                    option.value = tipo;
+                                    option.textContent = tipo;
+                                    typeSelector.appendChild(option);
+                                });
+                                
+                                console.log(`✅ Tipos cargados para ${currentConcepto}:`, Array.from(tipos));
+                            }
+                        }
+                        
                         updateMapColors(currentConcepto, currentYear);
+                    } else {
+                        // Deshabilitar selector de tipos
+                        if (typeSelector) {
+                            typeSelector.disabled = true;
+                            typeSelector.innerHTML = '<option value="">Primero selecciona un concepto...</option>';
+                        }
+                        
+                        // Limpiar segundo mapa y restaurar placeholder
+                        if (map2) {
+                            map2.remove();
+                            map2 = null;
+                        }
+                        
+                        const mapContainer2 = document.getElementById('map2');
+                        if (mapContainer2) {
+                            mapContainer2.classList.add('placeholder');
+                            mapContainer2.classList.remove('loaded'); // Quitar clase loaded
+                            mapContainer2.innerHTML = `
+                                <div class="placeholder-content">
+                                    <p>🚧 Mapa en desarrollo</p>
+                                    <p>Este espacio está reservado para funcionalidad adicional</p>
+                                </div>
+                            `;
+                        }
                     }
                 });
+                
+                // Event listener para cambios de tipo
+                if (typeSelector) {
+                    typeSelector.addEventListener('change', function() {
+                        currentTipo = this.value;
+                        console.log('🎯 Tipo seleccionado:', currentTipo);
+                        
+                        if (currentTipo && currentConcepto) {
+                            // Crear o actualizar el segundo mapa
+                            createSecondMap(currentConcepto, currentTipo, currentYear);
+                        } else {
+                            // Limpiar el segundo mapa y restaurar placeholder
+                            if (map2) {
+                                map2.remove();
+                                map2 = null;
+                            }
+                            
+                            // Restaurar placeholder
+                            const mapContainer2 = document.getElementById('map2');
+                            if (mapContainer2) {
+                                mapContainer2.classList.add('placeholder');
+                                mapContainer2.classList.remove('loaded'); // Quitar clase loaded
+                                mapContainer2.innerHTML = `
+                                    <div class="placeholder-content">
+                                        <p>🚧 Mapa en desarrollo</p>
+                                        <p>Este espacio está reservado para funcionalidad adicional</p>
+                                    </div>
+                                `;
+                            }
+                        }
+                    });
+                }
                 
                 // Configurar slider de año
                 const yearSlider = document.getElementById('map-year-slider');
@@ -1406,9 +1641,15 @@ function parseCSVToData(csvText) {
                     yearSlider.addEventListener('input', function() {
                         currentYear = parseInt(this.value);
                         yearDisplay.textContent = currentYear;
+                        console.log('📅 Año actualizado:', currentYear);
                         
                         if (currentConcepto) {
                             updateMapColors(currentConcepto, currentYear);
+                        }
+                        
+                        // Actualizar segundo mapa si hay tipo seleccionado
+                        if (currentTipo && currentConcepto && map2) {
+                            updateSecondMapColors(currentConcepto, currentTipo, currentYear);
                         }
                     });
                     
@@ -1463,12 +1704,12 @@ function parseCSVToData(csvText) {
         // Función para parsear CSV de entidad-concepto
         function parseCSVToEntidadConceptoData(csvText) {
             const lines = csvText.split('\n');
-            const headers = lines[0].split(',');
+            const headers = parseCSVLine(lines[0]);
             const data = {};
             
             lines.slice(1).forEach(line => {
                 if (line.trim()) {
-                    const values = line.split(',');
+                    const values = parseCSVLine(line);
                     const entidad = values[0];
                     const concepto = values[1];
                     
@@ -1490,6 +1731,212 @@ function parseCSVToData(csvText) {
             return data;
         }
         
+        // Función para crear el segundo mapa (por tipo)
+        function createSecondMap(concepto, tipo, year) {
+            try {
+                // Verificar que Leaflet está disponible
+                if (typeof L === 'undefined') {
+                    console.error('❌ Leaflet no está cargado para el segundo mapa');
+                    return;
+                }
+                
+                // Verificar que el contenedor existe
+                const mapContainer2 = document.getElementById('map2');
+                if (!mapContainer2) {
+                    console.error('❌ No se encontró el contenedor del segundo mapa');
+                    return;
+                }
+                
+                // Ocultar el placeholder
+                mapContainer2.classList.remove('placeholder');
+                mapContainer2.innerHTML = ''; // Limpiar contenido del placeholder
+                
+                // Limpiar mapa anterior si existe
+                if (map2) {
+                    map2.remove();
+                }
+                
+                // Crear el segundo mapa
+                map2 = L.map('map2', {
+                    center: [23.6345, -102.5528],
+                    zoom: 5,
+                    zoomControl: true,
+                    attributionControl: false
+                });
+                
+                // Establecer límites del mapa
+                map2.setMaxBounds([14.5, -118.5, 32.5, -86.5]);
+                
+                // Cargar GeoJSON de estados
+                fetch('data/geojson/estados_compressed.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(geojsonData => {
+                        // Agregar estados al segundo mapa
+                        const estadosLayer2 = L.geoJSON(geojsonData, {
+                            style: function(feature) {
+                                return {
+                                    fillColor: '#3498db',
+                                    weight: 1.5,
+                                    opacity: 1,
+                                    color: '#2c3e50',
+                                    fillOpacity: 0.8
+                                };
+                            },
+                            onEachFeature: function(feature, layer) {
+                                const nombre = feature.properties.NOMGEO || 'Estado';
+                                
+                                // Crear popup con datos de tipo
+                                let popupContent = `<b>${nombre}</b>`;
+                                
+                                if (entidadTipoData && currentConcepto && currentTipo && currentYear) {
+                                    const entidadData = entidadTipoData[nombre];
+                                    if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentTipo] && entidadData[currentConcepto][currentTipo].hasOwnProperty(currentYear)) {
+                                        const value = entidadData[currentConcepto][currentTipo][currentYear];
+                                        popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Tipo:</b> ${currentTipo}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
+                                    } else {
+                                        popupContent += `<br><br><i>No hay datos disponibles para "${currentTipo}" en ${currentYear}</i>`;
+                                    }
+                                } else {
+                                    popupContent += `<br><br><i>Selecciona un tipo para ver datos</i>`;
+                                }
+                                
+                                layer.bindPopup(popupContent);
+                            }
+                        });
+                        
+                        estadosLayer2.addTo(map2);
+                        
+                        // Ajustar la vista del mapa
+                        if (estadosLayer2.getBounds) {
+                            const bounds = estadosLayer2.getBounds();
+                            map2.fitBounds(bounds, { padding: [20, 20] });
+                        }
+                        
+                        // Actualizar colores del segundo mapa
+                        updateSecondMapColors(concepto, tipo, year);
+                        
+                        // Ocultar el mensaje de carga del segundo mapa
+                        const mapContainer2 = document.getElementById('map2');
+                        if (mapContainer2) {
+                            mapContainer2.classList.add('loaded');
+                        }
+                        
+                        console.log('✅ Segundo mapa creado exitosamente');
+                    })
+                    .catch(error => {
+                        console.error('❌ Error cargando GeoJSON para segundo mapa:', error);
+                    });
+                
+            } catch (error) {
+                console.error('❌ Error creando segundo mapa:', error);
+            }
+        }
+        
+        // Función para actualizar colores del segundo mapa según el tipo
+        function updateSecondMapColors(concepto, tipo, year) {
+            console.log('🔄 Actualizando colores del segundo mapa para concepto:', concepto, 'tipo:', tipo, 'año:', year);
+            
+            if (!map2 || !entidadTipoData) {
+                console.error('❌ Segundo mapa o datos de tipos no disponibles');
+                return;
+            }
+            
+            // Recopilar todos los valores para este tipo y concepto
+            const allValues = [];
+            Object.keys(entidadTipoData).forEach(entidad => {
+                if (entidadTipoData[entidad][concepto] && entidadTipoData[entidad][concepto][tipo] && entidadTipoData[entidad][concepto][tipo].hasOwnProperty(year)) {
+                    allValues.push(entidadTipoData[entidad][concepto][tipo][year]);
+                }
+            });
+            
+            console.log('📈 Valores encontrados para', concepto, tipo, 'en', year, ':', allValues);
+            
+            if (allValues.length === 0) {
+                console.error('❌ No hay valores para el concepto:', concepto, 'tipo:', tipo, 'en año:', year);
+                return;
+            }
+            
+            // Calcular percentiles para la escala de colores (7 niveles)
+            allValues.sort((a, b) => a - b);
+            const q14 = allValues[Math.floor(allValues.length * 0.14)];
+            const q28 = allValues[Math.floor(allValues.length * 0.28)];
+            const q42 = allValues[Math.floor(allValues.length * 0.42)];
+            const q56 = allValues[Math.floor(allValues.length * 0.56)];
+            const q70 = allValues[Math.floor(allValues.length * 0.70)];
+            const q84 = allValues[Math.floor(allValues.length * 0.84)];
+            
+            console.log('📊 Percentiles - Q14:', q14, 'Q28:', q28, 'Q42:', q42, 'Q56:', q56, 'Q70:', q70, 'Q84:', q84);
+            
+            // Actualizar colores de los estados en el segundo mapa
+            let estadosActualizados = 0;
+            map2.eachLayer(layer => {
+                if (layer.feature && layer.feature.properties) {
+                    const entidad = layer.feature.properties.NOMGEO;
+                    console.log('🗺️ Procesando entidad en segundo mapa:', entidad);
+                    
+                    const entidadData = entidadTipoData[entidad];
+                    
+                    if (entidadData && entidadData[concepto] && entidadData[concepto][tipo] && entidadData[concepto][tipo].hasOwnProperty(year)) {
+                        const value = entidadData[concepto][tipo][year];
+                        
+                        console.log(`   📊 ${entidad}: Tipo ${tipo} Año ${year} = ${value}`);
+                        
+                        // Asignar color según el valor (escala blanco a rojo con 7 niveles)
+                        let color;
+                        if (value <= q14) {
+                            color = '#ffffff'; // Blanco (muy baja incidencia)
+                        } else if (value <= q28) {
+                            color = '#ffe6e6'; // Rosa muy claro (baja incidencia)
+                        } else if (value <= q42) {
+                            color = '#ffcccc'; // Rosa claro (media-baja incidencia)
+                        } else if (value <= q56) {
+                            color = '#ffb3b3'; // Rosa medio (media incidencia)
+                        } else if (value <= q70) {
+                            color = '#ff9999'; // Rosa medio-alto (media-alta incidencia)
+                        } else if (value <= q84) {
+                            color = '#ff6666'; // Rosa alto (alta incidencia)
+                        } else {
+                            color = '#ff0000'; // Rojo intenso (muy alta incidencia)
+                        }
+                        
+                        layer.setStyle({
+                            fillColor: color,
+                            fillOpacity: 0.8
+                        });
+                        
+                        // Actualizar el popup con los nuevos datos
+                        const nombre = layer.feature.properties.NOMGEO;
+                        let popupContent = `<b>${nombre}</b>`;
+                        
+                        if (entidadTipoData && currentConcepto && currentTipo && currentYear) {
+                            const entidadData = entidadTipoData[nombre];
+                            if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentTipo] && entidadData[currentConcepto][currentTipo].hasOwnProperty(currentYear)) {
+                                const value = entidadData[currentConcepto][currentTipo][currentYear];
+                                popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Tipo:</b> ${currentTipo}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
+                            } else {
+                                popupContent += `<br><br><i>No hay datos disponibles para "${currentTipo}" en ${currentYear}</i>`;
+                            }
+                        } else {
+                            popupContent += `<br><br><i>Selecciona un tipo para ver datos</i>`;
+                        }
+                        
+                        layer.bindPopup(popupContent);
+                        
+                        estadosActualizados++;
+                    } else {
+                        console.log(`   ⚠️ ${entidad}: No hay datos para ${concepto} - ${tipo} en ${year}`);
+                    }
+                }
+            });
+            
+            console.log(`✅ Estados actualizados en segundo mapa: ${estadosActualizados}`);
+        }
+        
         // Función para actualizar colores del mapa según el concepto y año
         function updateMapColors(concepto, year) {
             console.log('🔄 Actualizando colores del mapa para concepto:', concepto, 'año:', year);
@@ -1503,9 +1950,9 @@ function parseCSVToData(csvText) {
             // Obtener todos los valores para este concepto y año específico
             const allValues = [];
             Object.values(entidadConceptoData).forEach(entidadData => {
-                if (entidadData[concepto] && entidadData[concepto][year]) {
+                if (entidadData[concepto] && entidadData[concepto].hasOwnProperty(year)) {
                     const value = entidadData[concepto][year];
-                    if (value > 0) allValues.push(value);
+                    allValues.push(value); // Incluir todos los valores, incluyendo 0s
                 }
             });
             
@@ -1536,7 +1983,7 @@ function parseCSVToData(csvText) {
                     
                     const entidadData = entidadConceptoData[entidad];
                     
-                    if (entidadData && entidadData[concepto] && entidadData[concepto][year]) {
+                    if (entidadData && entidadData[concepto] && entidadData[concepto].hasOwnProperty(year)) {
                         // Usar el valor del año específico
                         const value = entidadData[concepto][year];
                         
@@ -1571,7 +2018,7 @@ function parseCSVToData(csvText) {
                         
                         if (entidadConceptoData && currentConcepto && currentYear) {
                             const entidadData = entidadConceptoData[nombre];
-                            if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentYear]) {
+                            if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto].hasOwnProperty(currentYear)) {
                                 const value = entidadData[currentConcepto][currentYear];
                                 popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
                             } else {
@@ -1596,7 +2043,12 @@ function parseCSVToData(csvText) {
         // Función para crear el mapa de estados
         function createEstadosMap() {
             try {
-
+                // Verificar que Leaflet está disponible
+                if (typeof L === 'undefined') {
+                    console.error('❌ Leaflet no está cargado. Esperando...');
+                    setTimeout(createEstadosMap, 1000); // Reintentar en 1 segundo
+                    return;
+                }
                 
                 // Verificar que el contenedor existe
                 const mapContainer = document.getElementById('map');
@@ -1645,7 +2097,7 @@ function parseCSVToData(csvText) {
                                 
                                 if (entidadConceptoData && currentConcepto && currentYear) {
                                     const entidadData = entidadConceptoData[nombre];
-                                    if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto][currentYear]) {
+                                    if (entidadData && entidadData[currentConcepto] && entidadData[currentConcepto].hasOwnProperty(currentYear)) {
                                         const value = entidadData[currentConcepto][currentYear];
                                         popupContent += `<br><br><b>Concepto:</b> ${currentConcepto}<br><b>Año:</b> ${currentYear}<br><b>Incidencia:</b> ${value.toLocaleString()} carpetas`;
                                     } else {
@@ -1689,6 +2141,6 @@ function parseCSVToData(csvText) {
     </script>
     
     <!-- Leaflet JavaScript para mapas -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>

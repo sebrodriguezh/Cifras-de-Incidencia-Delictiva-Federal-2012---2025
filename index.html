@@ -330,6 +330,111 @@
                     </div>
                 </div>
                 
+                <!-- Tabla de datos por entidad y concepto -->
+                <div class="table-container">
+                    <h3>Tabla 3. Valores absolutos de la incidencia delictiva del fuero federal por entidad federativa y concepto</h3>
+                    <p class="table-description">Valores absolutos por entidad, concepto y año (suma de enero-julio)</p>
+                    <table class="data-table" id="entidad-concepto-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                                <th>2024</th>
+                                <th>2025</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto para ver datos...</td>
+                                <td colspan="8">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Tabla de variación porcentual por entidad y concepto -->
+                <div class="table-container">
+                    <h3>Tabla 3.1.1. Variación porcentual de la incidencia delictiva del fuero federal por entidad federativa y concepto</h3>
+                    <p class="table-description">Cambios porcentuales año tras año (2019 vs 2018, 2020 vs 2019, etc.)</p>
+                    <table class="data-table" id="entidad-concepto-percentage-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                                <th>2024</th>
+                                <th>2025</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto para ver datos...</td>
+                                <td colspan="7">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Tabla de datos por entidad y tipo -->
+                <div class="table-container">
+                    <h3>Tabla 3.1. Incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
+                    <p class="table-description">Valores absolutos por entidad, tipo y año (suma de enero-julio)</p>
+                    <table class="data-table" id="entidad-tipo-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                                <th>2024</th>
+                                <th>2025</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto y tipo para ver datos...</td>
+                                <td colspan="8">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Tabla de variación porcentual por entidad y tipo -->
+                <div class="table-container">
+                    <h3>Tabla 3.1.3. Variación porcentual de la incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
+                    <p class="table-description">Cambios porcentuales año tras año por tipo (2019 vs 2018, 2020 vs 2019, etc.)</p>
+                    <table class="data-table" id="entidad-tipo-percentage-table">
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                                <th>2024</th>
+                                <th>2025</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selecciona un concepto y tipo para ver datos...</td>
+                                <td colspan="7">Espera...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
 
@@ -1348,6 +1453,10 @@ function parseCSVToData(csvText) {
                 loadAvailableConceptsForMap();
             });
             
+            // Cargar datos de variación porcentual
+            loadPercentageData();
+            loadTipoPercentageData();
+            
             // Crear gráfica nacional
             createNationalStackedChart();
             createNationalPieCharts();
@@ -1373,10 +1482,140 @@ function parseCSVToData(csvText) {
         let map2 = null;
         let entidadConceptoData = null;
         let entidadTipoData = null;
+        let entidadConceptoPercentageData = null;
+        let entidadTipoPercentageData = null;
         let currentConcepto = null;
         let currentTipo = null;
         let currentYear = 2019;
         
+        // Función para cargar los datos de variación porcentual
+        async function loadPercentageData() {
+            try {
+                console.log('🔄 Cargando datos de variación porcentual...');
+                
+                const response = await fetch('data/entidad_concepto_percentage_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('✅ CSV de porcentajes cargado, longitud:', csvText.length);
+                
+                // Parsear CSV de porcentajes
+                entidadConceptoPercentageData = parseCSVToEntidadConceptoPercentageData(csvText);
+                console.log('📊 Datos de porcentajes parseados:', entidadConceptoPercentageData);
+                
+                return entidadConceptoPercentageData;
+                
+            } catch (error) {
+                console.error('❌ Error cargando datos de porcentajes:', error);
+                return null;
+            }
+        }
+        
+        // Función para parsear CSV de porcentajes a estructura de datos
+        function parseCSVToEntidadConceptoPercentageData(csvText) {
+            const lines = csvText.split('\n');
+            const headers = parseCSVLine(lines[0]);
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                
+                const values = parseCSVLine(line);
+                if (values.length < 4) continue;
+                
+                const entidad = values[0];
+                const concepto = values[1];
+                
+                // Mapear nombre de entidad del CSV al del GeoJSON
+                const entidadMapeada = mapEntidadName(entidad);
+                
+                if (!data[entidadMapeada]) {
+                    data[entidadMapeada] = {};
+                }
+                if (!data[entidadMapeada][concepto]) {
+                    data[entidadMapeada][concepto] = {};
+                }
+                
+                // Agregar datos por año (columnas 2 en adelante)
+                for (let j = 2; j < values.length && j < headers.length; j++) {
+                    const year = headers[j];
+                    const value = parseFloat(values[j]) || 0;
+                    data[entidadMapeada][concepto][year] = value;
+                }
+            }
+            
+            return data;
+        }
+
+        // Función para cargar los datos de variación porcentual por tipo
+        async function loadTipoPercentageData() {
+            try {
+                console.log('🔄 Cargando datos de variación porcentual por tipo...');
+                
+                const response = await fetch('data/entidad_tipo_percentage_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('✅ CSV de porcentajes por tipo cargado, longitud:', csvText.length);
+                
+                // Parsear CSV de porcentajes por tipo
+                entidadTipoPercentageData = parseCSVToEntidadTipoPercentageData(csvText);
+                console.log('📊 Datos de porcentajes por tipo parseados:', entidadTipoPercentageData);
+                
+                return entidadTipoPercentageData;
+                
+            } catch (error) {
+                console.error('❌ Error cargando datos de porcentajes por tipo:', error);
+                return null;
+            }
+        }
+        
+        // Función para parsear CSV de porcentajes por tipo a estructura de datos
+        function parseCSVToEntidadTipoPercentageData(csvText) {
+            const lines = csvText.split('\n');
+            const headers = parseCSVLine(lines[0]);
+            const data = {};
+            
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+                
+                const values = parseCSVLine(line);
+                if (values.length < 5) continue;
+                
+                const entidad = values[0];
+                const concepto = values[1];
+                const tipo = values[2];
+                
+                // Mapear nombre de entidad del CSV al del GeoJSON
+                const entidadMapeada = mapEntidadName(entidad);
+                
+                if (!data[entidadMapeada]) {
+                    data[entidadMapeada] = {};
+                }
+                if (!data[entidadMapeada][concepto]) {
+                    data[entidadMapeada][concepto] = {};
+                }
+                if (!data[entidadMapeada][concepto][tipo]) {
+                    data[entidadMapeada][concepto][tipo] = {};
+                }
+                
+                // Agregar datos por año (columnas 3 en adelante)
+                for (let j = 3; j < values.length && j < headers.length; j++) {
+                    const year = headers[j];
+                    const value = parseFloat(values[j]) || 0;
+                    data[entidadMapeada][concepto][tipo][year] = value;
+                }
+            }
+            
+            return data;
+        }
+
         // Función para cargar los datos de tipos
         async function loadTipoData() {
             try {
@@ -1573,11 +1812,140 @@ function parseCSVToData(csvText) {
                         }
                         
                         updateMapColors(currentConcepto, currentYear);
+                        createEntidadConceptoTable(currentConcepto);
+                        createEntidadConceptoPercentageTable(currentConcepto);
                     } else {
                         // Deshabilitar selector de tipos
                         if (typeSelector) {
                             typeSelector.disabled = true;
                             typeSelector.innerHTML = '<option value="">Primero selecciona un concepto...</option>';
+                        }
+                        
+                        // Limpiar tabla 3
+                        const table = document.getElementById('entidad-concepto-table');
+                        if (table) {
+                            table.innerHTML = `
+                                <thead>
+                                    <tr>
+                                        <th>Entidad</th>
+                                        <th>2019</th>
+                                        <th>2020</th>
+                                        <th>2021</th>
+                                        <th>2022</th>
+                                        <th>2023</th>
+                                        <th>2024</th>
+                                        <th>2025</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Selecciona un concepto para ver datos...</td>
+                                        <td colspan="8">Espera...</td>
+                                    </tr>
+                                </tbody>
+                            `;
+                        }
+                        
+                        // Limpiar tabla 3.1.1 (segundo bloque)
+                        const tablePercentage3 = document.getElementById('entidad-concepto-percentage-table');
+                        if (tablePercentage3) {
+                            tablePercentage3.innerHTML = `
+                                <thead>
+                                    <tr>
+                                        <th>Entidad</th>
+                                        <th>2019</th>
+                                        <th>2020</th>
+                                        <th>2021</th>
+                                        <th>2022</th>
+                                        <th>2023</th>
+                                        <th>2024</th>
+                                        <th>2025</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Selecciona un concepto para ver datos...</td>
+                                        <td colspan="7">Espera...</td>
+                                    </tr>
+                                </tbody>
+                            `;
+                        }
+                        
+                        // Limpiar tabla 3.1.1
+                        const tablePercentage2 = document.getElementById('entidad-concepto-percentage-table');
+                        if (tablePercentage2) {
+                            tablePercentage2.innerHTML = `
+                                <thead>
+                                    <tr>
+                                        <th>Entidad</th>
+                                        <th>2019</th>
+                                        <th>2020</th>
+                                        <th>2021</th>
+                                        <th>2022</th>
+                                        <th>2023</th>
+                                        <th>2024</th>
+                                        <th>2025</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Selecciona un concepto para ver datos...</td>
+                                        <td colspan="7">Espera...</td>
+                                    </tr>
+                                </tbody>
+                            `;
+                        }
+                        
+                        // Limpiar tabla 3.1
+                        const tableTipo = document.getElementById('entidad-tipo-table');
+                        if (tableTipo) {
+                            tableTipo.innerHTML = `
+                                <thead>
+                                    <tr>
+                                        <th>Entidad</th>
+                                        <th>2019</th>
+                                        <th>2020</th>
+                                        <th>2021</th>
+                                        <th>2022</th>
+                                        <th>2023</th>
+                                        <th>2024</th>
+                                        <th>2025</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Selecciona un concepto y tipo para ver datos...</td>
+                                        <td colspan="8">Espera...</td>
+                                    </tr>
+                                </tbody>
+                            `;
+                        }
+                        
+                        // Limpiar tabla 3.1.3
+                        const tableTipoPercentage2 = document.getElementById('entidad-tipo-percentage-table');
+                        if (tableTipoPercentage2) {
+                            tableTipoPercentage2.innerHTML = `
+                                <thead>
+                                    <tr>
+                                        <th>Entidad</th>
+                                        <th>2019</th>
+                                        <th>2020</th>
+                                        <th>2021</th>
+                                        <th>2022</th>
+                                        <th>2023</th>
+                                        <th>2024</th>
+                                        <th>2025</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Selecciona un concepto y tipo para ver datos...</td>
+                                        <td colspan="7">Espera...</td>
+                                    </tr>
+                                </tbody>
+                            `;
                         }
                         
                         // Limpiar segundo mapa y restaurar placeholder
@@ -1592,8 +1960,6 @@ function parseCSVToData(csvText) {
                             mapContainer2.classList.remove('loaded'); // Quitar clase loaded
                             mapContainer2.innerHTML = `
                                 <div class="placeholder-content">
-                                    <p>🚧 Mapa en desarrollo</p>
-                                    <p>Este espacio está reservado para funcionalidad adicional</p>
                                 </div>
                             `;
                         }
@@ -1609,6 +1975,10 @@ function parseCSVToData(csvText) {
                         if (currentTipo && currentConcepto) {
                             // Crear o actualizar el segundo mapa
                             createSecondMap(currentConcepto, currentTipo, currentYear);
+                            // Crear tabla de tipos
+                            createEntidadTipoTable(currentConcepto, currentTipo);
+                            // Crear tabla de porcentajes por tipo
+                            createEntidadTipoPercentageTable(currentConcepto, currentTipo);
                         } else {
                             // Limpiar el segundo mapa y restaurar placeholder
                             if (map2) {
@@ -1626,6 +1996,57 @@ function parseCSVToData(csvText) {
                                         <p>🚧 Mapa en desarrollo</p>
                                         <p>Este espacio está reservado para funcionalidad adicional</p>
                                     </div>
+                                `;
+                            }
+                            
+                            // Limpiar tabla 3.1
+                            const tableTipo = document.getElementById('entidad-tipo-table');
+                            if (tableTipo) {
+                                tableTipo.innerHTML = `
+                                    <thead>
+                                        <tr>
+                                            <th>Entidad</th>
+                                            <th>2019</th>
+                                            <th>2020</th>
+                                            <th>2021</th>
+                                            <th>2022</th>
+                                            <th>2023</th>
+                                            <th>2024</th>
+                                            <th>2025</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Selecciona un concepto y tipo para ver datos...</td>
+                                            <td colspan="8">Espera...</td>
+                                        </tr>
+                                    </tbody>
+                                `;
+                            }
+                            
+                            // Limpiar tabla 3.1.3
+                            const tableTipoPercentage = document.getElementById('entidad-tipo-percentage-table');
+                            if (tableTipoPercentage) {
+                                tableTipoPercentage.innerHTML = `
+                                    <thead>
+                                        <tr>
+                                            <th>Entidad</th>
+                                            <th>2019</th>
+                                            <th>2020</th>
+                                            <th>2021</th>
+                                            <th>2022</th>
+                                            <th>2023</th>
+                                            <th>2024</th>
+                                            <th>2025</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Selecciona un concepto y tipo para ver datos...</td>
+                                            <td colspan="7">Espera...</td>
+                                        </tr>
+                                    </tbody>
                                 `;
                             }
                         }
@@ -1937,6 +2358,222 @@ function parseCSVToData(csvText) {
             console.log(`✅ Estados actualizados en segundo mapa: ${estadosActualizados}`);
         }
         
+        // Función para crear la tabla de variación porcentual por entidad y concepto
+        function createEntidadConceptoPercentageTable(concepto) {
+            if (!entidadConceptoPercentageData || !concepto) {
+                console.error('No hay datos de porcentajes o concepto seleccionado');
+                return;
+            }
+            
+            const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            
+            // Obtener todas las entidades que tienen datos para este concepto
+            const entidades = Object.keys(entidadConceptoPercentageData).filter(entidad => {
+                return entidadConceptoPercentageData[entidad][concepto];
+            }).sort();
+            
+            // Crear tabla HTML
+            let tableHTML = '<thead><tr><th>Entidad</th>';
+            years.forEach(year => {
+                tableHTML += `<th>${year}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+            
+            // Procesar cada entidad
+            entidades.forEach(entidad => {
+                tableHTML += '<tr>';
+                tableHTML += `<td>${entidad}</td>`;
+                
+                // Agregar cambios porcentuales para cada año
+                years.forEach(year => {
+                    const value = entidadConceptoPercentageData[entidad][concepto][year] || 0;
+                    
+                    // Formatear cambios porcentuales con colores
+                    let cellClass = 'text-right';
+                    let displayValue = '-';
+                    
+                    if (value > 0) {
+                        cellClass += ' positive-change';
+                        displayValue = `+${value.toFixed(1)}%`;
+                    } else if (value < 0) {
+                        cellClass += ' negative-change';
+                        displayValue = `${value.toFixed(1)}%`;
+                    } else if (value === 0) {
+                        displayValue = '0.0%';
+                    }
+                    
+                    tableHTML += `<td class="${cellClass}">${displayValue}</td>`;
+                });
+                
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody>';
+            
+            // Actualizar la tabla
+            const table = document.getElementById('entidad-concepto-percentage-table');
+            if (table) {
+                table.innerHTML = tableHTML;
+                console.log('✅ Tabla de variación porcentual creada para:', concepto);
+            }
+        }
+
+        // Función para crear la tabla de variación porcentual por entidad y tipo
+        function createEntidadTipoPercentageTable(concepto, tipo) {
+            if (!entidadTipoPercentageData || !concepto || !tipo) {
+                console.error('No hay datos de porcentajes por tipo, concepto o tipo seleccionado');
+                return;
+            }
+            
+            const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            
+            // Obtener todas las entidades que tienen datos para este concepto y tipo
+            const entidades = Object.keys(entidadTipoPercentageData).filter(entidad => {
+                return entidadTipoPercentageData[entidad][concepto] && entidadTipoPercentageData[entidad][concepto][tipo];
+            }).sort();
+            
+            // Crear tabla HTML
+            let tableHTML = '<thead><tr><th>Entidad</th>';
+            years.forEach(year => {
+                tableHTML += `<th>${year}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+            
+            // Procesar cada entidad
+            entidades.forEach(entidad => {
+                tableHTML += '<tr>';
+                tableHTML += `<td>${entidad}</td>`;
+                
+                // Agregar cambios porcentuales para cada año
+                years.forEach(year => {
+                    const value = entidadTipoPercentageData[entidad][concepto][tipo][year] || 0;
+                    
+                    // Formatear cambios porcentuales con colores
+                    let cellClass = 'text-right';
+                    let displayValue = '-';
+                    
+                    if (value > 0) {
+                        cellClass += ' positive-change';
+                        displayValue = `+${value.toFixed(1)}%`;
+                    } else if (value < 0) {
+                        cellClass += ' negative-change';
+                        displayValue = `${value.toFixed(1)}%`;
+                    } else if (value === 0) {
+                        displayValue = '0.0%';
+                    }
+                    
+                    tableHTML += `<td class="${cellClass}">${displayValue}</td>`;
+                });
+                
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody>';
+            
+            // Actualizar la tabla
+            const table = document.getElementById('entidad-tipo-percentage-table');
+            if (table) {
+                table.innerHTML = tableHTML;
+                console.log('✅ Tabla de variación porcentual por tipo creada para:', concepto, '-', tipo);
+            }
+        }
+
+        // Función para crear la tabla de datos por entidad y tipo
+        function createEntidadTipoTable(concepto, tipo) {
+            if (!entidadTipoData || !concepto || !tipo) {
+                console.error('No hay datos, concepto o tipo seleccionado');
+                return;
+            }
+            
+            const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            
+            // Obtener todas las entidades que tienen datos para este concepto y tipo
+            const entidades = Object.keys(entidadTipoData).filter(entidad => {
+                return entidadTipoData[entidad][concepto] && entidadTipoData[entidad][concepto][tipo];
+            }).sort();
+            
+            // Crear tabla HTML
+            let tableHTML = '<thead><tr><th>Entidad</th>';
+            years.forEach(year => {
+                tableHTML += `<th>${year}</th>`;
+            });
+            tableHTML += '<th>Total</th></tr></thead><tbody>';
+            
+            // Procesar cada entidad
+            entidades.forEach(entidad => {
+                tableHTML += '<tr>';
+                tableHTML += `<td>${entidad}</td>`;
+                
+                let total = 0;
+                years.forEach(year => {
+                    const value = entidadTipoData[entidad][concepto][tipo][year] || 0;
+                    total += value;
+                    tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
+                });
+                
+                // Columna de total
+                tableHTML += `<td class="text-right total-cell"><strong>${total.toLocaleString()}</strong></td>`;
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody>';
+            
+            // Actualizar la tabla
+            const table = document.getElementById('entidad-tipo-table');
+            if (table) {
+                table.innerHTML = tableHTML;
+                console.log('✅ Tabla de entidad-tipo creada para:', concepto, '-', tipo);
+            }
+        }
+
+        // Función para crear la tabla de datos por entidad y concepto
+        function createEntidadConceptoTable(concepto) {
+            if (!entidadConceptoData || !concepto) {
+                console.error('No hay datos o concepto seleccionado');
+                return;
+            }
+            
+            const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            
+            // Obtener todas las entidades que tienen datos para este concepto
+            const entidades = Object.keys(entidadConceptoData).filter(entidad => {
+                return entidadConceptoData[entidad][concepto];
+            }).sort();
+            
+            // Crear tabla HTML
+            let tableHTML = '<thead><tr><th>Entidad</th>';
+            years.forEach(year => {
+                tableHTML += `<th>${year}</th>`;
+            });
+            tableHTML += '<th>Total</th></tr></thead><tbody>';
+            
+            // Procesar cada entidad
+            entidades.forEach(entidad => {
+                tableHTML += '<tr>';
+                tableHTML += `<td>${entidad}</td>`;
+                
+                let total = 0;
+                years.forEach(year => {
+                    const value = entidadConceptoData[entidad][concepto][year] || 0;
+                    total += value;
+                    tableHTML += `<td class="text-right">${value.toLocaleString()}</td>`;
+                });
+                
+                // Columna de total
+                tableHTML += `<td class="text-right total-cell"><strong>${total.toLocaleString()}</strong></td>`;
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody>';
+            
+            // Actualizar la tabla
+            const table = document.getElementById('entidad-concepto-table');
+            if (table) {
+                table.innerHTML = tableHTML;
+                console.log('✅ Tabla de entidad-concepto creada para:', concepto);
+            }
+        }
+
         // Función para actualizar colores del mapa según el concepto y año
         function updateMapColors(concepto, year) {
             console.log('🔄 Actualizando colores del mapa para concepto:', concepto, 'año:', year);

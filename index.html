@@ -132,8 +132,8 @@
 
         <!-- Nacional Section -->
         <section class="content-section">
-            <h2>Sección: Nacional</h2>
-            <p class="section-description">Análisis a nivel nacional</p>
+            <h2>Sección: Nacional anual</h2>
+            <p class="section-description">Análisis a nivel nacional de 2019 a 2025</p>
             
             <!-- Gráfica 1 -->
             <div class="chart-container">
@@ -359,7 +359,7 @@
                 
                 <!-- Tabla de variación porcentual por entidad y concepto -->
                 <div class="table-container">
-                    <h3>Tabla 3.1.1. Variación porcentual de la incidencia delictiva del fuero federal por entidad federativa y concepto</h3>
+                    <h3>Tabla 3.1. Variación porcentual de la incidencia delictiva del fuero federal por entidad federativa y concepto</h3>
                     <p class="table-description">Cambios porcentuales año tras año (2019 vs 2018, 2020 vs 2019, etc.)</p>
                     <table class="data-table" id="entidad-concepto-percentage-table">
                         <thead>
@@ -385,7 +385,7 @@
                 
                 <!-- Tabla de datos por entidad y tipo -->
                 <div class="table-container">
-                    <h3>Tabla 3.1. Incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
+                    <h3>Tabla 3.2. Valores absolutos de la incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
                     <p class="table-description">Valores absolutos por entidad, tipo y año (suma de enero-julio)</p>
                     <table class="data-table" id="entidad-tipo-table">
                         <thead>
@@ -412,7 +412,7 @@
                 
                 <!-- Tabla de variación porcentual por entidad y tipo -->
                 <div class="table-container">
-                    <h3>Tabla 3.1.3. Variación porcentual de la incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
+                    <h3>Tabla 3.3. Variación porcentual de la incidencia delictiva del fuero federal por entidad federativa y tipo</h3>
                     <p class="table-description">Cambios porcentuales año tras año por tipo (2019 vs 2018, 2020 vs 2019, etc.)</p>
                     <table class="data-table" id="entidad-tipo-percentage-table">
                         <thead>
@@ -442,13 +442,54 @@
 
         <!-- Estatal Section -->
         <section class="content-section">
-            <h2>Estatal</h2>
-            <p class="section-description">Análisis estatal con evolución de rankings</p>
+            <h2>Sección: Nacional mensual</h2>
+            <p class="section-description">Análisis a nivel nacional de enero 2024 a julio 2025</p>
+
+            <!-- Gráfica 1 -->
+            <div class="chart-container">
+                <h2>Gráfica 5. Evolución temporal de la incidencia delictiva del fuero federal por concepto (enero 2024 a julio 2025)</h2>
+                <p class="table-description">Datos reportados por el Secretariado Ejecutivo del Sistema Nacional de Seguridad Pública</p>
+                <div style="height: 500px; width: 100%;">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
             
-            
-            <!-- Placeholder for your content -->
-            <div class="placeholder-content">
-                <p>Tu contenido aquí...</p>
+            <!-- Tabla de datos mensuales -->
+            <div class="table-container">
+                <h3>Tabla 4. Valores absolutos de incidencia delictiva del fuero federal por concepto (enero 2024 a julio 2025)</h3>
+                <p class="table-description">Datos mensuales por concepto (mismos datos de la gráfica)</p>
+                <table class="data-table" id="monthly-data-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Ene 2024</th>
+                            <th>Feb 2024</th>
+                            <th>Mar 2024</th>
+                            <th>Abr 2024</th>
+                            <th>May 2024</th>
+                            <th>Jun 2024</th>
+                            <th>Jul 2024</th>
+                            <th>Ago 2024</th>
+                            <th>Sep 2024</th>
+                            <th>Oct 2024</th>
+                            <th>Nov 2024</th>
+                            <th>Dic 2024</th>
+                            <th>Ene 2025</th>
+                            <th>Feb 2025</th>
+                            <th>Mar 2025</th>
+                            <th>Abr 2025</th>
+                            <th>May 2025</th>
+                            <th>Jun 2025</th>
+                            <th>Jul 2025</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cargando datos...</td>
+                            <td colspan="19">Espera...</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -705,8 +746,262 @@
                 });
         }
 
+        // Función para crear gráfica mensual stacked
+        function createMonthlyStackedChart() {
+            // Obtener el canvas
+            const ctx = document.getElementById('monthlyChart').getContext('2d');
+            
+            // Colores consistentes para cada concepto (mismos que la gráfica anual)
+            const conceptColors = {
+                'OTRAS LEYES Y CODIGOS': '#FF6384',
+                'OTROS DELITOS': '#36A2EB', 
+                'CONTRA LA SALUD': '#FFCE56',
+                'LEY GENERAL DE SALUD (L.G.S.)': '#4BC0C0',
+                'LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)': '#FF9F40'
+            };
+            
+            // Cargar datos del CSV mensual
+            fetch('data/monthly_concept_analysis.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    const lines = csvText.split('\n');
+                    const headers = lines[0].split(',');
+                    const conceptos = headers.slice(1); // Conceptos (columnas 2 en adelante)
+                    
+                    // Extraer etiquetas (meses) y datos
+                    const labels = [];
+                    const dataByConcepto = {};
+                    
+                    // Inicializar arrays para cada concepto
+                    conceptos.forEach(concepto => {
+                        dataByConcepto[concepto] = [];
+                    });
+                    
+                    // Procesar cada línea (mes)
+                    for (let i = 1; i < lines.length; i++) {
+                        if (lines[i].trim()) {
+                            const values = lines[i].split(',');
+                            const mesAño = values[0];
+                            
+                            // Formatear etiqueta del mes (de "2024-01" a "Ene 2024")
+                            const [año, mes] = mesAño.split('-');
+                            const mesesNombres = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 
+                                                 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+                            const mesNombre = mesesNombres[parseInt(mes) - 1];
+                            labels.push(`${mesNombre} ${año}`);
+                            
+                            // Agregar datos para cada concepto
+                            for (let j = 1; j < values.length && j <= conceptos.length; j++) {
+                                const concepto = conceptos[j - 1];
+                                const valor = parseInt(values[j]) || 0;
+                                dataByConcepto[concepto].push(valor);
+                            }
+                        }
+                    }
+                    
+                    // Crear datasets para Chart.js
+                    const datasets = [];
+                    conceptos.forEach((concepto, index) => {
+                        datasets.push({
+                            label: concepto,
+                            data: dataByConcepto[concepto],
+                            backgroundColor: conceptColors[concepto] || `hsl(${index * 72}, 70%, 60%)`,
+                            borderColor: conceptColors[concepto] || `hsl(${index * 72}, 70%, 50%)`,
+                            borderWidth: 1
+                        });
+                    });
+                    
+                    // Crear la gráfica
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: labels,
+                            datasets: datasets
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                x: {
+                                    stacked: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Período (enero 2024 - julio 2025)'
+                                    },
+                                    ticks: {
+                                        maxRotation: 45
+                                    }
+                                },
+                                y: {
+                                    stacked: true,
+                                    title: {
+                                        display: true,
+                                        text: 'Carpetas de investigación'
+                                    },
+                                    beginAtZero: true
+                                }
+                            },
+                            plugins: {
+                                title: {
+                                    display: false,
+                                },
+                                legend: {
+                                    display: true,
+                                    position: 'bottom',
+                                    labels: {
+                                        usePointStyle: true,
+                                        padding: 20
+                                    }
+                                },
+                                tooltip: {
+                                    mode: 'index',
+                                    intersect: false,
+                                    callbacks: {
+                                        footer: function(tooltipItems) {
+                                            let total = 0;
+                                            tooltipItems.forEach(item => {
+                                                total += item.raw;
+                                            });
+                                            return `Total: ${total.toLocaleString()} carpetas`;
+                                        }
+                                    }
+                                }
+                            },
+                            interaction: {
+                                mode: 'nearest',
+                                axis: 'x',
+                                intersect: false
+                            }
+                        }
+                    });
+                    
+                    console.log('✅ Gráfica mensual stacked creada con', labels.length, 'meses y', conceptos.length, 'conceptos');
+                })
+                                .catch(error => {
+                    console.error('❌ Error cargando datos mensuales:', error);
+                });
+        }
 
-                // Función para cargar la tabla de datos nacionales
+        // Función para cargar la tabla de datos mensuales (Tabla 4)
+        async function loadMonthlyTable() {
+            try {
+                console.log('🔄 Cargando tabla de datos mensuales...');
+                const response = await fetch('data/monthly_concept_analysis.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('✅ CSV de tabla mensual cargado, longitud:', csvText.length);
+                
+                // Parsear CSV
+                const lines = csvText.split('\n');
+                const headers = lines[0].split(',');
+                const conceptos = headers.slice(1); // Conceptos (columnas 2 en adelante)
+                
+                // Extraer etiquetas (meses) y datos organizados por concepto
+                const mesesLabels = [];
+                const dataByConcepto = {};
+                
+                // Inicializar arrays para cada concepto
+                conceptos.forEach(concepto => {
+                    dataByConcepto[concepto] = [];
+                });
+                
+                // Procesar cada línea (mes)
+                for (let i = 1; i < lines.length; i++) {
+                    if (lines[i].trim()) {
+                        const values = lines[i].split(',');
+                        const mesAño = values[0];
+                        
+                        // Formatear etiqueta del mes (de "2024-01" a "Ene 2024")
+                        const [año, mes] = mesAño.split('-');
+                        const mesesNombres = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 
+                                             'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+                        const mesNombre = mesesNombres[parseInt(mes) - 1];
+                        mesesLabels.push(`${mesNombre} ${año}`);
+                        
+                        // Agregar datos para cada concepto
+                        for (let j = 1; j < values.length && j <= conceptos.length; j++) {
+                            const concepto = conceptos[j - 1];
+                            const valor = parseInt(values[j]) || 0;
+                            dataByConcepto[concepto].push(valor);
+                        }
+                    }
+                }
+                
+                // Crear encabezados de la tabla
+                let tableHTML = '<thead><tr><th>Concepto</th>';
+                mesesLabels.forEach(mes => {
+                    tableHTML += `<th>${mes}</th>`;
+                });
+                tableHTML += '</tr></thead><tbody>';
+                
+                // Crear filas para cada concepto
+                conceptos.forEach(concepto => {
+                    tableHTML += '<tr>';
+                    tableHTML += `<td>${concepto}</td>`;
+                    
+                    // Agregar datos mensuales para este concepto
+                    dataByConcepto[concepto].forEach(valor => {
+                        tableHTML += `<td class="text-right">${valor.toLocaleString()}</td>`;
+                    });
+                    
+                    tableHTML += '</tr>';
+                });
+                
+                // Agregar fila de totales
+                tableHTML += '<tr class="total-row">';
+                tableHTML += '<td><strong>TOTAL</strong></td>';
+                
+                // Calcular totales por mes
+                for (let mesIndex = 0; mesIndex < mesesLabels.length; mesIndex++) {
+                    let totalMes = 0;
+                    conceptos.forEach(concepto => {
+                        if (dataByConcepto[concepto][mesIndex] !== undefined) {
+                            totalMes += dataByConcepto[concepto][mesIndex];
+                        }
+                    });
+                    tableHTML += `<td class="text-right"><strong>${totalMes.toLocaleString()}</strong></td>`;
+                }
+                
+                tableHTML += '</tr>';
+                tableHTML += '</tbody>';
+                
+                // Actualizar la tabla
+                const table = document.getElementById('monthly-data-table');
+                if (table) {
+                    table.innerHTML = tableHTML;
+                    console.log('✅ Tabla 4 de datos mensuales creada con', mesesLabels.length, 'meses y', conceptos.length, 'conceptos');
+                } else {
+                    console.error('❌ No se encontró el elemento monthly-data-table');
+                }
+                
+            } catch (error) {
+                console.error('❌ Error cargando tabla mensual:', error);
+                
+                // Mostrar error en la tabla
+                const table = document.getElementById('monthly-data-table');
+                if (table) {
+                    table.innerHTML = `
+                        <thead>
+                            <tr>
+                                <th>Concepto</th>
+                                <th colspan="19">Error cargando datos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Error cargando datos</td>
+                                <td colspan="19">Revisa la consola para más detalles</td>
+                            </tr>
+                        </tbody>
+                    `;
+                }
+            }
+        }
+
+         // Función para cargar la tabla de datos nacionales
         async function loadNationalTable() {
             try {
                 console.log('🔄 Cargando tabla de datos nacionales...');
@@ -765,7 +1060,7 @@
                     '<tbody><tr><td colspan="8">Error cargando datos</td></tr></tbody>';
             }
         }
-
+        
         // ===== FUNCIÓN PARA CARGAR TABLA DE CAMBIOS PORCENTUALES =====
         
         async function loadPercentageChangesTable() {
@@ -1460,6 +1755,12 @@ function parseCSVToData(csvText) {
             // Crear gráfica nacional
             createNationalStackedChart();
             createNationalPieCharts();
+            
+            // Crear gráfica mensual
+            createMonthlyStackedChart();
+            
+            // Cargar tabla mensual
+            loadMonthlyTable();
             
             // Crear mapa de estados
             createEstadosMap();

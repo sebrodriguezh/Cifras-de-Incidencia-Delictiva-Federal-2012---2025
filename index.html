@@ -887,6 +887,27 @@
                     <p><strong>Fuente:</strong> gabinete_detenidos_final.csv - Datos procesados de conferencias del Gabinete de Seguridad Nacional</p>
                 </div>
             </div>
+
+            <!-- Tabla 1: Detenidos por Conferencia -->
+            <div class="table-container">
+                <h2>Tabla 1. Registro de detenidos en conferencias del Gabinete de Seguridad Nacional</h2>
+                <p class="table-description">
+                    Registro detallado de <span id="total-detenidos-count">796</span> detenidos individuales reportados en 18 conferencias de prensa. 
+                    Se aplicaron las siguientes correcciones: estandarización de comillas en nombres (Pedro "N" formato único), 
+                    conteo correcto de detenidos ("Otra persona X" = 1 detenido, "Y personas" = Y detenidos).
+                </p>
+                
+                <div id="gabinete-detenidos-table" class="data-table">
+                    <p style="text-align: center; color: #666; padding: 20px;">
+                        Cargando tabla de detenidos...
+                    </p>
+                </div>
+                
+                <!-- Footer del archivo fuente -->
+                <div class="data-source-footer">
+                    <p><strong>Fuente:</strong> gabinete_detenidos_final.csv - Datos procesados y corregidos</p>
+                </div>
+            </div>
         </div> <!-- Fin Tab Content: Gabinete -->
         
         <!-- Tab Content: Incidencia Estatal (Solo redirección) -->
@@ -2919,6 +2940,116 @@ function parseCSVToData(csvText) {
             container.innerHTML = tableHTML;
             console.log('✅ Tabla overview del Gabinete creada');
         }
+
+        async function loadGabineteDetenidosTable() {
+            try {
+                console.log('🔄 Cargando tabla de detenidos del Gabinete...');
+                
+                const response = await fetch('data/gabinete_detenidos_final.csv');
+                const csvText = await response.text();
+                
+                const lines = csvText.trim().split('\n');
+                const headers = lines[0].split(',');
+                
+                console.log(`✅ CSV cargado: ${lines.length - 1} registros`);
+                
+                // Procesar todas las filas
+                const allRows = lines.slice(1); // Todas las filas de datos
+                
+                // Crear tabla HTML
+                createGabineteDetenidosTable(headers, allRows);
+                
+            } catch (error) {
+                console.error('❌ Error cargando tabla de detenidos del Gabinete:', error);
+                document.getElementById('gabinete-detenidos-table').innerHTML = 
+                    '<p style="color: red; text-align: center;">Error al cargar la tabla de detenidos</p>';
+            }
+        }
+
+        function createGabineteDetenidosTable(headers, rows) {
+            const container = document.getElementById('gabinete-detenidos-table');
+            
+            // Columnas para la tabla de detenidos
+            const tableColumns = [
+                'conference_id',
+                'conference_date', 
+                'detainee_name',
+                'detainee_age',
+                'detainee_alias'
+            ];
+            
+            // Encontrar índices de las columnas
+            const columnIndices = tableColumns.map(col => {
+                const index = headers.findIndex(h => h.trim().toLowerCase() === col.toLowerCase());
+                return { name: col, index: index };
+            }).filter(col => col.index !== -1);
+            
+            // Encabezados de la tabla
+            const columnTitles = {
+                'conference_id': 'Conf.',
+                'conference_date': 'Fecha Conferencia',
+                'detainee_name': 'Nombre Detenido',
+                'detainee_age': 'Edad',
+                'detainee_alias': 'Alias'
+            };
+            
+            let tableHTML = '<div class="table-responsive"><table class="data-table-styled"><thead><tr>';
+            
+            // Crear encabezados
+            columnIndices.forEach(col => {
+                tableHTML += `<th>${columnTitles[col.name]}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+            
+            // Crear filas de datos
+            rows.forEach(row => {
+                const cells = parseCSVRow(row);
+                tableHTML += '<tr>';
+                
+                columnIndices.forEach(col => {
+                    let cellValue = cells[col.index] || '';
+                    
+                    // Limpiar y formatear valores
+                    if (cellValue === '' || cellValue === 'nan' || cellValue === 'NaN') {
+                        cellValue = '—';
+                    } else {
+                        cellValue = cellValue.trim();
+                        
+                        // Si es un nombre que termina en una sola comilla, completar las comillas
+                        if (col.name === 'detainee_name' && cellValue.match(/^[A-Za-z\s]+\s"[A-Z]$/)) {
+                            cellValue = cellValue.replace(/"([A-Z])$/, '"$1"');
+                        }
+                        
+                        // Truncar textos largos según la columna
+                        if (col.name === 'detainee_name' && cellValue.length > 30) {
+                            cellValue = cellValue.substring(0, 27) + '...';
+                        }
+                    }
+                    
+                    tableHTML += `<td>${cellValue}</td>`;
+                });
+                
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody></table></div>';
+            
+            // Agregar información adicional
+            tableHTML += `
+                <div style="margin-top: 15px; padding: 10px; background-color: #e9ecef; border-radius: 4px; font-size: 0.9em;">
+                    <strong>📊 Registros:</strong> ${rows.length} registros individuales correspondientes a 796 detenidos totales
+                    <br>
+                    <strong>📅 Período:</strong> Octubre 2024 - Julio 2025 (18 conferencias de prensa)
+                    <br>
+                    <strong>🔧 Conteo:</strong> "Otra persona X" = 1 detenido, "Y personas" = Y detenidos
+                    <br>
+                    <strong>🖱️ Navegación:</strong> Usa scroll horizontal para ver todas las columnas
+                </div>
+            `;
+            
+            container.innerHTML = tableHTML;
+            console.log('✅ Tabla de detenidos del Gabinete creada');
+        }
         
         function parseCSVRow(row) {
             // Función de parsing CSV más robusta
@@ -2981,6 +3112,7 @@ function parseCSVToData(csvText) {
             
             // Cargar datos del Gabinete de Seguridad
             loadGabineteOverview();
+            loadGabineteDetenidosTable();
             
             // Cargar datos de tipos para el segundo mapa
             loadTipoData().then(() => {

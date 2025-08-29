@@ -793,7 +793,7 @@
                 
             <!-- Gráfica Estatal 1 -->
             <div class="chart-container">
-                <h2>Gráfica Estatal 1. Incidencia delictiva por tipo y entidad federativa (enero–julio 2025)</h2>
+                <h2>Gráfica 1. Incidencia delictiva por tipo y entidad federativa (enero–julio 2025)</h2>
                 <p class="table-description">Casos de investigación ordenados por entidad federativa de mayor a menor incidencia</p>
                 
                 <!-- Selector de Concepto -->
@@ -801,7 +801,7 @@
                     <div class="concept-selector">
                         <label for="estatal-concepto-selector">Selecciona el concepto a visualizar:</label>
                         <select id="estatal-concepto-selector">
-                            <option value="">-- Selecciona un concepto --</option>
+                            <option value=""> Selecciona un concepto </option>
                         </select>
             </div>
                 </div>
@@ -813,15 +813,44 @@
 
             <!-- Tabla Estatal 1 -->
             <div class="table-container">
-                <h2>Tabla Estatal 1. Valores absolutos por tipo y entidad federativa (enero–julio 2025)</h2>
+                <h2>Tabla 1. Valores absolutos por tipo y entidad federativa (enero–julio 2025)</h2>
                 <p class="table-description">Datos correspondientes a la gráfica anterior</p>
-                
-                <div id="estatal-table-1" class="data-table">
-                    <p style="text-align: center; color: #666; padding: 20px;">
-                        Selecciona un concepto para ver los datos
-                    </p>
-                </div>
             </div>
+                
+                <!-- Gráfica Estatal 2 -->
+                <h3>Gráfica 2. Top 10 entidades por concepto o tipo (enero 2024 - julio 2025)</h3>
+                <p class="chart-description">
+                    Ranking mensual de las 10 entidades federativas con mayor incidencia delictiva (enero 2024 - julio 2025)
+                </p>
+                
+                <!-- Selectores para Gráfica Estatal 2 -->
+                <div class="map-selectors">
+                    <div class="concept-selector">
+                        <label for="estatal2-concepto-selector">Selecciona el concepto a visualizar:</label>
+                        <select id="estatal2-concepto-selector">
+                            <option value="">-- Selecciona un concepto --</option>
+                        </select>
+                    </div>
+                    <div class="concept-selector">
+                        <label for="estatal2-tipo-selector">Selecciona el tipo a visualizar:</label>
+                        <select id="estatal2-tipo-selector" disabled>
+                            <option value="">-- Primero selecciona un concepto --</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Contenedor para las cajas mensuales -->
+                <div id="estatal2-chart-container" class="chart-container" style="display: none;">
+                    <div id="estatal2-monthly-boxes" class="monthly-boxes-grid">
+                        <!-- Las cajas se generarán dinámicamente -->
+                    </div>
+                </div>
+                
+                <!-- Tabla Estatal 2 -->
+                <div id="table-estatal2-container" class="table-container" style="display: none;">
+                    <h4>Tabla Estatal 2. Datos detallados del ranking mensual</h4>
+                    <div id="table-estatal2"></div>
+                </div> <!-- Fin tabla estatal 2 -->
                 
         </section>
         </div> <!-- Fin Tab Content: Estatal -->
@@ -2759,6 +2788,9 @@ function parseCSVToData(csvText) {
             
             // Cargar datos estatales
             loadEstatalData();
+            
+            // Cargar datos para Gráfica Estatal 2
+            loadEstatal2Data();
         });
         
         // ===========================================
@@ -5190,6 +5222,259 @@ function parseCSVToData(csvText) {
             
             container.innerHTML = tableHTML;
             console.log(`✅ Tabla estatal 1 creada para: ${concepto}`);
+        }
+
+        // ========================================
+        // GRÁFICA ESTATAL 2: TOP 10 ENTIDADES MENSUALES
+        // ========================================
+
+        let estatal2Data = null;
+
+        // Cargar datos para Gráfica Estatal 2
+        async function loadEstatal2Data() {
+            try {
+                console.log('📊 Cargando datos para Gráfica Estatal 2...');
+                const response = await fetch('data/estatal_top10_monthly_analysis.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                estatal2Data = await response.json();
+                console.log('✅ Datos de Gráfica Estatal 2 cargados:', Object.keys(estatal2Data).length, 'meses');
+                
+                // Llenar selectores
+                populateEstatal2Selectors();
+                
+            } catch (error) {
+                console.error('❌ Error cargando datos Gráfica Estatal 2:', error);
+                document.getElementById('estatal2-chart-container').innerHTML = 
+                    '<p style="text-align: center; color: #e74c3c; padding: 20px;">Error cargando datos</p>';
+            }
+        }
+
+        // Llenar selectores de Gráfica Estatal 2
+        function populateEstatal2Selectors() {
+            const conceptoSelector = document.getElementById('estatal2-concepto-selector');
+            const tipoSelector = document.getElementById('estatal2-tipo-selector');
+            
+            if (!estatal2Data || !conceptoSelector) return;
+            
+            // Obtener conceptos únicos
+            const conceptos = new Set();
+            Object.values(estatal2Data).forEach(mesData => {
+                Object.keys(mesData).forEach(concepto => conceptos.add(concepto));
+            });
+            
+            // Llenar selector de conceptos
+            conceptoSelector.innerHTML = '<option value="">-- Selecciona un concepto --</option>';
+            [...conceptos].sort().forEach(concepto => {
+                const option = document.createElement('option');
+                option.value = concepto;
+                // Hacer más corto el nombre en el selector
+                option.textContent = concepto.includes('L.F.C.D.O.') ? 
+                    'LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA' : concepto;
+                conceptoSelector.appendChild(option);
+            });
+            
+            // Event listener para concepto
+            conceptoSelector.addEventListener('change', onEstatal2ConceptoChange);
+        }
+
+        // Cuando cambia el concepto en Gráfica Estatal 2
+        function onEstatal2ConceptoChange() {
+            const conceptoSelector = document.getElementById('estatal2-concepto-selector');
+            const tipoSelector = document.getElementById('estatal2-tipo-selector');
+            const concepto = conceptoSelector.value;
+            
+            // Limpiar visualización previa
+            document.getElementById('estatal2-chart-container').style.display = 'none';
+            document.getElementById('table-estatal2-container').style.display = 'none';
+            
+            if (!concepto) {
+                tipoSelector.innerHTML = '<option value="">-- Primero selecciona un concepto --</option>';
+                tipoSelector.disabled = true;
+                return;
+            }
+            
+            // Habilitar y llenar selector de tipos
+            tipoSelector.disabled = false;
+            tipoSelector.innerHTML = '<option value="">-- Todos los tipos --</option>';
+            
+            // Obtener tipos únicos para este concepto
+            const tipos = new Set();
+            Object.values(estatal2Data).forEach(mesData => {
+                if (mesData[concepto]) {
+                    Object.keys(mesData[concepto]).forEach(tipo => {
+                        if (tipo !== 'TODOS') tipos.add(tipo);
+                    });
+                }
+            });
+            
+            [...tipos].sort().forEach(tipo => {
+                const option = document.createElement('option');
+                option.value = tipo;
+                option.textContent = tipo;
+                tipoSelector.appendChild(option);
+            });
+            
+            // Event listener para tipo
+            tipoSelector.removeEventListener('change', onEstatal2TipoChange);
+            tipoSelector.addEventListener('change', onEstatal2TipoChange);
+            
+            // Mostrar datos con "TODOS" por defecto
+            renderEstatal2Chart(concepto, 'TODOS');
+        }
+
+        // Cuando cambia el tipo en Gráfica Estatal 2
+        function onEstatal2TipoChange() {
+            const conceptoSelector = document.getElementById('estatal2-concepto-selector');
+            const tipoSelector = document.getElementById('estatal2-tipo-selector');
+            const concepto = conceptoSelector.value;
+            const tipo = tipoSelector.value || 'TODOS';
+            
+            if (concepto) {
+                renderEstatal2Chart(concepto, tipo);
+            }
+        }
+
+        // Renderizar cajas mensuales de Gráfica Estatal 2
+        function renderEstatal2Chart(concepto, tipo) {
+            console.log(`📊 Renderizando Gráfica Estatal 2: ${concepto} - ${tipo}`);
+            
+            const container = document.getElementById('estatal2-monthly-boxes');
+            const chartContainer = document.getElementById('estatal2-chart-container');
+            const tableContainer = document.getElementById('table-estatal2-container');
+            
+            if (!estatal2Data || !container) return;
+            
+            // Obtener meses ordenados
+            const meses = Object.keys(estatal2Data).sort();
+            
+            // Limpiar contenedor
+            container.innerHTML = '';
+            
+            // Generar cajas para cada mes
+            meses.forEach(mes => {
+                const mesData = estatal2Data[mes];
+                if (!mesData[concepto] || !mesData[concepto][tipo]) return;
+                
+                const ranking = mesData[concepto][tipo];
+                const [year, month] = mes.split('-');
+                const monthNames = [
+                    'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                    'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+                ];
+                const monthName = monthNames[parseInt(month) - 1];
+                
+                // Crear caja mensual
+                const box = document.createElement('div');
+                box.className = 'monthly-box';
+                
+                box.innerHTML = `
+                    <div class="monthly-box-header">
+                        <h5 class="monthly-box-title">${monthName} ${year}</h5>
+                        <p class="monthly-box-subtitle">${tipo === 'TODOS' ? 'Todos los tipos' : tipo}</p>
+                    </div>
+                    <ol class="monthly-ranking">
+                        ${ranking.map((item, index) => {
+                            const isSinaloa = item.entidad.toUpperCase() === 'SINALOA';
+                            const highlightClass = isSinaloa ? ' highlight-sinaloa' : '';
+                            return `
+                                <li class="ranking-item${highlightClass}">
+                                    <span class="ranking-position">${index + 1}</span>
+                                    <span class="ranking-entity">${item.entidad}</span>
+                                    <span class="ranking-value">${item.casos.toLocaleString()}</span>
+                                </li>
+                            `;
+                        }).join('')}
+                    </ol>
+                `;
+                
+                container.appendChild(box);
+            });
+            
+            // Mostrar contenedores
+            chartContainer.style.display = 'block';
+            
+            // Crear tabla asociada
+            createEstatal2Table(concepto, tipo);
+        }
+
+        // Crear tabla para Gráfica Estatal 2
+        function createEstatal2Table(concepto, tipo) {
+            const container = document.getElementById('table-estatal2');
+            const tableContainer = document.getElementById('table-estatal2-container');
+            
+            if (!estatal2Data || !container) return;
+            
+            console.log(`📋 Creando tabla Estatal 2: ${concepto} - ${tipo}`);
+            
+            // Obtener meses ordenados
+            const meses = Object.keys(estatal2Data).sort();
+            const monthNames = [
+                'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+                'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'
+            ];
+            
+            // Obtener todas las entidades que aparecen en top 10
+            const todasEntidades = new Set();
+            meses.forEach(mes => {
+                const mesData = estatal2Data[mes];
+                if (mesData[concepto] && mesData[concepto][tipo]) {
+                    mesData[concepto][tipo].forEach(item => {
+                        todasEntidades.add(item.entidad);
+                    });
+                }
+            });
+            
+            const entidadesOrdenadas = [...todasEntidades].sort();
+            
+            // Crear encabezados de columnas
+            const headers = meses.map(mes => {
+                const [year, month] = mes.split('-');
+                const monthName = monthNames[parseInt(month) - 1];
+                return `${monthName} ${year}`;
+            });
+            
+            // Crear tabla HTML
+            let tableHTML = `
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Entidad Federativa</th>
+                            ${headers.map(header => `<th>${header}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            entidadesOrdenadas.forEach(entidad => {
+                tableHTML += `
+                    <tr>
+                        <td style="font-weight: bold;">${entidad}</td>
+                        ${meses.map(mes => {
+                            const mesData = estatal2Data[mes];
+                            let valor = 0;
+                            if (mesData[concepto] && mesData[concepto][tipo]) {
+                                const entidadData = mesData[concepto][tipo].find(item => item.entidad === entidad);
+                                valor = entidadData ? entidadData.casos : 0;
+                            }
+                            return `<td>${valor.toLocaleString()}</td>`;
+                        }).join('')}
+                    </tr>
+                `;
+            });
+            
+            tableHTML += `
+                    </tbody>
+                </table>
+            `;
+            
+            container.innerHTML = tableHTML;
+            tableContainer.style.display = 'block';
+            
+            console.log(`✅ Tabla Estatal 2 creada: ${entidadesOrdenadas.length} entidades`);
         }
 
     </script>

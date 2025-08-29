@@ -1,0 +1,8894 @@
+{
+  "2024-01": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 66
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 39
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 35
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 33
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 29
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 25
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 23
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 22
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 22
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 21
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 6
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 5
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 17
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 14
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 5
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 6
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 3
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 2
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 50
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 25
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 23
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 22
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 17
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 17
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 17
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 15
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 15
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 12
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ]
+    }
+  },
+  "2024-02": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 62
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 55
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 44
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 43
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 29
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 29
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 25
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 22
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 22
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 22
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 17
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 6
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 39
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 10
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 9
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 6
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 6
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 5
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 4
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 49
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 37
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 20
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 16
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 15
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 12
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 12
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 12
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 11
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 11
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "GUERRERO",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "GUERRERO",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-03": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 57
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 42
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 42
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 32
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 30
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 27
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 26
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 24
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 21
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 20
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 10
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 9
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 7
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 6
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 6
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 3
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 27
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 8
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 6
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 6
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 6
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 4
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 42
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 26
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 18
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 17
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 16
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 15
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 14
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 13
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 13
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 11
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 9
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 6
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-04": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 57
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 48
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 38
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 32
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 32
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 30
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 28
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 21
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 18
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 17
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 13
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 5
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 5
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 5
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 19
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 13
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 13
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 8
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 7
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 7
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 7
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 6
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 39
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 27
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 26
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 20
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 11
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 11
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 11
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 10
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 9
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 9
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 10
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 3
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-05": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 73
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 42
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 41
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 39
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 34
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 30
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 28
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 27
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 25
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 24
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SONORA",
+          "casos": 18
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 14
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 12
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 8
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 7
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 7
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 6
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 4
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 24
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 12
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 8
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 7
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 7
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 6
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 2
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 56
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 24
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 22
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 19
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 17
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 16
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 13
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 13
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 12
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 10
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 6
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "ZACATECAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-06": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 68
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 38
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 35
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 31
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 26
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 24
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 21
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 21
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 20
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 19
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 18
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 16
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 11
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 6
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 6
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 18
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 11
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 10
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 7
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 1
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 49
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 24
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 15
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 13
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 12
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 11
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 11
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 9
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 8
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-07": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 70
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 44
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 41
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 33
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 33
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 28
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 27
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 24
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 23
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 18
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SONORA",
+          "casos": 14
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 8
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 6
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 5
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 5
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 24
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 13
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 9
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 6
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 5
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "COAHUILA",
+          "casos": 5
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 4
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 54
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 26
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 25
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 22
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 18
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 15
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 13
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 12
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 11
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "GUERRERO",
+          "casos": 3
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "MORELOS",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ]
+    }
+  },
+  "2024-08": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 78
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 51
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 48
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 45
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 30
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 27
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 26
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 24
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 23
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 21
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 22
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 13
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 11
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 8
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 7
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 7
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 6
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 5
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 4
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 27
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 12
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 10
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 9
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 9
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 6
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 4
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 3
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 2
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 1
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 1
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 60
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 26
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 25
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 23
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 23
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 18
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 18
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 12
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 5
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 3
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-09": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 61
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 47
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 45
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 31
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 27
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 20
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 18
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 18
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 16
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 15
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 14
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 9
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 8
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 3
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 33
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 15
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 6
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 6
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 5
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 5
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 3
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "COAHUILA",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 41
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 26
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 20
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 15
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 12
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 11
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 10
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 9
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 3
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "COLIMA",
+          "casos": 3
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ]
+    }
+  },
+  "2024-10": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 61
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 61
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 48
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 35
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 34
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 34
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 33
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 29
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 25
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 18
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 15
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 14
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 14
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 8
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 6
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 6
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 5
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 4
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 44
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 12
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 9
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 8
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 7
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 7
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 5
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 3
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 10
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 53
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 24
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 20
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 20
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 15
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 12
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 11
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 10
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 10
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 10
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "GUERRERO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-11": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 57
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 42
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 41
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 30
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 29
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 28
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 23
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 22
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 19
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 19
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 16
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 15
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 9
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 7
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 6
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 6
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 21
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 16
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 10
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 7
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 7
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 6
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 3
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 33
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 24
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 17
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 16
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 14
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 14
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 13
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 10
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 9
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 6
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 3
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 2
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 3
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2024-12": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 52
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 38
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 33
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 30
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 29
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 27
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 25
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 24
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 22
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 21
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 17
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 13
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 9
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 8
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 6
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 17
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 14
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 11
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 6
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 3
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 3
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 3
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 1
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 33
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 23
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 20
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 18
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 18
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 15
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 14
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 13
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 13
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 11
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "GUERRERO",
+          "casos": 7
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2025-01": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 61
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 51
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 48
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 46
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 38
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 37
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 36
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 35
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 23
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 22
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 23
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 13
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 9
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 3
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 34
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 14
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 13
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 5
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "COLIMA",
+          "casos": 7
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 29
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 28
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 27
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 25
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 21
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 18
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 18
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 18
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 17
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 16
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 6
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 7
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 4
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 2
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SINALOA",
+          "casos": 6
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        }
+      ]
+    }
+  },
+  "2025-02": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "SONORA",
+          "casos": 55
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 50
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 48
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 45
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 36
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 33
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 33
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 31
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 30
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 25
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 19
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 16
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 14
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 8
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 7
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 18
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 12
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 11
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 11
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 9
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 7
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 10
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "CAMPECHE",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 31
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 27
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 25
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 23
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 21
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 20
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 17
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 15
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 14
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 14
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "OAXACA",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "JALISCO",
+          "casos": 5
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 2
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "DURANGO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2025-03": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 59
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 52
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 41
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 35
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 35
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 31
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 30
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 27
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 25
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 23
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 22
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 19
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 14
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 10
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 6
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 17
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 15
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 14
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 6
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 4
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 8
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 5
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 4
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 35
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 26
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 24
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 21
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 21
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 21
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 18
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 13
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 12
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 12
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 6
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "JALISCO",
+          "casos": 11
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 10
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 4
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "JALISCO",
+          "casos": 10
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 8
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2025-04": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 78
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 56
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 44
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 42
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 35
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 33
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 25
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 24
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 20
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 19
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 29
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 15
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 10
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 8
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 6
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 6
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 6
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 5
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 3
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 30
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 17
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 17
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 8
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 8
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 7
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 6
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 41
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 25
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 19
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 19
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 18
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 16
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 15
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 14
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 11
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 10
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "JALISCO",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 6
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 2
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 1
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 2
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2025-05": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 70
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 47
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 34
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 30
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 29
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 27
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 26
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 24
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 24
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 23
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 17
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 10
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 9
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 8
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 4
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 24
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 18
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 12
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 9
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 5
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 4
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "CAMPECHE",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 40
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 21
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 21
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 21
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 19
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 13
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 12
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 12
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 12
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 9
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "NAYARIT",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 1
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 6
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "COLIMA",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 3
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2025-06": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 103
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 44
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 43
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 37
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 33
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 27
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 27
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 27
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 26
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 21
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "SINALOA",
+          "casos": 15
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 12
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 12
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 12
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 9
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 8
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 30
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 15
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 9
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 8
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 5
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 5
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 5
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 4
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 4
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 64
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 25
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 19
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 19
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 19
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 18
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 16
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 16
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 11
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 11
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "DURANGO",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 4
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 1
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 2
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 2
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 1
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 1
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 1
+        }
+      ]
+    }
+  },
+  "2025-07": {
+    "CONTRA LA SALUD": {
+      "TODOS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 93
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 58
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 46
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 44
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 41
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 40
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 39
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 32
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 32
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 24
+        }
+      ],
+      "PRODUCCION": [
+        {
+          "entidad": "HIDALGO",
+          "casos": 2
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 1
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 0
+        },
+        {
+          "entidad": "QUINTANA ROO",
+          "casos": 0
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        }
+      ],
+      "TRANSPORTE": [
+        {
+          "entidad": "QUERETARO",
+          "casos": 20
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 19
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 18
+        },
+        {
+          "entidad": "CHIAPAS",
+          "casos": 10
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 5
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 4
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 4
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 3
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 2
+        }
+      ],
+      "TRAFICO": [
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 31
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 15
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 13
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 8
+        },
+        {
+          "entidad": "DURANGO",
+          "casos": 8
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 8
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "BAJA CALIFORNIA SUR",
+          "casos": 5
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 5
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 5
+        }
+      ],
+      "COMERCIO": [
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 7
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 4
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 2
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 2
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "COAHUILA",
+          "casos": 2
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 1
+        }
+      ],
+      "SUMINISTRO": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 0
+        },
+        {
+          "entidad": "TLAXCALA",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 0
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 0
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 0
+        }
+      ],
+      "POSESION": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 67
+        },
+        {
+          "entidad": "COLIMA",
+          "casos": 38
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 36
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 28
+        },
+        {
+          "entidad": "QUERETARO",
+          "casos": 25
+        },
+        {
+          "entidad": "GUANAJUATO",
+          "casos": 24
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 14
+        },
+        {
+          "entidad": "NUEVO LEON",
+          "casos": 13
+        },
+        {
+          "entidad": "SAN LUIS POTOSI",
+          "casos": 13
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 12
+        }
+      ],
+      "OTROS": [
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 5
+        },
+        {
+          "entidad": "HIDALGO",
+          "casos": 3
+        },
+        {
+          "entidad": "ZACATECAS",
+          "casos": 2
+        },
+        {
+          "entidad": "SINALOA",
+          "casos": 2
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 1
+        },
+        {
+          "entidad": "AGUASCALIENTES",
+          "casos": 1
+        },
+        {
+          "entidad": "MORELOS",
+          "casos": 1
+        },
+        {
+          "entidad": "CHIHUAHUA",
+          "casos": 1
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 0
+        },
+        {
+          "entidad": "YUCATAN",
+          "casos": 0
+        }
+      ]
+    },
+    "LEY FEDERAL CONTRA LA DELINCUENCIA ORGANIZADA (L.F.C.D.O.)": {
+      "TODOS": [
+        {
+          "entidad": "SINALOA",
+          "casos": 8
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        }
+      ],
+      "CONTRA LA SALUD": [
+        {
+          "entidad": "SINALOA",
+          "casos": 3
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 2
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "GUERRERO",
+          "casos": 1
+        },
+        {
+          "entidad": "NAYARIT",
+          "casos": 1
+        },
+        {
+          "entidad": "TABASCO",
+          "casos": 0
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 0
+        },
+        {
+          "entidad": "OAXACA",
+          "casos": 0
+        }
+      ],
+      "OTROS DELITOS PREVISTOS EN LA L.F.C.D.O.": [
+        {
+          "entidad": "SINALOA",
+          "casos": 5
+        },
+        {
+          "entidad": "MEXICO",
+          "casos": 4
+        },
+        {
+          "entidad": "TAMAULIPAS",
+          "casos": 4
+        },
+        {
+          "entidad": "CIUDAD DE MEXICO",
+          "casos": 3
+        },
+        {
+          "entidad": "JALISCO",
+          "casos": 3
+        },
+        {
+          "entidad": "VERACRUZ",
+          "casos": 2
+        },
+        {
+          "entidad": "PUEBLA",
+          "casos": 2
+        },
+        {
+          "entidad": "SONORA",
+          "casos": 1
+        },
+        {
+          "entidad": "BAJA CALIFORNIA",
+          "casos": 1
+        },
+        {
+          "entidad": "MICHOACAN",
+          "casos": 1
+        }
+      ]
+    }
+  }
+}

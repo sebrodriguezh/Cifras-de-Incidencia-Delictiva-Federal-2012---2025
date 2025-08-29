@@ -828,3 +828,151 @@ body {
     font-weight: bold;
 }
 
+/* ========================================
+   MONTHLY BOXES GRID (Estatal 2)
+   ======================================== */
+
+.monthly-boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.monthly-box {
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.monthly-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.monthly-box-header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #3498db;
+}
+
+.monthly-box-title {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.monthly-box-subtitle {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    margin: 3px 0 0 0;
+}
+
+.monthly-ranking {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.ranking-item:last-child {
+    border-bottom: none;
+}
+
+.ranking-position {
+    font-weight: bold;
+    color: #3498db;
+    min-width: 20px;
+    font-size: 0.8rem;
+}
+
+.ranking-entity {
+    flex: 1;
+    margin-left: 6px;
+    font-size: 0.75rem;
+    color: #2c3e50;
+}
+
+.ranking-value {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 0.75rem;
+}
+
+/* Destacar top 3 */
+.ranking-item:nth-child(1) .ranking-position {
+    color: #f39c12;
+}
+
+.ranking-item:nth-child(2) .ranking-position {
+    color: #95a5a6;
+}
+
+.ranking-item:nth-child(3) .ranking-position {
+    color: #e67e22;
+}
+
+/* Highlight especial para Sinaloa */
+.ranking-item.highlight-sinaloa {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    padding-left: 8px;
+    margin: 2px 0;
+}
+
+.ranking-item.highlight-sinaloa .ranking-entity {
+    font-weight: bold;
+    color: #856404;
+}
+
+.ranking-item.highlight-sinaloa .ranking-value {
+    color: #856404;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .monthly-boxes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .monthly-boxes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+    }
+    
+    .monthly-box {
+        margin: 0 5px;
+        padding: 8px;
+    }
+    
+    .monthly-box-title {
+        font-size: 0.85rem;
+    }
+    
+    .ranking-entity {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .monthly-boxes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

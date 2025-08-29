@@ -23,8 +23,19 @@
         </div>
     </header>
 
+    <!-- Navigation Tabs -->
+    <nav class="tab-navigation">
+        <div class="tab-container">
+            <button class="tab-button active" data-tab="nacional">Nacional</button>
+            <button class="tab-button" data-tab="estatal">Estatal</button>
+        </div>
+    </nav>
+
     <!-- Main Content Container -->
     <main class="main-container">
+        
+        <!-- Tab Content: Nacional -->
+        <div id="nacional-content" class="tab-content active">
         <!-- Overview section -->
         <section class="content-section">
             <h2>Estructura de la base de datos</h2>
@@ -772,21 +783,89 @@
             </div>
         </section>
 
-        <!-- Snapshots Section -->
+        </div> <!-- Fin Tab Content: Nacional -->
+
+        <!-- Tab Content: Estatal -->
+        <div id="estatal-content" class="tab-content">
         <section class="content-section">
-            <h2>Snapshots Temporales</h2>
-            <p class="section-description">Vista rápida de la evolución temporal</p>
-            
-            <!-- Placeholder for your content -->
-            <div class="placeholder-content">
-                <p>Tu contenido aquí...</p>
+                <h2>Análisis Estatal</h2>
+                <p class="section-description">Análisis detallado por entidad federativa</p>
+                
+            <!-- Gráfica Estatal 1 -->
+            <div class="chart-container">
+                <h2>Gráfica Estatal 1. Incidencia delictiva por tipo y entidad federativa (enero–julio 2025)</h2>
+                <p class="table-description">Casos de investigación ordenados por entidad federativa de mayor a menor incidencia</p>
+                
+                <!-- Selector de Concepto -->
+                <div class="map-selectors">
+                    <div class="concept-selector">
+                        <label for="estatal-concepto-selector">Selecciona el concepto a visualizar:</label>
+                        <select id="estatal-concepto-selector">
+                            <option value="">-- Selecciona un concepto --</option>
+                        </select>
             </div>
+                </div>
+                
+                <div style="height: 800px; width: 100%;">
+                    <canvas id="estatal-chart-1"></canvas>
+                </div>
+            </div>
+
+            <!-- Tabla Estatal 1 -->
+            <div class="table-container">
+                <h2>Tabla Estatal 1. Valores absolutos por tipo y entidad federativa (enero–julio 2025)</h2>
+                <p class="table-description">Datos correspondientes a la gráfica anterior</p>
+                
+                <div id="estatal-table-1" class="data-table">
+                    <p style="text-align: center; color: #666; padding: 20px;">
+                        Selecciona un concepto para ver los datos
+                    </p>
+                </div>
+            </div>
+                
         </section>
+        </div> <!-- Fin Tab Content: Estatal -->
+        
     </main>
 
-    <!-- JavaScript para cargar estadísticas -->
          <!-- JavaScript para cargar estadísticas -->
     <script>
+        // ========================================
+        // TAB NAVIGATION FUNCTIONALITY
+        // ========================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todos los botones de pestañas
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // Agregar event listeners a los botones
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remover clase active de todos los botones y contenidos
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    // Mostrar el contenido correspondiente
+                    const targetContent = document.getElementById(targetTab + '-content');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                    
+                    console.log('🔄 Pestaña cambiada a:', targetTab);
+                });
+            });
+        });
+        
+        // ========================================
+        // DATA LOADING FUNCTIONS
+        // ========================================
+        
         // Función para cargar estadísticas de la base ORIGINAL
         async function loadOriginalStats() {
             try {
@@ -2677,6 +2756,9 @@ function parseCSVToData(csvText) {
             
             // Cargar conceptos para mapas mensuales
             loadAvailableConceptsForMonthlyMap();
+            
+            // Cargar datos estatales
+            loadEstatalData();
         });
         
         // ===========================================
@@ -4811,6 +4893,303 @@ function parseCSVToData(csvText) {
             } catch (error) {
                 console.error('❌ Error creando mapa:', error);
             }
+        }
+
+        // ===========================================
+        // FUNCIONES PARA ANÁLISIS ESTATAL
+        // ===========================================
+        
+        // Variables globales para análisis estatal
+        let estatalData = null;
+        let estatalChart1 = null;
+        
+        // Función para cargar datos estatales
+        async function loadEstatalData() {
+            try {
+                console.log('🔄 Cargando datos estatales...');
+                
+                const response = await fetch('data/estatal_concepto_tipo_analysis.csv');
+                const csvText = await response.text();
+                
+                console.log(`✅ CSV estatal cargado, longitud: ${csvText.length}`);
+                
+                const lines = csvText.trim().split('\n');
+                console.log(`📊 Líneas en CSV estatal: ${lines.length}`);
+                
+                if (lines.length < 2) {
+                    console.error('❌ Archivo CSV estatal vacío o solo headers');
+                    return;
+                }
+                
+                const headers = parseCSVLine(lines[0]);
+                console.log('📋 Headers estatal:', headers);
+                
+                const data = {};
+                
+                // Procesar cada línea
+                for (let i = 1; i < lines.length; i++) {
+                    const values = parseCSVLine(lines[i]);
+                    
+                    if (values.length >= 4) {
+                        const entidad = values[0].trim();
+                        const concepto = values[1].trim();
+                        const tipo = values[2].trim();
+                        const total = parseInt(values[3]) || 0;
+                        
+                        if (!data[concepto]) data[concepto] = {};
+                        if (!data[concepto][entidad]) data[concepto][entidad] = {};
+                        data[concepto][entidad][tipo] = total;
+                    }
+                }
+                
+                estatalData = data;
+                console.log('📊 Datos estatales parseados:', estatalData);
+                
+                // Cargar conceptos en el selector
+                loadEstatalConceptos();
+                
+            } catch (error) {
+                console.error('❌ Error cargando datos estatales:', error);
+            }
+        }
+        
+        // Función para cargar conceptos en el selector estatal
+        function loadEstatalConceptos() {
+            const selector = document.getElementById('estatal-concepto-selector');
+            if (!selector || !estatalData) return;
+            
+            // Limpiar opciones existentes (excepto la primera)
+            while (selector.children.length > 1) {
+                selector.removeChild(selector.lastChild);
+            }
+            
+            const conceptos = Object.keys(estatalData).sort();
+            console.log('🎯 Conceptos estatales encontrados:', conceptos);
+            
+            conceptos.forEach(concepto => {
+                const option = document.createElement('option');
+                option.value = concepto;
+                option.textContent = concepto;
+                selector.appendChild(option);
+            });
+            
+            // Agregar event listener
+            selector.addEventListener('change', function() {
+                const selectedConcepto = this.value;
+                if (selectedConcepto) {
+                    createEstatalChart1(selectedConcepto);
+                    createEstatalTable1(selectedConcepto);
+                } else {
+                    // Limpiar gráfica y tabla
+                    if (estatalChart1) {
+                        estatalChart1.destroy();
+                        estatalChart1 = null;
+                    }
+                    document.getElementById('estatal-table-1').innerHTML = 
+                        '<p style="text-align: center; color: #666; padding: 20px;">Selecciona un concepto para ver los datos</p>';
+                }
+            });
+        }
+        
+        // Función para crear la gráfica estatal 1 (stacked horizontal bar chart)
+        function createEstatalChart1(concepto) {
+            if (!estatalData || !estatalData[concepto]) return;
+            
+            const ctx = document.getElementById('estatal-chart-1');
+            if (!ctx) return;
+            
+            // Destruir gráfica existente
+            if (estatalChart1) {
+                estatalChart1.destroy();
+            }
+            
+            const conceptoData = estatalData[concepto];
+            
+            // Obtener todos los tipos únicos para este concepto
+            const todosLosTipos = new Set();
+            Object.values(conceptoData).forEach(entidadData => {
+                Object.keys(entidadData).forEach(tipo => todosLosTipos.add(tipo));
+            });
+            const tipos = Array.from(todosLosTipos).sort();
+            
+            // Calcular totales por entidad y ordenar
+            const entidadTotales = [];
+            Object.keys(conceptoData).forEach(entidad => {
+                const entidadData = conceptoData[entidad];
+                const total = Object.values(entidadData).reduce((sum, val) => sum + val, 0);
+                entidadTotales.push({ entidad, total, data: entidadData });
+            });
+            
+            // Ordenar de mayor a menor
+            entidadTotales.sort((a, b) => b.total - a.total);
+            
+            // Preparar datos para Chart.js
+            const labels = entidadTotales.map(item => item.entidad);
+            
+            // Crear datasets para cada tipo
+            const datasets = tipos.map((tipo, index) => {
+                const data = entidadTotales.map(item => item.data[tipo] || 0);
+                
+                // Colores para los tipos (usar paleta distintiva)
+                const colors = [
+                    '#2196F3', // Azul
+                    '#4CAF50', // Verde
+                    '#FF9800', // Naranja
+                    '#9C27B0', // Púrpura
+                    '#F44336', // Rojo
+                    '#00BCD4', // Cian
+                    '#795548', // Marrón
+                    '#607D8B', // Gris azulado
+                    '#FFC107', // Ámbar
+                    '#E91E63'  // Rosa
+                ];
+                
+                return {
+                    label: tipo,
+                    data: data,
+                    backgroundColor: colors[index % colors.length],
+                    borderColor: colors[index % colors.length],
+                    borderWidth: 1
+                };
+            });
+            
+            estatalChart1 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: datasets
+                },
+                options: {
+                    indexAxis: 'y', // Hacer barras horizontales
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Número de casos'
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            title: {
+                                display: true,
+                                text: 'Entidad Federativa'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: false,
+                            text: `${concepto} - Enero a Julio 2025`,
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            mode: 'point',
+                            callbacks: {
+                                title: function(context) {
+                                    return `${context[0].label}`;
+                                },
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.x.toLocaleString()} casos`;
+                                },
+                                footer: function(context) {
+                                    const entidad = context[0].label;
+                                    const entidadData = conceptoData[entidad];
+                                    const total = Object.values(entidadData).reduce((sum, val) => sum + val, 0);
+                                    return `Total: ${total.toLocaleString()} casos`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            console.log(`✅ Gráfica estatal 1 creada para: ${concepto}`);
+        }
+        
+        // Función para crear la tabla estatal 1
+        function createEstatalTable1(concepto) {
+            if (!estatalData || !estatalData[concepto]) return;
+            
+            const container = document.getElementById('estatal-table-1');
+            if (!container) return;
+            
+            const conceptoData = estatalData[concepto];
+            
+            // Obtener todos los tipos únicos para este concepto
+            const todosLosTipos = new Set();
+            Object.values(conceptoData).forEach(entidadData => {
+                Object.keys(entidadData).forEach(tipo => todosLosTipos.add(tipo));
+            });
+            const tipos = Array.from(todosLosTipos).sort();
+            
+            // Calcular totales por entidad y ordenar
+            const entidadTotales = [];
+            Object.keys(conceptoData).forEach(entidad => {
+                const entidadData = conceptoData[entidad];
+                const total = Object.values(entidadData).reduce((sum, val) => sum + val, 0);
+                entidadTotales.push({ entidad, total, data: entidadData });
+            });
+            
+            // Ordenar de mayor a menor (igual que la gráfica)
+            entidadTotales.sort((a, b) => b.total - a.total);
+            
+            // Crear tabla HTML
+            let tableHTML = `
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Entidad Federativa</th>
+                            ${tipos.map(tipo => `<th>${tipo}</th>`).join('')}
+                            <th style="background-color: #e3f2fd; font-weight: bold;">TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            entidadTotales.forEach(item => {
+                const { entidad, total, data } = item;
+                tableHTML += `
+                    <tr>
+                        <td style="font-weight: bold;">${entidad}</td>
+                        ${tipos.map(tipo => `<td>${(data[tipo] || 0).toLocaleString()}</td>`).join('')}
+                        <td style="background-color: #e3f2fd; font-weight: bold;">${total.toLocaleString()}</td>
+                    </tr>
+                `;
+            });
+            
+            // Fila de totales
+            const totalPorTipo = tipos.map(tipo => {
+                return entidadTotales.reduce((sum, item) => sum + (item.data[tipo] || 0), 0);
+            });
+            const granTotal = totalPorTipo.reduce((sum, val) => sum + val, 0);
+            
+            tableHTML += `
+                    <tr style="background-color: #f5f5f5; font-weight: bold; border-top: 2px solid #ddd;">
+                        <td>TOTAL NACIONAL</td>
+                        ${totalPorTipo.map(total => `<td>${total.toLocaleString()}</td>`).join('')}
+                        <td style="background-color: #e3f2fd;">${granTotal.toLocaleString()}</td>
+                    </tr>
+                </tbody>
+            </table>
+            `;
+            
+            container.innerHTML = tableHTML;
+            console.log(`✅ Tabla estatal 1 creada para: ${concepto}`);
         }
 
     </script>

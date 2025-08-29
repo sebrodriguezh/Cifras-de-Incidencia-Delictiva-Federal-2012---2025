@@ -1,0 +1,87 @@
+{
+  "total_registros": 506,
+  "registros_con_datos": 402,
+  "total_menciones": 1036,
+  "instituciones_unicas": 15,
+  "promedio_por_operacion": 2.6,
+  "instituciones_ranking": [
+    [
+      "SEDENA",
+      371
+    ],
+    [
+      "SSPC",
+      162
+    ],
+    [
+      "SEMAR",
+      148
+    ],
+    [
+      "FGR",
+      116
+    ],
+    [
+      "Guardia Nacional",
+      84
+    ],
+    [
+      "CNI",
+      56
+    ],
+    [
+      "Fiscalía General del Estado",
+      55
+    ],
+    [
+      "Policía Estatal",
+      29
+    ],
+    [
+      "INM",
+      3
+    ],
+    [
+      "CENFI",
+      3
+    ],
+    [
+      "Secretaría de Seguridad Ciudadana CDMX",
+      2
+    ],
+    [
+      "Gabinete de Seguridad",
+      2
+    ],
+    [
+      "Centro Nacional de Vigilancia Aérea",
+      2
+    ],
+    [
+      "Secretarías Estatales",
+      2
+    ],
+    [
+      "Policía Municipal",
+      1
+    ]
+  ],
+  "consolidaciones_aplicadas": {
+    "SEDENA": [
+      "Defensa Nacional",
+      "Ejército Mexicano",
+      "Inteligencia Militar Central",
+      "Policía Ministerial Militar"
+    ],
+    "SEMAR": [
+      "SEMAR",
+      "Unidad de Inteligencia Naval"
+    ],
+    "Estados_eliminados": [
+      "Guanajuato",
+      "Querétaro",
+      "Sinaloa",
+      "y otros estados que aparecían como instituciones"
+    ]
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "total_registros": 506,
+  "registros_con_institution": 402,
+  "porcentaje_cobertura": 79.4,
+  "valores_unicos_originales": 118,
+  "valores_unicos_normalizados": 89,
+  "reduccion_porcentaje": 24.6,
+  "top_combinaciones": [
+    [
+      "FGR, SEDENA, SEMAR, SSPC",
+      40
+    ],
+    [
+      "Policía Estatal, SEDENA",
+      21
+    ],
+    [
+      "CNI, SEDENA, Sinaloa",
+      20
+    ],
+    [
+      "SEDENA",
+      16
+    ],
+    [
+      "FGR, SEDENA",
+      14
+    ],
+    [
+      "Ejército, Guardia Nacional, Policía Estatal",
+      13
+    ],
+    [
+      "CNI, Fiscalía Estatal, SEDENA, SSPC",
+      12
+    ],
+    [
+      "CNI, Guardia Nacional, Policía Estatal, SEDENA",
+      10
+    ],
+    [
+      "CNI, FGR, INM, SEDENA, SSPC",
+      10
+    ],
+    [
+      "Fiscalía Estatal, Policía Estatal, SEDENA",
+      10
+    ],
+    [
+      "SEMAR",
+      10
+    ],
+    [
+      "Ejército, FGR, Guardia Nacional",
+      10
+    ],
+    [
+      "CNI, FGR, SEDENA, SSPC",
+      10
+    ],
+    [
+      "CNI, SEDENA, SSPC",
+      10
+    ],
+    [
+      "AIC, CNI, FGR, Guardia Nacional, SEDENA",
+      9
+    ]
+  ],
+  "top_instituciones_individuales": [
+    [
+      "SEDENA",
+      297
+    ],
+    [
+      "FGR",
+      183
+    ],
+    [
+      "SSPC",
+      169
+    ],
+    [
+      "SEMAR",
+      146
+    ],
+    [
+      "CNI",
+      133
+    ],
+    [
+      "Guardia Nacional",
+      87
+    ],
+    [
+      "Policía Estatal",
+      85
+    ],
+    [
+      "Fiscalía Estatal",
+      76
+    ],
+    [
+      "Ejército",
+      50
+    ],
+    [
+      "Secretaría",
+      30
+    ],
+    [
+      "Sinaloa",
+      20
+    ],
+    [
+      "Inteligencia Militar",
+      19
+    ],
+    [
+      "INM",
+      15
+    ],
+    [
+      "AIC",
+      9
+    ],
+    [
+      "Unidad",
+      8
+    ]
+  ]
+}

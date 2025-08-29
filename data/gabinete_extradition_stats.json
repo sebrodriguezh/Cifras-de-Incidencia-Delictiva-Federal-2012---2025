@@ -1,0 +1,21 @@
+{
+  "total_registros": 506,
+  "registros_con_dato": 415,
+  "registros_sin_dato": 91,
+  "porcentaje_con_dato": 82.0,
+  "solicitudes_si": 15,
+  "solicitudes_no": 400,
+  "porcentaje_si_del_total": 3.0,
+  "porcentaje_no_del_total": 79.1,
+  "porcentaje_si_con_dato": 3.6,
+  "porcentaje_no_con_dato": 96.4,
+  "distribucion_completa": {
+    "No": 400,
+    "Sí": 15,
+    "No especificado": 91
+  },
+  "distribucion_valida": {
+    "No": 400,
+    "Sí": 15
+  }
+}

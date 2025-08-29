@@ -1,0 +1,29 @@
+INSTITUCIONES INDIVIDUALES ÚNICAS (PARSING MEJORADO)
+============================================================
+Registros con datos: 402
+Total menciones: 1,052
+Instituciones únicas: 22
+Promedio por operación: 2.6
+
+ 1. SEDENA: 297 menciones (73.9%)
+ 2. SSPC: 162 menciones (40.3%)
+ 3. SEMAR: 140 menciones (34.8%)
+ 4. FGR: 116 menciones (28.9%)
+ 5. Guardia Nacional: 84 menciones (20.9%)
+ 6. CNI: 56 menciones (13.9%)
+ 7. Fiscalía General del Estado: 55 menciones (13.7%)
+ 8. Ejército Mexicano: 49 menciones (12.2%)
+ 9. Policía Estatal: 30 menciones (7.5%)
+10. Inteligencia Militar Central: 23 menciones (5.7%)
+11. Unidad de Inteligencia Naval: 8 menciones (2.0%)
+12. Fgjedomx: 7 menciones (1.7%)
+13. Procuraduría Estatal: 7 menciones (1.7%)
+14. INM: 3 menciones (0.7%)
+15. CENFI: 3 menciones (0.7%)
+16. Secretaría de Seguridad Ciudadana CDMX: 2 menciones (0.5%)
+17. Gabinete de Seguridad: 2 menciones (0.5%)
+18. Centro Nacional de Vigilancia Aérea: 2 menciones (0.5%)
+19. Secretarías De Seguridad De Querétaro: 2 menciones (0.5%)
+20. Guanajuato: 2 menciones (0.5%)
+21. Policía Ministerial Militar: 1 menciones (0.2%)
+22. Policía Municipal: 1 menciones (0.2%)

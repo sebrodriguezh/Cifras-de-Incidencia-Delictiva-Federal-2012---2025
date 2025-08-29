@@ -1,0 +1,324 @@
+{
+  "total_grupos": 53,
+  "total_casos_con_grupo": 242,
+  "grupos": [
+    {
+      "rank": 1,
+      "grupo": "Cártel Jalisco Nueva Generación",
+      "casos": 29,
+      "porcentaje": 12.0
+    },
+    {
+      "rank": 2,
+      "grupo": "Los Mayos",
+      "casos": 21,
+      "porcentaje": 8.7
+    },
+    {
+      "rank": 3,
+      "grupo": "Cártel del Pacífico (Los Mayos)",
+      "casos": 21,
+      "porcentaje": 8.7
+    },
+    {
+      "rank": 4,
+      "grupo": "Cártel del Noreste",
+      "casos": 20,
+      "porcentaje": 8.3
+    },
+    {
+      "rank": 5,
+      "grupo": "Cártel del Pacífico (Los Menores)",
+      "casos": 13,
+      "porcentaje": 5.4
+    },
+    {
+      "rank": 6,
+      "grupo": "Cártel de Santa Rosa de Lima",
+      "casos": 11,
+      "porcentaje": 4.5
+    },
+    {
+      "rank": 7,
+      "grupo": "La Barredora (Pueblos Unidos, Gente del Koqui)",
+      "casos": 10,
+      "porcentaje": 4.1
+    },
+    {
+      "rank": 8,
+      "grupo": "Los Salazar",
+      "casos": 9,
+      "porcentaje": 3.7
+    },
+    {
+      "rank": 9,
+      "grupo": "Los Chapitos",
+      "casos": 9,
+      "porcentaje": 3.7
+    },
+    {
+      "rank": 10,
+      "grupo": "Cártel de Santa Rosa de Lima (Los Escorpiones)",
+      "casos": 9,
+      "porcentaje": 3.7
+    },
+    {
+      "rank": 11,
+      "grupo": "Los Totoys",
+      "casos": 8,
+      "porcentaje": 3.3
+    },
+    {
+      "rank": 12,
+      "grupo": "Cártel del Pacífico (Los Chapitos)",
+      "casos": 7,
+      "porcentaje": 2.9
+    },
+    {
+      "rank": 13,
+      "grupo": "Cártel del Pacífico",
+      "casos": 7,
+      "porcentaje": 2.9
+    },
+    {
+      "rank": 14,
+      "grupo": "La Barredora",
+      "casos": 4,
+      "porcentaje": 1.7
+    },
+    {
+      "rank": 15,
+      "grupo": "La Línea",
+      "casos": 4,
+      "porcentaje": 1.7
+    },
+    {
+      "rank": 16,
+      "grupo": "Cártel de los Arellano Félix",
+      "casos": 4,
+      "porcentaje": 1.7
+    },
+    {
+      "rank": 17,
+      "grupo": "Cártel del Golfo",
+      "casos": 3,
+      "porcentaje": 1.2
+    },
+    {
+      "rank": 18,
+      "grupo": "Cártel de Sinaloa",
+      "casos": 3,
+      "porcentaje": 1.2
+    },
+    {
+      "rank": 19,
+      "grupo": "Cártel del Pacífico (Los Mayos, Los Demonios)",
+      "casos": 3,
+      "porcentaje": 1.2
+    },
+    {
+      "rank": 20,
+      "grupo": "Cártel del Golfo (Los Escorpiones)",
+      "casos": 3,
+      "porcentaje": 1.2
+    },
+    {
+      "rank": 21,
+      "grupo": "CIDA",
+      "casos": 3,
+      "porcentaje": 1.2
+    },
+    {
+      "rank": 22,
+      "grupo": "Cártel del Golfo (Los Metros)",
+      "casos": 3,
+      "porcentaje": 1.2
+    },
+    {
+      "rank": 23,
+      "grupo": "El Cártel de Santa Rosa de Lima",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 24,
+      "grupo": "Cártel del Pacífico (Los Salazar)",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 25,
+      "grupo": "La Unión Tepito",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 26,
+      "grupo": "Cártel de Sinaloa (Los Chapitos)",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 27,
+      "grupo": "Cártel de Jalisco Nueva Generación",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 28,
+      "grupo": "Blancos de Troya",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 29,
+      "grupo": "Gente Nueva / Los Chapitos / Cártel del Pacífico",
+      "casos": 2,
+      "porcentaje": 0.8
+    },
+    {
+      "rank": 30,
+      "grupo": "Una organización delictiva transnacional que funge como enlace logístico entre el Cártel de Jalisco Nueva Generación y el Cártel del Pacífico",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 31,
+      "grupo": "Cártel Jalisco Nueva Generación (Los Deltas)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 32,
+      "grupo": "Cártel del Pacífico (Los Pelones)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 33,
+      "grupo": "Una célula delictiva independiente dedicada al trasiego de droga hacia E.E.U.U., Australia y Europa",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 34,
+      "grupo": "Cártel Jalisco Nueva Generación (La Barredora)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 35,
+      "grupo": "Los Rusos (Tres Palos)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 36,
+      "grupo": "Los Colombianos",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 37,
+      "grupo": "Los Magno",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 38,
+      "grupo": "Cártel del Pacífico (Mayo Zambada)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 39,
+      "grupo": "Los Chapitos (Los Durango)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 40,
+      "grupo": "Deltas 101",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 41,
+      "grupo": "Los Chapos, Los Mayos",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 42,
+      "grupo": "MS-13",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 43,
+      "grupo": "Los Beltrán-Leyva",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 44,
+      "grupo": "Cártel del Golfo (Los Ciclones, Los Escorpiones)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 45,
+      "grupo": "Cártel Nuevo Imperio",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 46,
+      "grupo": "Cártel de Sinaloa (Los Mayos)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 47,
+      "grupo": "Los Aquiles",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 48,
+      "grupo": "Los Zetas",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 49,
+      "grupo": "Chapo Isidro",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 50,
+      "grupo": "Beltrán-Leyva (Los Linces)",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 51,
+      "grupo": "La Familia Michoacana",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 52,
+      "grupo": "Nuevo Cártel de Juárez",
+      "casos": 1,
+      "porcentaje": 0.4
+    },
+    {
+      "rank": 53,
+      "grupo": "Cártel del Noroeste",
+      "casos": 1,
+      "porcentaje": 0.4
+    }
+  ]
+}

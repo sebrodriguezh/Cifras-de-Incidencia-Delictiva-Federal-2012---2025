@@ -1,0 +1,53 @@
+{
+  "total_registros": 506,
+  "registros_con_grupo": 242,
+  "registros_sin_grupo": 264,
+  "porcentaje_con_grupo": 47.8,
+  "grupos_unicos": 53,
+  "top_grupos": [
+    [
+      "Cártel Jalisco Nueva Generación",
+      29
+    ],
+    [
+      "Los Mayos",
+      21
+    ],
+    [
+      "Cártel del Pacífico (Los Mayos)",
+      21
+    ],
+    [
+      "Cártel del Noreste",
+      20
+    ],
+    [
+      "Cártel del Pacífico (Los Menores)",
+      13
+    ],
+    [
+      "Cártel de Santa Rosa de Lima",
+      11
+    ],
+    [
+      "La Barredora (Pueblos Unidos, Gente del Koqui)",
+      10
+    ],
+    [
+      "Los Salazar",
+      9
+    ],
+    [
+      "Los Chapitos",
+      9
+    ],
+    [
+      "Cártel de Santa Rosa de Lima (Los Escorpiones)",
+      9
+    ]
+  ],
+  "promedio_casos_por_grupo": 4.6,
+  "mediana_casos_por_grupo": 2.0,
+  "max_casos_grupo": 29,
+  "min_casos_grupo": 1
+}

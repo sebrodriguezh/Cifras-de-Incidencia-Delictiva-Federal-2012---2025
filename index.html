@@ -908,6 +908,94 @@
                     <p><strong>Fuente:</strong> gabinete_detenidos_final.csv - Datos procesados y corregidos</p>
                 </div>
             </div>
+
+            <!-- Análisis de Edades -->
+            <div class="table-container">
+                <h2>Análisis de edades de los detenidos</h2>
+                <p class="table-description">
+                    De los 506 registros de detenidos individuales, únicamente 9 casos (1.8%) reportaron edad específica. 
+                    Entre estos casos con dato de edad, el promedio es de 31.4 años (mediana: 30 años, rango: 15-50 años).
+                </p>
+                
+                <div class="age-analysis-container" style="display: flex; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
+                    <!-- Estadísticas principales -->
+                    <div class="age-stats-box" style="flex: 1; min-width: 300px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #007bff;">
+                        <h3 style="margin-top: 0; color: #007bff; font-size: 1.1em;">Estadísticas generales</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.95em;">
+                            <div><strong>Total registros:</strong> 506</div>
+                            <div><strong>Con edad reportada:</strong> 9 (1.8%)</div>
+                            <div><strong>Promedio de edad:</strong> 31.4 años</div>
+                            <div><strong>Mediana:</strong> 30.0 años</div>
+                            <div><strong>Edad mínima:</strong> 15 años</div>
+                            <div><strong>Edad máxima:</strong> 50 años</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Distribución por rangos -->
+                    <div class="age-distribution-box" style="flex: 1; min-width: 300px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #28a745;">
+                        <h3 style="margin-top: 0; color: #28a745; font-size: 1.1em;">Distribución por rangos de Edad</h3>
+                        <div style="font-size: 0.95em;">
+                            <div style="margin-bottom: 8px;"><strong>Menores (&lt; 18 años):</strong> 1 persona (11.1%)</div>
+                            <div style="margin-bottom: 8px;"><strong>Jóvenes (18-29 años):</strong> 3 personas (33.3%)</div>
+                            <div style="margin-bottom: 8px;"><strong>Adultos (30-44 años):</strong> 4 personas (44.4%)</div>
+                            <div style="margin-bottom: 8px;"><strong>Adultos mayores (45-59 años):</strong> 1 persona (11.1%)</div>
+                            <div style="margin-bottom: 8px;"><strong>Tercera edad (60+ años):</strong> 0 personas (0.0%)</div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Análisis de Grupos Criminales -->
+            <div class="table-container">
+                <h2>Análisis de grupos criminales</h2>
+                <p class="table-description">
+                    De los 506 registros de detenidos individuales, 242 casos (47.8%) reportaron afiliación a grupo criminal específico. 
+                    Se identificaron 53 grupos únicos, con el Cártel Jalisco Nueva Generación como el más frecuente (29 casos, 12.0% del total con grupo).
+                </p>
+                
+                <div class="criminal-groups-analysis-container" style="display: flex; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
+                    <!-- Estadísticas principales -->
+                    <div class="groups-stats-box" style="flex: 1; min-width: 300px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545;">
+                        <h3 style="margin-top: 0; color: #dc3545; font-size: 1.1em;">Estadísticas generales</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.95em;">
+                            <div><strong>Total registros:</strong> 506</div>
+                            <div><strong>Con grupo reportado:</strong> 242 (47.8%)</div>
+                            <div><strong>Grupos únicos:</strong> 53</div>
+                            <div><strong>Promedio casos/grupo:</strong> 4.6</div>
+                            <div><strong>Grupo más activo:</strong> 29 casos</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top 10 grupos -->
+                    <div class="top-groups-box" style="flex: 1; min-width: 300px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #6f42c1;">
+                        <h3 style="margin-top: 0; color: #6f42c1; font-size: 1.1em;">Top 10 grupos criminales</h3>
+                        <div style="font-size: 0.9em;">
+                            <div style="margin-bottom: 6px;"><strong>1. Cártel Jalisco Nueva Generación:</strong> 29 casos (12.0%)</div>
+                            <div style="margin-bottom: 6px;"><strong>2. Los Mayos:</strong> 21 casos (8.7%)</div>
+                            <div style="margin-bottom: 6px;"><strong>3. Cártel del Pacífico (Los Mayos):</strong> 21 casos (8.7%)</div>
+                            <div style="margin-bottom: 6px;"><strong>4. Cártel del Noreste:</strong> 20 casos (8.3%)</div>
+                            <div style="margin-bottom: 6px;"><strong>5. Cártel del Pacífico (Los Menores):</strong> 13 casos (5.4%)</div>
+                            <div style="margin-bottom: 6px;"><strong>6. Cártel de Santa Rosa de Lima:</strong> 11 casos (4.5%)</div>
+                            <div style="margin-bottom: 6px;"><strong>7. La Barredora (Pueblos Unidos, Gente del Koqui):</strong> 10 casos (4.1%)</div>
+                            <div style="margin-bottom: 6px;"><strong>8. Los Salazar:</strong> 9 casos (3.7%)</div>
+                            <div style="margin-bottom: 6px;"><strong>9. Los Chapitos:</strong> 9 casos (3.7%)</div>
+                            <div style="margin-bottom: 6px;"><strong>10. Cártel de Santa Rosa de Lima (Los Escorpiones):</strong> 9 casos (3.7%)</div>
+                        </div>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #dee2e6; font-size: 0.85em; color: #6c757d;">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tabla completa de todas las organizaciones -->
+                <div style="margin-top: 20px;">
+                    <h3 style="color: #495057; font-size: 1.1em; margin-bottom: 15px;">Ranking completo de organizaciones criminales (53 grupos)</h3>
+                    
+                    <div id="all-criminal-groups-table" class="table-responsive">
+                        <p style="text-align: center; color: #666; padding: 20px;">
+                            Cargando ranking completo de grupos criminales...
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div> <!-- Fin Tab Content: Gabinete -->
         
         <!-- Tab Content: Incidencia Estatal (Solo redirección) -->
@@ -3034,19 +3122,6 @@ function parseCSVToData(csvText) {
             
             tableHTML += '</tbody></table></div>';
             
-            // Agregar información adicional
-            tableHTML += `
-                <div style="margin-top: 15px; padding: 10px; background-color: #e9ecef; border-radius: 4px; font-size: 0.9em;">
-                    <strong>📊 Registros:</strong> ${rows.length} registros individuales correspondientes a 796 detenidos totales
-                    <br>
-                    <strong>📅 Período:</strong> Octubre 2024 - Julio 2025 (18 conferencias de prensa)
-                    <br>
-                    <strong>🔧 Conteo:</strong> "Otra persona X" = 1 detenido, "Y personas" = Y detenidos
-                    <br>
-                    <strong>🖱️ Navegación:</strong> Usa scroll horizontal para ver todas las columnas
-                </div>
-            `;
-            
             container.innerHTML = tableHTML;
             console.log('✅ Tabla de detenidos del Gabinete creada');
         }
@@ -3095,6 +3170,69 @@ function parseCSVToData(csvText) {
             result.push(current.trim());
             return result;
         }
+        
+        // ===== FUNCIONES PARA GRUPOS CRIMINALES =====
+        
+        async function loadAllCriminalGroupsTable() {
+            try {
+                console.log('🔄 Cargando tabla completa de grupos criminales...');
+                
+                const response = await fetch('data/all_criminal_groups.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('✅ Datos de grupos criminales cargados:', data);
+                
+                createAllCriminalGroupsTable(data);
+                
+            } catch (error) {
+                console.error('❌ Error cargando grupos criminales:', error);
+                const container = document.getElementById('all-criminal-groups-table');
+                if (container) {
+                    container.innerHTML = '<p style="text-align: center; color: #dc3545; padding: 20px;">Error cargando datos de grupos criminales</p>';
+                }
+            }
+        }
+        
+        function createAllCriminalGroupsTable(data) {
+            const container = document.getElementById('all-criminal-groups-table');
+            if (!container) return;
+            
+            let tableHTML = `
+                <table class="data-table-styled" style="min-width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; width: 60px;">Rank</th>
+                            <th style="text-align: left;">Grupo Criminal</th>
+                            <th style="text-align: center; width: 80px;">Casos</th>
+                            <th style="text-align: center; width: 100px;">% del Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            // Generar filas para todos los grupos
+            data.grupos.forEach(grupo => {
+                // Destacar top 10 en rojo
+                const isTop10 = grupo.rank <= 10;
+                const rankStyle = isTop10 ? 'font-weight: bold; color: #dc3545;' : '';
+                const casosStyle = isTop10 ? 'font-weight: bold;' : '';
+                
+                tableHTML += `
+                    <tr>
+                        <td style="text-align: center; ${rankStyle}">${grupo.rank}</td>
+                        <td>${grupo.grupo}</td>
+                        <td style="text-align: center; ${casosStyle}">${grupo.casos}</td>
+                        <td style="text-align: center;">${grupo.porcentaje}%</td>
+                    </tr>
+                `;
+            });
+        
+            container.innerHTML = tableHTML;
+            console.log('✅ Tabla completa de grupos criminales creada');
+        }
 
         // ===== EVENT LISTENERS Y INICIALIZACIÓN =====
         
@@ -3113,6 +3251,7 @@ function parseCSVToData(csvText) {
             // Cargar datos del Gabinete de Seguridad
             loadGabineteOverview();
             loadGabineteDetenidosTable();
+            loadAllCriminalGroupsTable();
             
             // Cargar datos de tipos para el segundo mapa
             loadTipoData().then(() => {

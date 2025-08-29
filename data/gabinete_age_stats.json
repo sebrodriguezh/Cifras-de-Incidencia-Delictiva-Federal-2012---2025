@@ -1,0 +1,25 @@
+{
+  "total_registros": 506,
+  "registros_con_edad": 9,
+  "registros_sin_edad": 497,
+  "porcentaje_con_edad": 1.8,
+  "promedio_edad": 31.4,
+  "mediana_edad": 30.0,
+  "edad_minima": 15,
+  "edad_maxima": 50,
+  "desviacion_std": 10.0,
+  "distribución_rangos": {
+    "Menores (< 18)": 1,
+    "Jóvenes (18-29)": 3,
+    "Adultos (30-44)": 4,
+    "Adultos mayores (45-59)": 1,
+    "Tercera edad (60+)": 0
+  },
+  "distribución_rangos_porcentaje": {
+    "Menores (< 18)": 11.1,
+    "Jóvenes (18-29)": 33.3,
+    "Adultos (30-44)": 44.4,
+    "Adultos mayores (45-59)": 11.1,
+    "Tercera edad (60+)": 0.0
+  }
+}

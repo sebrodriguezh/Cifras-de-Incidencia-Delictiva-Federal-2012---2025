@@ -24,12 +24,14 @@
     </header>
 
     <!-- Navigation Tabs -->
-    <nav class="tab-navigation">
-        <div class="tab-container">
-            <button class="tab-button active" data-tab="nacional">Nacional</button>
-            <button class="tab-button" data-tab="estatal">Estatal</button>
-        </div>
-    </nav>
+            <nav class="tab-navigation">
+            <div class="tab-container">
+                <button class="tab-button active" data-tab="nacional">Nacional</button>
+                <button class="tab-button" data-tab="estatal">Estatal</button>
+                <button class="tab-button" data-tab="gabinete">Cifras de Gabinete de Seguridad</button>
+                <button class="tab-button" data-tab="incidencia-estatal">Incidencia Estatal</button>
+            </div>
+        </nav>
 
     <!-- Main Content Container -->
     <main class="main-container">
@@ -855,6 +857,43 @@
         </section>
         </div> <!-- Fin Tab Content: Estatal -->
         
+        <!-- Tab Content: Gabinete de Seguridad -->
+        <div id="gabinete-content" class="tab-content">
+            <section class="intro-section">
+                <h1>Cifras de Gabinete de Seguridad</h1>
+                <p class="section-description">
+                    Análisis de capturas relevantes reportadas en conferencias del Gabinete de Seguridad Nacional
+                </p>
+            </section>
+
+            <!-- Overview de datos -->
+            <div class="table-container">
+                <h2>Vista general de los datos</h2>
+                <p class="section-description">
+                    Datos procesados y limpiados de conferencias del Gabinete de Seguridad Nacional. Se aplicaron las siguientes transformaciones: 
+                    separación de detenidos múltiples en registros individuales (506 detenidos de 257 registros originales), 
+                    eliminación de valores faltantes marcados como "?" y conversión a NULL, estandarización del campo de extradición 
+                    a valores binarios (Sí/No), extracción de alias de nombres cuando disponibles, y normalización de espacios en blanco. 
+                </p>
+                
+                <div id="gabinete-overview-table" class="data-table">
+                    <p style="text-align: center; color: #666; padding: 20px;">
+                        Cargando datos del Gabinete de Seguridad...
+                    </p>
+                </div>
+                
+                <!-- Footer del archivo fuente -->
+                <div class="data-source-footer">
+                    <p><strong>Fuente:</strong> gabinete_detenidos_final.csv - Datos procesados de conferencias del Gabinete de Seguridad Nacional</p>
+                </div>
+            </div>
+        </div> <!-- Fin Tab Content: Gabinete -->
+        
+        <!-- Tab Content: Incidencia Estatal (Solo redirección) -->
+        <div id="incidencia-estatal-content" class="tab-content">
+            <!-- Contenido vacío - redirección directa -->
+        </div> <!-- Fin Tab Content: Incidencia Estatal -->
+        
     </main>
 
          <!-- JavaScript para cargar estadísticas -->
@@ -884,6 +923,12 @@
                     const targetContent = document.getElementById(targetTab + '-content');
                     if (targetContent) {
                         targetContent.classList.add('active');
+                    }
+                    
+                    // Redirección directa para Incidencia Estatal
+                    if (targetTab === 'incidencia-estatal') {
+                        window.open('https://sebrodriguezh.github.io/SESNSP_Site/', '_blank');
+                        return; // No mostrar contenido, solo redirigir
                     }
                     
                     console.log('🔄 Pestaña cambiada a:', targetTab);
@@ -2734,6 +2779,192 @@ function parseCSVToData(csvText) {
     // Crear también la tabla de cambios porcentuales
     createTypePercentageTable(concepto);
 }
+        // ========================================
+        // GABINETE DE SEGURIDAD FUNCTIONALITY
+        // ========================================
+        
+        async function loadGabineteOverview() {
+            try {
+                console.log('🔄 Cargando overview del Gabinete de Seguridad...');
+                
+                const response = await fetch('data/gabinete_detenidos_final.csv');
+                const csvText = await response.text();
+                
+                const lines = csvText.trim().split('\n');
+                const headers = lines[0].split(',');
+                
+                console.log(`✅ CSV cargado: ${lines.length - 1} registros`);
+                console.log(`📋 Columnas: ${headers.join(', ')}`);
+                
+                // Procesar solo las primeras 10 filas para el overview
+                const previewRows = lines.slice(1, 11); // Primeras 10 filas de datos
+                
+                // Crear tabla HTML
+                createGabineteOverviewTable(headers, previewRows);
+                
+            } catch (error) {
+                console.error('❌ Error cargando overview del Gabinete:', error);
+                document.getElementById('gabinete-overview-table').innerHTML = 
+                    '<p style="color: red; text-align: center;">Error al cargar los datos del Gabinete de Seguridad</p>';
+            }
+        }
+        
+        function createGabineteOverviewTable(headers, rows) {
+            const container = document.getElementById('gabinete-overview-table');
+            
+            // Mostrar TODAS las columnas disponibles
+            const relevantColumns = [
+                'conference_id',
+                'conference_date', 
+                'detainee_name',
+                'detainee_age',
+                'detainee_alias',
+                'criminal_group',
+                'charges_or_supposed_role',
+                'date_of_arrest',
+                'city_municipality',
+                'state_of_arrest',
+                'involved_institutions',
+                'US_request_extradition',
+                'items_seized',
+                'additional_details',
+                'other',
+                'original_row_id'
+            ];
+            
+            // Encontrar índices de todas las columnas
+            const columnIndices = relevantColumns.map(col => {
+                const index = headers.findIndex(h => h.trim().toLowerCase() === col.toLowerCase());
+                return { name: col, index: index };
+            }).filter(col => col.index !== -1);
+            
+            // Crear encabezados traducidos para todas las columnas
+            const columnTitles = {
+                'conference_id': 'Conf.',
+                'conference_date': 'Fecha Conferencia',
+                'detainee_name': 'Nombre Detenido',
+                'detainee_age': 'Edad',
+                'detainee_alias': 'Alias',
+                'criminal_group': 'Grupo Criminal',
+                'charges_or_supposed_role': 'Cargos/Rol',
+                'date_of_arrest': 'Fecha Detención',
+                'city_municipality': 'Ciudad/Municipio',
+                'state_of_arrest': 'Estado Detención',
+                'involved_institutions': 'Instituciones',
+                'US_request_extradition': 'Extradición EE.UU.',
+                'items_seized': 'Artículos Incautados',
+                'additional_details': 'Detalles Adicionales',
+                'other': 'Otros',
+                'original_row_id': 'ID Original'
+            };
+            
+            let tableHTML = '<div class="table-responsive"><table class="data-table-styled"><thead><tr>';
+            
+            // Crear encabezados
+            columnIndices.forEach(col => {
+                tableHTML += `<th>${columnTitles[col.name]}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+            
+            // Crear filas de datos
+            rows.forEach(row => {
+                const cells = parseCSVRow(row);
+                tableHTML += '<tr>';
+                
+                columnIndices.forEach(col => {
+                    let cellValue = cells[col.index] || '';
+                    
+                    // Limpiar y formatear valores
+                    if (cellValue === '' || cellValue === 'nan' || cellValue === 'NaN') {
+                        cellValue = '—';
+                    } else {
+                        // El parsing ya maneja las comillas correctamente
+                        // Pero necesitamos formatear nombres que terminan en comilla incompleta
+                        cellValue = cellValue.trim();
+                        
+                        // Si es un nombre que termina en una sola comilla, completar las comillas
+                        if (col.name === 'detainee_name' && cellValue.match(/^[A-Za-z\s]+\s"[A-Z]$/)) {
+                            cellValue = cellValue.replace(/"([A-Z])$/, '"$1"');
+                        }
+                        
+                        // Truncar textos largos según la columna
+                        if (col.name === 'detainee_name' && cellValue.length > 25) {
+                            cellValue = cellValue.substring(0, 22) + '...';
+                        } else if (col.name === 'criminal_group' && cellValue.length > 30) {
+                            cellValue = cellValue.substring(0, 27) + '...';
+                        } else if (col.name === 'charges_or_supposed_role' && cellValue.length > 35) {
+                            cellValue = cellValue.substring(0, 32) + '...';
+                        } else if (col.name === 'city_municipality' && cellValue.length > 20) {
+                            cellValue = cellValue.substring(0, 17) + '...';
+                        } else if (col.name === 'involved_institutions' && cellValue.length > 40) {
+                            cellValue = cellValue.substring(0, 37) + '...';
+                        } else if (col.name === 'items_seized' && cellValue.length > 50) {
+                            cellValue = cellValue.substring(0, 47) + '...';
+                        } else if (col.name === 'additional_details' && cellValue.length > 50) {
+                            cellValue = cellValue.substring(0, 47) + '...';
+                        } else if (col.name === 'other' && cellValue.length > 30) {
+                            cellValue = cellValue.substring(0, 27) + '...';
+                        }
+                    }
+                    
+                    tableHTML += `<td>${cellValue}</td>`;
+                });
+                
+                tableHTML += '</tr>';
+            });
+            
+            tableHTML += '</tbody></table></div>';
+        
+            
+            container.innerHTML = tableHTML;
+            console.log('✅ Tabla overview del Gabinete creada');
+        }
+        
+        function parseCSVRow(row) {
+            // Función de parsing CSV más robusta
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            let i = 0;
+            
+            while (i < row.length) {
+                const char = row[i];
+                
+                if (char === '"') {
+                    if (inQuotes) {
+                        // Estamos dentro de comillas
+                        if (i + 1 < row.length && row[i + 1] === '"') {
+                            // Comilla doble escapada -> agregar una sola comilla
+                            current += '"';
+                            i += 2; // Saltar ambas comillas
+                            continue;
+                        } else {
+                            // Fin del campo con comillas
+                            inQuotes = false;
+                        }
+                    } else {
+                        // Inicio del campo con comillas
+                        inQuotes = true;
+                    }
+                } else if (char === ',' && !inQuotes) {
+                    // Separador de campo fuera de comillas
+                    result.push(current.trim());
+                    current = '';
+                    i++;
+                    continue;
+                } else {
+                    // Carácter normal
+                    current += char;
+                }
+                
+                i++;
+            }
+            
+            // Agregar el último campo
+            result.push(current.trim());
+            return result;
+        }
+
         // ===== EVENT LISTENERS Y INICIALIZACIÓN =====
         
         // Cargar todos los datos cuando la página se cargue
@@ -2747,6 +2978,9 @@ function parseCSVToData(csvText) {
             loadNationalTable();
             loadPercentageChangesTable();
             loadAvailableConcepts();
+            
+            // Cargar datos del Gabinete de Seguridad
+            loadGabineteOverview();
             
             // Cargar datos de tipos para el segundo mapa
             loadTipoData().then(() => {

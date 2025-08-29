@@ -943,6 +943,71 @@ body {
     font-weight: bold;
 }
 
+
+/* Table responsive wrapper para scroll horizontal */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Clase para tablas styled (alias de data-table) */
+.data-table-styled {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1400px; /* Ancho mínimo para acomodar todas las columnas */
+}
+
+/* Headers para tablas styled */
+.data-table-styled th {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px 12px;
+    text-align: center;
+    white-space: nowrap; /* Evitar wrap en headers */
+}
+
+/* Celdas para tablas styled */
+.data-table-styled td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Evitar wrap en celdas */
+}
+
+/* Hover para tablas styled */
+.data-table-styled tbody tr:hover {
+    background: linear-gradient(90deg, #f8f9fa, #e3f2fd);
+}
+
+/* Filas alternadas para tablas styled */
+.data-table-styled tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Footer para fuente de datos */
+.data-source-footer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.data-source-footer p {
+    margin: 0;
+    color: #495057;
+}
+
 /* Responsive design */
 @media (max-width: 1200px) {
     .monthly-boxes-grid {

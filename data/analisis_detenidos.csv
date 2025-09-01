@@ -1,0 +1,507 @@
+detainee_name,criminal_group,charges_or_supposed_role,state_of_arrest
+Identidad desconocida,,Tráfico de fentanilo,Baja California
+"Pedro ""N",Cártel de Santa Rosa de Lima,,Guanajuato
+"María Reyna ""N",Cártel de Santa Rosa de Lima,,Guanajuato
+"Javier ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"Michael ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"Juan José ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"Axel Yahir ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"José Guadalupe ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"Gerónimo ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"Cristian Jovany ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"José Luis ""N",,Portación de armas de fuego de uso exclusivo del ejército,Guerrero
+"Andrew ""N",Una organización delictiva transnacional que funge como enlace logístico entre el Cártel de Jalisco Nueva Generación y el Cártel del Pacífico,"Líder de la organización, trasiego de fentanilo y metanfetaminas, tráfico de armas, comercialización ilegal de drogas sintéticas entre México, Estados Unidos, Canadá, Ecuador y Colombia",Jalisco
+"Luis Mario ""N""",Cártel del Noreste,,Nuevo León
+Otra persona 1,Cártel del Noreste,,Nuevo León
+Otra persona 2,Cártel del Noreste,,Nuevo León
+Otra persona 3,Cártel del Noreste,,Nuevo León
+Otra persona 4,Cártel del Noreste,,Nuevo León
+"José Alberto ""N""",Cártel del Noreste,,Nuevo León
+Otra persona 1,Cártel del Noreste,,Nuevo León
+Otra persona 2,Cártel del Noreste,,Nuevo León
+Otra persona 3,Cártel del Noreste,,Nuevo León
+Otra persona 4,Cártel del Noreste,,Nuevo León
+Otra persona 5,Cártel del Noreste,,Nuevo León
+Otra persona 6,Cártel del Noreste,,Nuevo León
+Otra persona 7,Cártel del Noreste,,Nuevo León
+Otra persona 8,Cártel del Noreste,,Nuevo León
+Otra persona 9,Cártel del Noreste,,Nuevo León
+"Jesús ""N",Cártel Jalisco Nueva Generación,"Homicidio calificado, integrante",Quintana Roo
+"Edwin ""N""",Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 1,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 2,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 3,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 4,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 5,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 6,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 7,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 8,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 9,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 10,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 11,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 12,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 13,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 14,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 15,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 16,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 17,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 18,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+Otra persona 19,Cártel del Pacífico (Los Mayos),"Posesión de armas de fuego del uso exclusivo del Ejército, Armada y Fuerza Aérea y Contra la Salud cometidos en pandilla",Sinaloa
+"Jesús Adrián ""N",Los Salazar,,Sonora
+"Jesús Policarpo ""N",Los Salazar,,Sonora
+Otra persona 1,Los Salazar,,Sonora
+Otra persona 2,Los Salazar,,Sonora
+Otra persona 3,Los Salazar,,Sonora
+Otra persona 4,Los Salazar,,Sonora
+"Javier Feliciano ""N""",Cártel del Pacífico (Los Salazar),,Sonora
+"Jesús Carmelo ""N",Cártel del Pacífico (Los Salazar),,Sonora
+"Antonio ""N",Cártel del Pacífico (Los Mayos),,Sinaloa
+"Luis ""N",Cártel del Pacífico (Los Chapitos),,Sinaloa
+Gamaliel “N”,Cártel del Pacífico (Los Chapitos),,Sinaloa
+Salvador “N”,Cártel Jalisco Nueva Generación,,Jalisco
+"Armando ""N",Cártel Jalisco Nueva Generación,,Jalisco
+"Zhi Dong ""N",,"Asociación delictuosa, distribución internacional de cocaína, operaciones con recursos de procedencia ilícita",Ciudad de México
+"Jesús Esteban ""N",,Líder de una célula,Chiapas
+11 hombres y 4 mujeres,,"Delitos contra la salud y secuestro, asegurando diversas dosis de droga, parte de una célula delictiva",Estado de México
+"Josseline ""N",,Integrantes de grupos delictivos,Estado de México y Morelos
+"Sergio ""N",,Integrantes de grupos delictivos,Estado de México y Morelos
+"Itania ""N",,"Operadora logística de un grupo delictivo, coordinando la venta y distribución de droga en Colima, delitos contra la salud y por la ley federal de armas de fuego",Jalisco
+"Alejandro ""N""",,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 1,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 2,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 3,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 4,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 5,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 6,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 7,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+Otra persona 8,,"Alejandro ""N"" (líder de una célula delictiva dedicada al trasiego de drogas hacia E.E.U.U., Australia y Europea)",Michoacán y Veracruz
+"José Enrique ""N",,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 1,,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 2,,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 3,,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 4,,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 5,,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 6,,"""Se le vincula con un grupo criminal""",Nuevo León
+Otra persona 7,,"""Se le vincula con un grupo criminal""",Nuevo León
+"Marcelino ""N",,"Jefe de una célula delictiva, generador de violencia, extorsión, secuestro y tráfico de narcóticos",Sinaloa
+Otra persona 1,,"Jefe de una célula delictiva, generador de violencia, extorsión, secuestro y tráfico de narcóticos",Sinaloa
+Otra persona 2,,"Jefe de una célula delictiva, generador de violencia, extorsión, secuestro y tráfico de narcóticos",Sinaloa
+Otra persona 3,,"Jefe de una célula delictiva, generador de violencia, extorsión, secuestro y tráfico de narcóticos",Sinaloa
+"Roy James ""N""",Cártel del Golfo,,
+"Armando ""N""",Cártel Jalisco Nueva Generación (Los Deltas),Líder del grupo delictivo,
+"Ramón Enrique ""N""",Cártel del Pacífico (Los Mayos),,
+"Jorge Luis ""N""",Cártel del Pacífico (Los Mayos),,
+2 personas,,"Relacionadas a una célula delictiva, se les relaciona con 4 casos de secuestro y con hechos violentos",Baja California
+7 personas,,"4 de los detenidos son originarios de Sinaloa, Sonora y Michoacán; formaban parte de una organización delictiva dedicada al trasiego y comercialización de narcóticos que operaba en la zona oriente de la capital",Ciudad de México
+"24 servidores públicos, incluyendo:",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"Rodolfo ""N",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"Eraclio ""N",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"Omar ""N",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"María Elena ""N",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"Manuel Alejandro ""N",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"Ellery Guadalupe ""N",,"Diversos delitos como homicidio y secuestro con fines de extorsión, todos acusados por presuntos vínculos con la delincuencia organizada",Estado de México
+"Ismael ""N",,"Líder de un grupo independiente dedicado a la venta de droga al menudeo, extorsión al transporte público, homicidios y robo de hidrocarburo",Puebla
+"Vicente ""N",,"Vinculado con un grupo delictivo, hechos violentos",Querétaro
+"Jaime ""N",,Líder de una organización criminal dedicada al robo de autotransporte y tráfico y venta de armas de fuego,"Querétaro, Guanajuato"
+"Omar ""N""",Cártel del Pacífico (Los Pelones),"Generador de violencia, coordina el tráfico transfronterizo de droga, migrantes y armas; la producción y comercialización de estupefacientes y en menor medida, el secuestro y la extorsión, jefe del grupo delictivo",Sinaloa
+2 hombres,,"Agresiones a los elementos del Ejército Mexicano y Guardia Nacional, integrantes de la organización delictiva de violencia",Sinaloa
+"Carlos Mario ""N",,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 1,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 2,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 3,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 4,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 5,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 6,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 7,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 8,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+Otra persona 9,,Líder de un grupo delictivo y encargado de la logística del tráfico de personas de Centro América,"Ciudad de México, Estado de México, Nayarit"
+"Francisco ""N",,"Se le relaciona con el homicidio de 3 personas, parte de ""un grupo generador de violencia""",Guerrero
+"José Luis ""N","Una célula delictiva independiente dedicada al trasiego de droga hacia E.E.U.U., Australia y Europa",,Michoacán
+"José Jaime ""N",,"José Jaime ""N"" (coordinador de la célula delictiva)",Nuevo León
+7 otros integrantes,,"José Jaime ""N"" (coordinador de la célula delictiva)",Nuevo León
+"Arnulfo ""N",,Integrantes de un grupo criminal,Nuevo León
+Otra persona 1,,Integrantes de un grupo criminal,Nuevo León
+Otra persona 2,,Integrantes de un grupo criminal,Nuevo León
+Elier Jassiel “N”,,Producción y tráfico de fentanilo,Sinaloa
+Javier Alonso “N”,,Producción y tráfico de fentanilo,Sinaloa
+2 hombres,,Integrantes del grupo delictivo,Sinaloa
+Paul Alexander “N”,,"Paul Alexander “N” (operador de una célula, coordinaba la vigilancia, robo de vehículos y homicidio de integrantes de grupos rivales, además de suministrar armas de grueso calibre, artefactos explosivos improvisados y participar en el trasiego de droga), Karla “N” (la encargada de la distribución de droga y del resguardo de vehículos robados)",Sinaloa
+Karla “N”,,"Paul Alexander “N” (operador de una célula, coordinaba la vigilancia, robo de vehículos y homicidio de integrantes de grupos rivales, además de suministrar armas de grueso calibre, artefactos explosivos improvisados y participar en el trasiego de droga), Karla “N” (la encargada de la distribución de droga y del resguardo de vehículos robados)",Sinaloa
+Crescencio “N”,,Distribución de cocaína y vínculos con el narcotráfico,Sinaloa
+Adrián “N”,,Vinculado con la elaboración de fentanilo,Sinaloa
+Hernán “N”,,"Integrante de una célula delictiva, responsable del trasiego de droga desde Culiacán hacia los Estados Unidos, delincuencia organizada, generador de violencia en la entidad",Sinaloa
+9 personas,,Integrantes de un grupo delictivo,Sonora
+Héctor Gustavo “N”,,"Generador de violencia e integrante de una célula delictiva, delincuencia organizada en la modalidad de tráfico de armas",Sonora
+Jose Luis “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Francisco “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+David “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Ricardo “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Basilio “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+José Ignacio “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Luis Antonio “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Israel “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Rodrigo “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+Mariela Rubí “N”,,6 inmuebles vinculados con robo y contrabando de hidrocarburos,Veracruz
+"Josué ""N",,Uno de los principales generadores de violencia en la entidad,Baja California
+"Selvin Abigail ""N",,"Líder de una estructura delictiva transnacional dedicada al tráfico de drogas en la región norte de Guatemala y en la frontera con México, narcotráfico",Chiapas
+Fernando Emanuel “N”,,,Ciudad de México
+Santos “N”,,,Ciudad de México
+José “N”,,,Ciudad de México
+3 trabajadores del Ayunatemiento,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+3 policías municipales,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+5 familiares,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+La esposa del reigdor,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+Otra persona 1,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+Otra persona 2,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+Otra persona 3,,"Relacionados con la fuga del alcalde del municipio, es acusado de revisar el dinero del erario para financiar actividades delictiva, además de emplear a policías municipales como informantes de las operaciones de fuerzas federales y estatales",Estado de México
+"Norma Idalia ""N",,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+Otra persona 1,,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+Otra persona 2,,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+Otra persona 3,,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+Otra persona 4,,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+Otra persona 5,,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+Otra persona 6,,"Norma Idalia “N” (generadora de violencia, líder de un grupo delictivo, dedicado a la venta de hidrocarburo robado, droga y armas, homicidios, delitos de alto impacto)",Guanajuato
+"Marco Antonio ""N",,"Marco Antonio ""N"" (líder de un grupo delictivo generador de violencia, delitos contra la salud)",Guerrero
+Otra persona 1,,"Marco Antonio ""N"" (líder de un grupo delictivo generador de violencia, delitos contra la salud)",Guerrero
+Otra persona 2,,"Marco Antonio ""N"" (líder de un grupo delictivo generador de violencia, delitos contra la salud)",Guerrero
+Otra persona 3,,"Marco Antonio ""N"" (líder de un grupo delictivo generador de violencia, delitos contra la salud)",Guerrero
+Otra persona 4,,"Marco Antonio ""N"" (líder de un grupo delictivo generador de violencia, delitos contra la salud)",Guerrero
+Otra persona 5,,"Marco Antonio ""N"" (líder de un grupo delictivo generador de violencia, delitos contra la salud)",Guerrero
+"David Adrián ""N",,"Delitos contra la salud, en Puerto Márquez, Acapulco, Guerrero, integrante de un grupo delictivo generador de violencia con presencia en Acapulco, Guerrero y autor material del homicidio cometido en contra un Magistrado, ocurrido el 11 de diciembre de 2024",Guerrero
+"Alexander ""N",,"Generador de violencia, varias denuncias por extorsión en el mercado Central de Acapulco",Guerrero
+Miguel Ángel “N”,,"Delitos de homicidio, extorsión",Hidalgo
+"Juan Manuel ""N",Cártel del Pacífico (Los Chapitos),"Integrantes, Juan Manuel ""N"" (jefe de una célula delictiva)",Sinaloa
+Otra persona 1,Cártel del Pacífico (Los Chapitos),"Integrantes, Juan Manuel ""N"" (jefe de una célula delictiva)",Sinaloa
+Otra persona 2,Cártel del Pacífico (Los Chapitos),"Integrantes, Juan Manuel ""N"" (jefe de una célula delictiva)",Sinaloa
+Otra persona 3,Cártel del Pacífico (Los Chapitos),"Integrantes, Juan Manuel ""N"" (jefe de una célula delictiva)",Sinaloa
+Otra persona 4,Cártel del Pacífico (Los Chapitos),"Integrantes, Juan Manuel ""N"" (jefe de una célula delictiva)",Sinaloa
+"Martín ""N",,"Integrante de una célula delictiva, delincuencia organizada",Sonora
+13 policías estatales,,Desaparición forzada de personas,Veracruz
+Salvador “N”,Cártel Jalisco Nueva Generación,"Jefe regional en Talpa de Allende, Jalisco",
+Hernán Domingo “N”,Cártel del Pacífico (Los Mayos),Tráfico de pastillas de fentanilo en Sinaloa,
+Said Alberto “N”,Cártel Jalisco Nueva Generación (La Barredora),Líder de la célula delictiva,
+"Roy ""N",Los Rusos (Tres Palos),Líder de la célula,
+José Osvaldo “N”,Los Colombianos,Líder de la célula delictiva,
+Marco Antonio “N”,Los Magno,"Jefe de plaza en La Venta, Guerrero",
+2 hombres,,"Delitos de extorsión agravada y asociación delictuosa, contra una célula delictiva",Ciudad de México
+"Alexander ""N",,Varias denuncias por extorsión en el mercado Central de Acapulco,Guerrero
+27 personas,,Generadores de violencia,Nuevo León
+5 personas,,Generadores de violencia,Sinaloa
+Juan Carlos “N”,Cártel del Pacífico (Mayo Zambada),"Operador financiero de un grupo delictivo, es señalado como responsable del incremento de la incidencia delictiva en el Estado, supervisaba la producción y trasiego de fentanilo, metafetamina, cocaína, y heroína hacia Estados Unidos, segundo hombre de importancia de la facción",Sinaloa
+Raúl Alonso “N”,Cártel del Pacífico (Los Chapitos),"Vinculados a un grupo delictivo, distribución de fentanilo",Sinaloa
+Héctor Abel “N”,Cártel del Pacífico (Los Chapitos),"Vinculados a un grupo delictivo, distribución de fentanilo",Sinaloa
+14 personas,,Pertenecientes a una célula criminal,"Puebla, Tlaxcala"
+Joel “N”,,"Parte de un grupo delictivo generador de violencia en el estado, responsable de los laboratorios clandestinos utilizados para la fabricación de droga sintética en Elota, Sinaloa",Ciudad de México
+"Tomás ""N",Cártel del Pacífico (Los Chapitos),,
+"Jesús Daniel ""N""",Cártel del Pacífico (Los Chapitos),"Facción “Los Chapitos”, Culiacán, Sinaloa",
+Carlos “N”,La Barredora,Líder del grupo delictivo,
+"Daniel Eduardo ""N""",La Unión Tepito,Operador financiero del grupo delictivo,
+"Milton Bladmir ""N""",Cártel del Pacífico (Los Chapitos),,
+15 policías municipales,,Relacionados con una red de corrupción y extorsión,Chiapas
+5 personas,,"Integrantes de una célula delictiva, vinculada con Luis Antonio ""N""",Guanajuato
+2 hombres,,"1 de ellos relacionado con una agresión en donde perdieron la vida de 2 custodios y 1 más resultó herido en un penal de León, ocurrida el pasado 1 de noviembre de 2024, además se le relaciona con varios homicidios en el estado y se le considera el principal distributor de droga en la Central de Abastos de León, Guanajuato",Guanajuato
+37 personas,,Asegurando un campamento de adiestramiento afina a un grupo delictivo,Jalisco
+2 personas,,"Relacionados con Hiram “N”, encargado de una célula dedicada al robo de hidrocarburo",Jalisco
+Cruz Esmeralda “N”,,"Desaparición en contra dos particulares, vinculado a un evento en que falleció el líder de la célula delictiva",Oaxaca
+"Rubén ""N",,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 1,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 2,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 3,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 4,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 5,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 6,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 7,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Otra persona 8,,"Integrantes de un grupo delictivo, Rubén ""N"" (jefe de una célula)",Nuevo León
+Rogelio “N”,,Homicidio en el estado de Durango,Sinaloa
+Ricardo “N”,Cártel del Noreste,"Operador de una célula delictiva, relacionado con homicidios y extorsiones, está relacionada con el homicidio de 5 elementos de la Fuerza Civil de Nuevo León así como ataques en contra de personal de la secretaría de la Defensa Nacional, jefe regional de Nuevo León, Coahuila y Tamaulipas",Tamaulipas
+Mauro “N”,,"Operador clave de una organización delictiva, hombre de confianza del líder del grupo delictivo",Sinaloa
+Mauro Alberto “N”,Cártel del Pacífico (Los Chapitos),Encargado del círculo de seguridad interna de Archivaldo Iván Guzmán Salazar “Chapito”,
+"Fernando ""N""",Cártel de Sinaloa,Jefe de célula y coordinador de distribuciones de droga del Cártel de Sinaloa,
+"Christian ""N""",Cártel de Sinaloa,"Distributor de droga, extorsión y secuestros para el Cártel de Sinaloa",
+Deissy “N”,Cártel de Sinaloa,"Distribuidora de droga, extorsión y secuestros para el Cártel de Sinaloa",
+"Gerson ""N",La Unión Tepito,"Distribuidor de droga, extorsión y secuestros para el cártel de “La Unión Tepito”",
+"Yoad ""N",Cártel Jalisco Nueva Generación,Perteneciente al grupo delictivo,
+Christian Alejandro “N”,,"Generador de violencia, jefe de una organización delictiva, la distribución de droga, secuestros, homicidios y cobro de piso",Guanajuato
+"Sotero ""N",,Tráfico de drogas y armas,Guerrero
+Aaron “N”,,"Distribución de fentanilo, posesión de armas de fuego",Jalisco
+Hong Thoa “N”,,"Distribución de fentanilo, posesión de armas de fuego",Jalisco
+8 personas,,Ocupaban el 3er y 4to nivel dentro de la estructura de una célula delictiva que es generador de violencia en el norte del país,Oaxaca
+"Francisco Manuel ""N",,,Michoacán
+6 otros hombres,,,Michoacán
+Humberto “N”,,"Generado de violencia, líder de una célula delictiva en la región",Chihuahua
+"Jonathan ""N",,"Jonathan ""N"" (ocupa el 2do nivel dentro de una célula delictiva y presenta órdenes de aprehensión por homicidio calificado, asociación delictuosa y desaparición de personas), Francisco “N” y Octavio “N” (desaparición de personas y asociación delictuosa)",Sonora
+"Francisco ""N",,"Jonathan ""N"" (ocupa el 2do nivel dentro de una célula delictiva y presenta órdenes de aprehensión por homicidio calificado, asociación delictuosa y desaparición de personas), Francisco “N” y Octavio “N” (desaparición de personas y asociación delictuosa)",Sonora
+"Octavio ""N",,"Jonathan ""N"" (ocupa el 2do nivel dentro de una célula delictiva y presenta órdenes de aprehensión por homicidio calificado, asociación delictuosa y desaparición de personas), Francisco “N” y Octavio “N” (desaparición de personas y asociación delictuosa)",Sonora
+"Brayan ""N",,"Brayan ""N"" (operador de un grupo delictivo de la región), Eric ""N"" (autor material del homicidio ocurrido en plaza Carso en Abril de 2023), los dos realizaban distribución de droga y homicidios para un grupo delictivo",Sinaloa
+"Eric ""N",,"Brayan ""N"" (operador de un grupo delictivo de la región), Eric ""N"" (autor material del homicidio ocurrido en plaza Carso en Abril de 2023), los dos realizaban distribución de droga y homicidios para un grupo delictivo",Sinaloa
+Otra persona 1,,"Brayan ""N"" (operador de un grupo delictivo de la región), Eric ""N"" (autor material del homicidio ocurrido en plaza Carso en Abril de 2023), los dos realizaban distribución de droga y homicidios para un grupo delictivo",Sinaloa
+Otra persona 2,,"Brayan ""N"" (operador de un grupo delictivo de la región), Eric ""N"" (autor material del homicidio ocurrido en plaza Carso en Abril de 2023), los dos realizaban distribución de droga y homicidios para un grupo delictivo",Sinaloa
+Otra persona 3,,"Brayan ""N"" (operador de un grupo delictivo de la región), Eric ""N"" (autor material del homicidio ocurrido en plaza Carso en Abril de 2023), los dos realizaban distribución de droga y homicidios para un grupo delictivo",Sinaloa
+José Ángel “N”,Cártel del Pacífico (Los Chapitos),"Operador, planeación de rutas para la distribución de fentanilo, cocaína y metafetamina a nivel international, operador financiero y hombre de confianza de “El Chapito”",Sinaloa
+Kevin Alonso “N”,Cártel del Pacífico (Los Chapitos),"Homicidios, extorsiones y ataques a la autoridad, así como generar violencia en la entidad, Kevin “N” (responsible de la seguridad del líder de una organización criminal (""El Chapito"") y coordinaba la compra de armas y municiones)",Sinaloa
+Gustavo “N”,Cártel del Pacífico (Los Chapitos),"Homicidios, extorsiones y ataques a la autoridad, así como generar violencia en la entidad, Kevin “N” (responsible de la seguridad del líder de una organización criminal (""El Chapito"") y coordinaba la compra de armas y municiones)",Sinaloa
+"Antonio ""N",Los Chapitos (Los Durango),Jefe de la célula delictiva,
+"Joel ""N""",Deltas 101,Perteneciente al grupo delictivo “Deltas 101”,
+"Abner ""N",,Líder y fundador de un grupo delictivo independiente,
+"Candelaria ""N",,"Colaboradora de “El Marro”, de un grupo delictivo, que realizaba secuestro, extorsión y cobro de piso en Guanajuato",
+"Leonel ""N",,"Perteneciente a una célula delictiva, Leonel ""N"" (secuestro agravado, tráfico de drogas y de personas)",Durango
+Otra persona 1,,"Perteneciente a una célula delictiva, Leonel ""N"" (secuestro agravado, tráfico de drogas y de personas)",Durango
+Otra persona 2,,"Perteneciente a una célula delictiva, Leonel ""N"" (secuestro agravado, tráfico de drogas y de personas)",Durango
+"Abraham ""N""",,"Uno de los principales operadores financieros de un grupo delictivo, actividades de lavado de dinero",Jalisco
+Otra persona 1,,"Uno de los principales operadores financieros de un grupo delictivo, actividades de lavado de dinero",Jalisco
+Otra persona 2,,"Uno de los principales operadores financieros de un grupo delictivo, actividades de lavado de dinero",Jalisco
+Otra persona 3,,"Uno de los principales operadores financieros de un grupo delictivo, actividades de lavado de dinero",Jalisco
+Gerardo “N”,,"Jefe operativo y segundo hombre de importancia de un grupo delincuencial, generador de violencia y responsable de dirigir las actividades de extorsión a los productores de limón y aguacate, así como distribución de droga, secuestros, homicidios y cobro de piso, también es responsable del homicidio de 2 integrantes de la FGR",Michoacán
+"Roberto ""N""",,"Conspiración con la delincuencia organizada, delitos contra la salud",Morelos
+"Casto ""N",,"Casto ""N"" (jefe de plaza y generador de violencia, afín a una organización delictiva)",Nuevo León
+1 otra persona,,"Casto ""N"" (jefe de plaza y generador de violencia, afín a una organización delictiva)",Nuevo León
+11 personas,,,Tamaulipas
+3 mujeres,"Los Chapos, Los Mayos","""Actividades criminales""",Sinaloa
+Rodolfo “N”,,"Principal operador financiero y hermano del “Moncho”, de un grupo delictivo que opera en Jalisco",
+"José Manuel ""N""",,"La distribución de droga, extorsión y secuestro, parte de un grupo delictivo",
+"Julián ""N",,Perteneciente a una grupo delictivo,
+"Samuel ""N""",,Jefe operativo y financiero de un grupo delictivo,
+"Bruno ""N",,La producción y trasiego de sustancias psicotrópicas de un grupo delictivo,
+Cristhian “N”,,"Jefe de célula vinculado por delitos contra la salud, de un grupo delictivo",
+Nadxieli “N”,,Integrante de una célula vinculada por delitos contra la salud y delincuencia organizada de un grupo delictivo,
+Leonel “N”,,Realizaba secuestro grabado y trafico de drogas de un grupo delictivo,
+Jonathan Godínez Ramírez,Cártel Jalisco Nueva Generación,Jefe de plaza para el CJNG,Natyarit
+Francisco Javier Roman-Bardales,MS-13,"Prestar y ocultar apoyo material y recursos a terroristas, conspiración narcoterrorista, conspiración de crimen organizado, conspiración para traficar extranjeros",Veracruz
+"José Francisco ""N""",Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+"José Remedios ""N",Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 1,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 2,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 3,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 4,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 5,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 6,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Otra persona 7,Cártel de Santa Rosa de Lima (Los Escorpiones),"Integrantes de un grupo delictivo vinculado con delincuencia organizada, secuestro, robo de hidrocarburo, venta de droga, ataques armados y homicidios, José Francisco “N” (líder de la célula y responsable del ataque al Bar “Los Cantaritos” en Guerrero, donde perdieron la vida de 10 personas y de ordenar agresiones a grupos rivales y autoridades), José Remedios “N” (líder de homicidas de una célula delictiva, uno de los principales generadores de violencia de la región de Guanajuato y Querétaro)","Querétaro, Guanajuato, Yucatán"
+Jesse Kevin “N”,,"Generadoras de violencia, relacionados con una célula delictiva",Sinaloa
+Juan Carlos “N”,,"Generadoras de violencia, relacionados con una célula delictiva",Sinaloa
+Otra persona 1,,"Generadoras de violencia, relacionados con una célula delictiva",Sinaloa
+Otra persona 2,,"Generadoras de violencia, relacionados con una célula delictiva",Sinaloa
+José Gregorio “N”,,"José Gregorio “N” (líder de una célula delictiva vinculado con el reclutamiento de personas para una organización criminal, tenía a su cargo el centro de adiestramiento ubicado en el Rancho Izaguirre en el municipio de Teuchitlán, Jalisco)",Ciudad de México
+"Abril ""N",,"José Gregorio “N” (líder de una célula delictiva vinculado con el reclutamiento de personas para una organización criminal, tenía a su cargo el centro de adiestramiento ubicado en el Rancho Izaguirre en el municipio de Teuchitlán, Jalisco)",Ciudad de México
+Braulio Salvador “N”,,Jefe de un centro de monitoreo y almacenamiento de armas (lanzacohetes y más de 82 mil cartuchos) de un grupo delictivo,
+"Melina ""N""",,"Operadora financiera y encargada de la extracción ilícita de hidrocarburo, de un grupo delictivo",
+Carmen “N”,,"Vinculado con el delito de tráfico de personas, perteneciente a un grupo delictivo",
+Luis Fernando “N”,,"Responsable de trasiego de fentanilo, perteneciente a un grupo delictivo",
+José Roberto “N”,,"Jefe de sicarios, perteneciente a un grupo delictivo",
+"Rafael ""N""",,Segundo al mando de un grupo delictivo,
+Antonio “N”,,"Generador de violencia, perteneciente a un grupo delictivo",
+Jonathan “N”,,,
+David Roberto “N”,,,
+David Adrián “N”,,,
+Ubaldo “N”,,,
+Marco Antonio “N”,,,
+Pedro “N”,,,
+Norma Idalia “N”,,,
+Esmeralda “N”,,,
+Leonel “N”,Cártel de Santa Rosa de Lima,Jefe de plaza,Querétaro
+Antonio “N”,,,
+Christian Alejandro “N”,Cártel de Santa Rosa de Lima,Jefe de una célula de sicarios,Guanajuato
+Rodolfo “N”,,,Tabasco
+Francisco Javier “N”,,"Control de la venta y distribución de droga, extorsión, agresiones a grupos rivales",
+Jorge Luis “N”,La Barredora,,Tabasco
+Edson Aldair “N”,La Barredora,,Tabasco
+Adrian “N”,,,
+Scott Harvey Daniel “N”,,,
+Dalia “N”,,,
+Maria Raquel “N”,,,
+Noé “N”,,,
+José Antonio “N”,,,
+Omar “N”,Cártel del Pacífico (Los Chapitos),Operador,
+Horacio “N”,Cártel del Pacífico (Los Mayos),Operador financiero,
+Jesse Kevin “N”,,,Sinaloa
+Juan Carlos “N”,,,Sinaloa
+Paul Alexander “N”,,,
+Adrian “N”,Los Beltrán-Leyva,Integrante,
+Juan Carlos “N”,,,
+"Salu Francisco ""N""",,Líder de un grupo delictivo,
+"Jesús Manuel ""N",,Operador de una célula delictiva,
+"Leonardo ""N""",,,
+"Adán Alexis ""N",,,
+Jesús Abel “N”,,,
+"Carlos ""N",,,
+Francisco “N”,,Líder de células criminales,
+"Manuel ""N",,Jefe de plaza,
+Elías “N”,,Transportar sustancias ilícitas,
+Edson “N”,,,
+Leobardo “N”,,,
+Ataulfo López Flores,,Ataulfo López Flores (jefe de plaza afín a una organización delictiva con presencia en Chiapas y Guatemala),Chiapas
+Otra persona 1,,Ataulfo López Flores (jefe de plaza afín a una organización delictiva con presencia en Chiapas y Guatemala),Chiapas
+Otra persona 2,,Ataulfo López Flores (jefe de plaza afín a una organización delictiva con presencia en Chiapas y Guatemala),Chiapas
+Juan Benito “N”,,"Ocupa el segundo nivel dentro de un grupo delictivo relacionados con los delitos de robo y trasiego de hidrocarburo, cobro de piso y extorsión",Oaxaca
+"Joel Alfonso ""N""",Cártel del Pacífico (Los Mayos),"Alfonso “N” (jefe de una célula operativa de Los Mayos, dedicada a la elaboración de metanfetamina y generación de violencia, con presencia en Sinaloa y Puebla)",Puebla
+Otra persona 1,Cártel del Pacífico (Los Mayos),"Alfonso “N” (jefe de una célula operativa de Los Mayos, dedicada a la elaboración de metanfetamina y generación de violencia, con presencia en Sinaloa y Puebla)",Puebla
+Otra persona 2,Cártel del Pacífico (Los Mayos),"Alfonso “N” (jefe de una célula operativa de Los Mayos, dedicada a la elaboración de metanfetamina y generación de violencia, con presencia en Sinaloa y Puebla)",Puebla
+Otra persona 3,Cártel del Pacífico (Los Mayos),"Alfonso “N” (jefe de una célula operativa de Los Mayos, dedicada a la elaboración de metanfetamina y generación de violencia, con presencia en Sinaloa y Puebla)",Puebla
+Otra persona 4,Cártel del Pacífico (Los Mayos),"Alfonso “N” (jefe de una célula operativa de Los Mayos, dedicada a la elaboración de metanfetamina y generación de violencia, con presencia en Sinaloa y Puebla)",Puebla
+"Daniel ""N",La Línea,"Daniel ""N"" (líder de una célula de La Línea que era buscado por autoridades en E.E.U.U. por narcotráfico, homicidio y tortura)",Chihuahua
+Otra persona 1,La Línea,"Daniel ""N"" (líder de una célula de La Línea que era buscado por autoridades en E.E.U.U. por narcotráfico, homicidio y tortura)",Chihuahua
+Otra persona 2,La Línea,"Daniel ""N"" (líder de una célula de La Línea que era buscado por autoridades en E.E.U.U. por narcotráfico, homicidio y tortura)",Chihuahua
+Otra persona 3,La Línea,"Daniel ""N"" (líder de una célula de La Línea que era buscado por autoridades en E.E.U.U. por narcotráfico, homicidio y tortura)",Chihuahua
+"Samuel ""N""",,"Atacar a los oficiales con armas, Samuel “N” (operador relevante de un grupo delictivo, jefe de plaza de Guamúchil y responsable de incremento de la incidencia delictiva en Sinaloa)",Sinaloa
+Otra persona 1,,"Atacar a los oficiales con armas, Samuel “N” (operador relevante de un grupo delictivo, jefe de plaza de Guamúchil y responsable de incremento de la incidencia delictiva en Sinaloa)",Sinaloa
+Otra persona 2,,"Atacar a los oficiales con armas, Samuel “N” (operador relevante de un grupo delictivo, jefe de plaza de Guamúchil y responsable de incremento de la incidencia delictiva en Sinaloa)",Sinaloa
+Otra persona 3,,"Atacar a los oficiales con armas, Samuel “N” (operador relevante de un grupo delictivo, jefe de plaza de Guamúchil y responsable de incremento de la incidencia delictiva en Sinaloa)",Sinaloa
+Otra persona 4,,"Atacar a los oficiales con armas, Samuel “N” (operador relevante de un grupo delictivo, jefe de plaza de Guamúchil y responsable de incremento de la incidencia delictiva en Sinaloa)",Sinaloa
+Otra persona 5,,"Atacar a los oficiales con armas, Samuel “N” (operador relevante de un grupo delictivo, jefe de plaza de Guamúchil y responsable de incremento de la incidencia delictiva en Sinaloa)",Sinaloa
+"Jesús Daniel ""N",Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+"Osmar Alonso ""N",Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+Otra persona 1,Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+Otra persona 2,Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+Otra persona 3,Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+Otra persona 4,Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+Otra persona 5,Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+Otra persona 6,Cártel del Pacífico (Los Chapitos),"Jesús Daniel ""N"" y Osmar Alonso ""N"" (vnculados con una célula delictiva del Cártel del Pacífico, responsables de homicidio, secuestro y agresiones a autoridades y grupos rivales)",Sinaloa
+6 personas,,,Sonora
+4 personas,,Pertenecían a una célula delictiva,Sonora
+"Iván Fernando ""N""","Cártel del Pacífico (Los Mayos, Los Demonios)","Delincuencia organizada con la finalidad de cometer delitos contra la salud en modalidad de quien extraiga del país algunos narcóticos comprendidos en la Ley General de Salud, pertenecía a la célula delictiva a Los Demonios",Sonora
+"Juan Enrique ""N""","Cártel del Golfo (Los Ciclones, Los Escorpiones)","Jefe operativo de célula delictiva Los Escorpiones, secuestros, extorsiones, agresiones armadas en contra de autoridades federales y estatales",Tamaulipas
+"Francisco ""N""",,"Líder de una célula delictiva, responsable del trasiego de drogas, privaciones de la libertad, elaboración de artefactos explosivos improvisados y acondicionamiento de vehículos con blindaje artesanal",
+"César ""N",,"Presunto responsable del delito de homicidio de una agente de la Fuerza Estatal de Seguridad Ciudadana en Tijuana, Baja California",
+"Uriel ""N""",,Jefe de plaza y generador de violencia de un grupo delictivo,
+Ramón Salvador “N”,,Segundo al mando de un grupo delictivo,
+"Luis Marcos ""N",Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Otra persona 1,Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Otra persona 2,Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Otra persona 3,Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Otra persona 4,Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Otra persona 5,Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Otra persona 6,Cártel del Pacífico (Los Mayos),"Un grupo delictivo con operación en La Paz y en Los Cabos, los detenidos son responsables de privar de la vida a un elemento de la Agencia Ministerial de Investigación Criminal en la entidad, Luis Marcos ""N"" (jefe de una célula delictiva generadora de violencia de la facción “Los Mayos”)",Baja California Sur
+Eduardo “N”,,Extorsión agravada de cobro de piso en la Central de Abastos de Acapulco,Guerrero
+César Moisés “N”,,Involucrado en la muerte de un agente de la Defensa Nacional,Guanajuato
+María del Rosario “N”,Cártel Jalisco Nueva Generación,"Operadora, tráfico de armas, drogas y personas; lavado de dinero y distribución de metanfetamina y fentanilo a través de las fronteras de México y E.E.U.U.",Jalisco
+Armando “N”,Cártel Nuevo Imperio,"Extorsión, generador de violencia, jefe de plaza del cártel",Querétaro
+Jesús “N”,Cártel Jalisco Nueva Generación,"Integrantes del cártel, Euler ""N"" (líder delictivo)",Tabasco
+Euler “N”,Cártel Jalisco Nueva Generación,"Integrantes del cártel, Euler ""N"" (líder delictivo)",Tabasco
+Jonathan Enrique “N”,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 1,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 2,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 3,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 4,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 5,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 6,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Otra persona 7,Los Totoys,Jonathan Enrique “N” (líder de la organización),Nuevo León
+Mario Humberto “N”,Cártel del Golfo (Los Escorpiones),"Mario Humberto “N” (líder delictivo del grupo, encargado del secuestro, robo, extorsión, tráfico de armas y drogas, con zona de operación en Soto La Marina)",Nuevo León
+Otra persona 1,Cártel del Golfo (Los Escorpiones),"Mario Humberto “N” (líder delictivo del grupo, encargado del secuestro, robo, extorsión, tráfico de armas y drogas, con zona de operación en Soto La Marina)",Nuevo León
+Otra persona 2,Cártel del Golfo (Los Escorpiones),"Mario Humberto “N” (líder delictivo del grupo, encargado del secuestro, robo, extorsión, tráfico de armas y drogas, con zona de operación en Soto La Marina)",Nuevo León
+Francisco Alfredo Encinas Rosales,"Cártel del Pacífico (Los Mayos, Los Demonios)",Integrante del grupo delictivo,Sonora
+Bernando “N”,Cártel del Pacífico (Los Mayos),"Bernando “N” (generado de violencia), tráfico de precursores químicos y elaboración de pastillas de fentanilo",Sinaloa
+Otra persona 1,Cártel del Pacífico (Los Mayos),"Bernando “N” (generado de violencia), tráfico de precursores químicos y elaboración de pastillas de fentanilo",Sinaloa
+Otra persona 2,Cártel del Pacífico (Los Mayos),"Bernando “N” (generado de violencia), tráfico de precursores químicos y elaboración de pastillas de fentanilo",Sinaloa
+Otra persona 3,Cártel del Pacífico (Los Mayos),"Bernando “N” (generado de violencia), tráfico de precursores químicos y elaboración de pastillas de fentanilo",Sinaloa
+Otra persona 4,Cártel del Pacífico (Los Mayos),"Bernando “N” (generado de violencia), tráfico de precursores químicos y elaboración de pastillas de fentanilo",Sinaloa
+Jesús “N”,Cártel de Sinaloa (Los Mayos),"Asociación delictuosa contra la salud y operaciones con recurso de procedencia ilícita, integrante del cártel",Sinaloa
+José Ramiro “N”,,"Jefe de una célula, trasiego de armas, armamento, extorsiones y confrontación on grupos antagónicos",
+Edwin “N”,,Jefe de un grupo delictivo,
+Isidro Enrique “N”,,Coordinador operativo de un grupo delictivo,
+"Valentín ""N",,Coordinador operativo de un grupo delictivo,
+Alfredo “N”,Cártel Jalisco Nueva Generación,,Jalisco
+Isidro Guadalupe “N”,Cártel Jalisco Nueva Generación,,Jalisco
+9 personas,Cártel Jalisco Nueva Generación,"Integrantes de una célula criminal, homicidio, extorsión, privación ilegal de la libertad",Michoacán
+Agustín “N”,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 1,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 2,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 3,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 4,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 5,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 6,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 7,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Otra persona 8,Cártel de Santa Rosa de Lima,"Augustín ""N"" (generador de violencia, administración de bares afines al Cártel, robo de hidrocarburos)",Guanajuato
+Jorge Luis “N”,Cártel del Noreste,,Nuevo León
+Otra persona 1,Cártel del Noreste,,Nuevo León
+Otra persona 2,Cártel del Noreste,,Nuevo León
+Otra persona 3,Cártel del Noreste,,Nuevo León
+8 personas,Cártel del Pacífico (Los Mayos),,Sinaloa
+11 personas,Cártel del Pacífico (Los Chapitos),,Sinaloa
+José Juan “N”,"Cártel del Pacífico (Los Mayos, Los Demonios)","Líder del grupo delictivo, tráfico de drogas y armas, extorsión, homicidios, secuestro, asociación delictuosa, acciones contra la salud",Sonora
+Ramón “N”,Los Salazar,,Sonora
+Jesús David “N”,Los Salazar,,Sonora
+Rubén Gilberto “N”,Los Salazar,,Sonora
+José Luis “N”,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 1,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 2,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 3,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 4,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 5,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 6,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Otra persona 7,Cártel Jalisco Nueva Generación,"José Luis ""N"" (jefe operativo en Poza Rica, tercer nivel en la estructura delicativa), el resto de las personas ocupaban el cuarto nivel",Veracruz
+Paisa,CIDA,"""Paisa"" (jefe de plaza)",Guerrero
+Otra persona 1,CIDA,"""Paisa"" (jefe de plaza)",Guerrero
+Otra persona 2,CIDA,"""Paisa"" (jefe de plaza)",Guerrero
+Luis Felipe “N”,Cártel Jalisco Nueva Generación,"""Pulido"" (jefe de seguridad de Isidrio ""N"" del CJNG)",Jalisco
+"Arturo Fabian ""N",Cártel Jalisco Nueva Generación,"""Pulido"" (jefe de seguridad de Isidrio ""N"" del CJNG)",Jalisco
+17 personas,,,Michoacán
+29 personas,La Barredora,Intento de robo de material ferroso de una empresa,Tabasco
+Jesús Manuel “N”,Cártel Jalisco Nueva Generación,"Jesús Manuel “N” (jefe de plaza de Comalcalco), más de 10 ejecuciones en la región, venta de droga",Tabasco
+Otra persona 1,Cártel Jalisco Nueva Generación,"Jesús Manuel “N” (jefe de plaza de Comalcalco), más de 10 ejecuciones en la región, venta de droga",Tabasco
+Otra persona 2,Cártel Jalisco Nueva Generación,"Jesús Manuel “N” (jefe de plaza de Comalcalco), más de 10 ejecuciones en la región, venta de droga",Tabasco
+Asal Antonio “N”,,Homicidio,Veracruz
+José Antonio “N”,Los Aquiles,"Distribución y venta de droga, homicidios, operador de la célula delictiva",Baja California
+Óscar “N”,Los Zetas,"Secuestro, homicidio, robo con violencia, daños por incendio",Nuevo León
+Santos Rueda Zapata,Cártel del Golfo (Los Metros),Santos Rueda Zapata (jefe operativo),Tamaulipas
+Raúl Martínez Saavedra,Cártel del Golfo (Los Metros),Santos Rueda Zapata (jefe operativo),Tamaulipas
+Jesús Alejandro Preciado Espinoza,Cártel del Golfo (Los Metros),Santos Rueda Zapata (jefe operativo),Tamaulipas
+Rubén Rojo Román,Cártel del Pacífico (Los Chapitos),"Rubén Rojo Román (persona confianza de Jorge Humberto Figueroa Benítez (alias “Perris”, “27”), jefe de seguridad de la facción “Los Menores” del Cártel del Pacífico en el municipio de Culiacán, Sinaloa; generador de violencia de Navolato, Sinaloa)",Sinaloa
+Otra persona 1,Cártel del Pacífico (Los Chapitos),"Rubén Rojo Román (persona confianza de Jorge Humberto Figueroa Benítez (alias “Perris”, “27”), jefe de seguridad de la facción “Los Menores” del Cártel del Pacífico en el municipio de Culiacán, Sinaloa; generador de violencia de Navolato, Sinaloa)",Sinaloa
+Otra persona 2,Cártel del Pacífico (Los Chapitos),"Rubén Rojo Román (persona confianza de Jorge Humberto Figueroa Benítez (alias “Perris”, “27”), jefe de seguridad de la facción “Los Menores” del Cártel del Pacífico en el municipio de Culiacán, Sinaloa; generador de violencia de Navolato, Sinaloa)",Sinaloa
+Otra persona 3,Cártel del Pacífico (Los Chapitos),"Rubén Rojo Román (persona confianza de Jorge Humberto Figueroa Benítez (alias “Perris”, “27”), jefe de seguridad de la facción “Los Menores” del Cártel del Pacífico en el municipio de Culiacán, Sinaloa; generador de violencia de Navolato, Sinaloa)",Sinaloa
+Otra persona 4,Cártel del Pacífico (Los Chapitos),"Rubén Rojo Román (persona confianza de Jorge Humberto Figueroa Benítez (alias “Perris”, “27”), jefe de seguridad de la facción “Los Menores” del Cártel del Pacífico en el municipio de Culiacán, Sinaloa; generador de violencia de Navolato, Sinaloa)",Sinaloa
+Juan Pablo Bastidas Erenas,Chapo Isidro,Integrante,Sinaloa
+"Bonifacio ""N",,Integrante,
+"Eloisa ""N""",,Jefa de plaza,
+Zuemy “N”,,Segunda al mando,
+Irwin “N”,Beltrán-Leyva (Los Linces),"Persona de confianza, jefe operativo y logístico de Jesús Alfredo “N” (alias “Mochomito”)",Jalisco
+"Alejandro ""N""","La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 1,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 2,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 3,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 4,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 5,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 6,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 7,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 8,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Otra persona 9,"La Barredora (Pueblos Unidos, Gente del Koqui)","Integrantes, Alejandro ""N"" (lugarteniente y persona de confianza del líder del grupo, relacionado con al menos de 10 homicidios en la entidad)",Tabasco
+Pablo Edwin “N”,Cártel de los Arellano Félix,"Pablo Edwin ""N"" (jefe del grupo delictivo, tráfico de droga hacia los EUA, producción de drogas sintéticas, robo de drogas a otras organizaciones delictivas, cooptación de autoridades, usurpación de funciones públicos)",Baja California
+Otra persona 1,Cártel de los Arellano Félix,"Pablo Edwin ""N"" (jefe del grupo delictivo, tráfico de droga hacia los EUA, producción de drogas sintéticas, robo de drogas a otras organizaciones delictivas, cooptación de autoridades, usurpación de funciones públicos)",Baja California
+Otra persona 2,Cártel de los Arellano Félix,"Pablo Edwin ""N"" (jefe del grupo delictivo, tráfico de droga hacia los EUA, producción de drogas sintéticas, robo de drogas a otras organizaciones delictivas, cooptación de autoridades, usurpación de funciones públicos)",Baja California
+Otra persona 3,Cártel de los Arellano Félix,"Pablo Edwin ""N"" (jefe del grupo delictivo, tráfico de droga hacia los EUA, producción de drogas sintéticas, robo de drogas a otras organizaciones delictivas, cooptación de autoridades, usurpación de funciones públicos)",Baja California
+Marco Antonio “N”,,"Marco Antonio “N” (operador de una célula delictiva, distribución de droga, coordinar homicidios y actividades de vigilancia para la organización)",Baja California
+1 otra persona,,"Marco Antonio “N” (operador de una célula delictiva, distribución de droga, coordinar homicidios y actividades de vigilancia para la organización)",Baja California
+3 personas,,El tráfico de fentanilo,Chihuahua
+"Emilio ""N",,Operador logístico y financiero de un grupo delictivo,
+Tomás de Jesús “N”,,Integrante,
+"Carlos ""N",,Jefe de una célula delictiva,
+6 personas,Cártel del Pacífico (Los Mayos),,Baja California
+1 persona,Cártel del Pacífico (Los Mayos),Integrante,Baja California Sur
+3 personas,,,Colima
+Walter “N”,Cártel Jalisco Nueva Generación,Proveedor de armas y explosivos,Jalisco
+Cirilo “N”,Blancos de Troya,,Michoacán
+1 otra persona,Blancos de Troya,,Michoacán
+Máximo “N”,Cártel Jalisco Nueva Generación,,Nayarit
+Otra persona 1,Cártel Jalisco Nueva Generación,,Nayarit
+Otra persona 2,Cártel Jalisco Nueva Generación,,Nayarit
+Felipe Jesús “N”,Cártel del Golfo,"Integrantes de una célula delictiva, Felipe Jesús “N” (liderazgo del grupo criminal), delincuencia organizada",Querétaro
+"Marcelino ""N",Cártel del Golfo,"Integrantes de una célula delictiva, Felipe Jesús “N” (liderazgo del grupo criminal), delincuencia organizada",Querétaro
+17 personas,Cártel del Pacífico (Los Mayos),,Sinaloa
+11 personas,Cártel del Pacífico (Los Mayos),Integrantes,Sinaloa
+5 personas,Cártel del Pacífico (Los Mayos),Integrantes,Sinaloa
+"Cirio Sergio ""N""",,"Cirio Sergio ""N"" y Luis Miguel ""N"" (líderes principales del grupo delictivo, coordinaban la extracción y distribución del combustible), robo y comercialización ilícita de hidrocarburo","Estado de México, CDMX, Querétaro"
+"Luis Miguel ""N""",,"Cirio Sergio ""N"" y Luis Miguel ""N"" (líderes principales del grupo delictivo, coordinaban la extracción y distribución del combustible), robo y comercialización ilícita de hidrocarburo","Estado de México, CDMX, Querétaro"
+32 personas,,"Cirio Sergio ""N"" y Luis Miguel ""N"" (líderes principales del grupo delictivo, coordinaban la extracción y distribución del combustible), robo y comercialización ilícita de hidrocarburo","Estado de México, CDMX, Querétaro"
+2 personas,Cártel Jalisco Nueva Generación,Integrantes,Jalisco
+"Jesús Santiago ""N""",Cártel Jalisco Nueva Generación,Integrantes,Jalisco
+"Eduardo Maclovio ""N""",La Familia Michoacana,Generador de violencia,Querétaro
+2 personas,Nuevo Cártel de Juárez,Integrantes,Chihuahua
+"Salvador Humberto ""N""",Gente Nueva / Los Chapitos / Cártel del Pacífico,Integrantes,Chihuahua
+2 personas,Gente Nueva / Los Chapitos / Cártel del Pacífico,Integrantes,Chihuahua
+8 personas,,Generador de violencia,Nuevo León
+"Jose ""N",,Generador de violencia,Nuevo León
+7 personas,Cártel del Noroeste,Integrantes,Nuevo León
+1 persona,Cártel del Pacífico (Los Mayos),Integrantes,Sonora
+2 personas,,,Sonora
+5 personas,,Aseguramiento,Sinaloa
+"José Manuel ""N""",,Integrantes,Sinaloa
+7 personas,,Integrantes,Sinaloa
